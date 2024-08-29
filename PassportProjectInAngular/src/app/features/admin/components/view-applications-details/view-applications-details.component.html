@@ -1,0 +1,226 @@
+<div class="application-view">
+  <div class="section">
+    <h3>Service Required</h3>
+    <p>
+      <strong>Application Type:</strong>
+      {{ application.serviceRequired!.applicationType }}
+    </p>
+    <p>
+      <strong>Passport Booklet Type:</strong>
+      {{ application.serviceRequired!.passportBookletType }}
+    </p>
+    <p>
+      <strong>Validity Required:</strong>
+      {{ application.serviceRequired!.validityRequired }}
+    </p>
+    <!-- Add other fields as required -->
+    <button class="btn btn-success" (click)="approveSection('serviceRequired')">
+      Approve
+    </button>
+    <button class="btn btn-danger" (click)="declineSection('serviceRequired')">
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Application Details</h3>
+    <p>
+      <strong>Given Name:</strong>
+      {{ application.applicationDetails!.given_name }}
+    </p>
+    <p>
+      <strong>Surname:</strong> {{ application.applicationDetails!.surname }}
+    </p>
+    <p>
+      <strong>Date of Birth:</strong> {{ application.applicationDetails!.dob }}
+    </p>
+    <p>
+      <strong>Place of Birth:</strong>
+      {{ application.applicationDetails!.place_of_birth }}
+    </p>
+    <!-- Add other fields as required -->
+    <button
+      class="btn btn-success"
+      (click)="approveSection('applicationDetails')"
+    >
+      Approve
+    </button>
+    <button
+      class="btn btn-danger"
+      (click)="declineSection('applicationDetails')"
+    >
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Family Details</h3>
+    <p>
+      <strong>Father's Given Name:</strong>
+      {{ application.familyDetails!.father_given_name }}
+    </p>
+    <p>
+      <strong>Father's Surname:</strong>
+      {{ application.familyDetails!.father_surname }}
+    </p>
+    <p>
+      <strong>Mother's Given Name:</strong>
+      {{ application.familyDetails!.mother_given_name }}
+    </p>
+    <p>
+      <strong>Mother's Surname:</strong>
+      {{ application.familyDetails!.mother_surname }}
+    </p>
+    <p>
+      <strong>Legal Guardian's Given Name:</strong>
+      {{ application.familyDetails!.legal_guardian_given_name }}
+    </p>
+    <p>
+      <strong>Legal Guardian's Surname:</strong>
+      {{ application.familyDetails!.legal_guardian_surname }}
+    </p>
+    <p>
+      <strong>Spouse's Given Name:</strong>
+      {{ application.familyDetails!.spouse_given_name }}
+    </p>
+    <p>
+      <strong>Spouse's Surname:</strong>
+      {{ application.familyDetails!.spouse_surname }}
+    </p>
+    <p>
+      <strong>Applicant Minor:</strong>
+      {{ application.familyDetails!.applicant_minor }}
+    </p>
+    <p>
+      <strong>Father's Passport Number:</strong>
+      {{ application.familyDetails!.father_passport_number }}
+    </p>
+    <p>
+      <strong>Father's Nationality:</strong>
+      {{ application.familyDetails!.father_nationality }}
+    </p>
+    <p>
+      <strong>Mother's Passport Number:</strong>
+      {{ application.familyDetails!.mother_passport_number }}
+    </p>
+    <p>
+      <strong>Mother's Nationality:</strong>
+      {{ application.familyDetails!.mother_nationality }}
+    </p>
+    <!-- Add other fields as required -->
+    <button class="btn btn-success" (click)="approveSection('familyDetails')">
+      Approve
+    </button>
+    <button class="btn btn-danger" (click)="declineSection('familyDetails')">
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Address Details</h3>
+    <p>
+      <strong>Present Address:</strong>
+      {{ application.addressDetails!.present_house_street }},
+      {{ application.addressDetails!.present_town }},
+      {{ application.addressDetails!.present_state }},
+      {{ application.addressDetails!.pin }}
+    </p>
+    <p>
+      <strong>Permanent Address:</strong>
+      {{ application.addressDetails!.permanent_house_street }},
+      {{ application.addressDetails!.permanent_town }},
+      {{ application.addressDetails!.permanent_state }},
+      {{ application.addressDetails!.permanent_pin }}
+    </p>
+    <!-- Add other fields as required -->
+    <button class="btn btn-success" (click)="approveSection('addressDetails')">
+      Approve
+    </button>
+    <button class="btn btn-danger" (click)="declineSection('addressDetails')">
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Emergency Contact Details</h3>
+    <p>
+      <strong>Emergency Contact Name:</strong>
+      {{ application.EmergencyContactDetails!.emergency_contact_name }}
+    </p>
+    <p>
+      <strong>Emergency Contact Mobile:</strong>
+      {{ application.EmergencyContactDetails!.emergency_contact_mobile }}
+    </p>
+    <p>
+      <strong>Emergency Contact Email:</strong>
+      {{ application.EmergencyContactDetails!.emergency_contact_email }}
+    </p>
+    <!-- Add other fields as required -->
+    <button
+      class="btn btn-success"
+      (click)="approveSection('EmergencyContactDetails')"
+    >
+      Approve
+    </button>
+    <button
+      class="btn btn-danger"
+      (click)="declineSection('EmergencyContactDetails')"
+    >
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Previous Application</h3>
+    <p>
+      <strong>Previous Passport Number:</strong>
+      {{ application.previousApplication!.previous_passport_number }}
+    </p>
+    <p>
+      <strong>Previous Issue Date:</strong>
+      {{ application.previousApplication!.previous_issue_date }}
+    </p>
+    <p>
+      <strong>Previous Expiry Date:</strong>
+      {{ application.previousApplication!.previous_expiry_date }}
+    </p>
+    <!-- Add other fields as required -->
+    <button
+      class="btn btn-success"
+      (click)="approveSection('previousApplication')"
+    >
+      Approve
+    </button>
+    <button
+      class="btn btn-danger"
+      (click)="declineSection('previousApplication')"
+    >
+      Decline
+    </button>
+  </div>
+
+  <div class="section">
+    <h3>Other Details</h3>
+    <p>
+      <strong>Criminal Proceedings:</strong>
+      {{ application.otherDetails!.criminal_proceedings ? "Yes" : "No" }}
+    </p>
+    <p>
+      <strong>Criminal Convictions:</strong>
+      {{ application.otherDetails!.criminal_convictions ? "Yes" : "No" }}
+    </p>
+    <p>
+      <strong>Granted Citizenship:</strong>
+      {{ application.otherDetails!.granted_citizenship ? "Yes" : "No" }}
+    </p>
+    <!-- Add other fields as required -->
+    <button class="btn btn-success" (click)="approveSection('otherDetails')">
+      Approve
+    </button>
+    <button class="btn btn-danger" (click)="declineSection('otherDetails')">
+      Decline
+    </button>
+  </div>
+
+  <!-- Repeat similar sections for other parts like Address Details, Emergency Contact Details, etc. -->
+</div>

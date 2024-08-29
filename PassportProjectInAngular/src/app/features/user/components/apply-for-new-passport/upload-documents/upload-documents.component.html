@@ -1,0 +1,169 @@
+<fieldset>
+  <legend><b>Upload Documents</b></legend>
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label class="form-check-label" for="identityProof">
+        Upload any of the below documents for identity proof:
+        <ul>
+          <li>
+            Aadhaar Card/e-Aadhar containing the 12 digit Aadhaar number issued
+            by the Unique Identification Authority of India(UIDAI)
+          </li>
+          <li>Electors Photo Identity Card (EPIC)</li>
+          <li>Last Passport issued (in case of re-issue only)</li>
+          <li>Permanent Account Number(PAN)</li>
+          <li>Bank Passbook or Kisan Passbook or Post Office Passbook</li>
+          <li>
+            Student Photo Identity Cards issued by Recognized Educational
+            Institutions
+          </li>
+          <li>
+            Driving Licenses (valid and within the jurisdiction of State of
+            submission of applicant)
+          </li>
+          <li>
+            Birth Certificates issued under the Registration of Births and
+            Deaths Act, 1969 (18 of 1969)
+          </li>
+          <li>Rations Cards</li>
+          <li>Arms License issued under the Arms Act, 1959(54 of 1959)</li>
+        </ul>
+      </label>
+      <input
+        type="file"
+        id="identityProof"
+        formControlName="identityProof"
+        (change)="onFileSelected($event, 'identityProof')"
+      />
+      <div
+        *ngIf="
+          uploadForm.get('identityProof')!.touched &&
+          uploadForm.get('identityProof')!.invalid
+        "
+        class="text-danger"
+      >
+        Identity proof is required.
+      </div>
+    </div>
+    <hr />
+    <div>
+      <label for="addressProof">
+        Upload any of the below documents for address proof:
+        <ul>
+          <li>Water Bill</li>
+          <li>Telephone (landline or post paid mobile bill)</li>
+          <li>Electricity bill</li>
+          <li>Income Tax Assessment Order</li>
+          <li>Election Commission Photo ID card</li>
+          <li>Proof of Gas Connection</li>
+          <li>Certificate from Employer of reputed companies on letter head</li>
+          <li>
+            Spouse's passport copy (First and last page including family details
+            mentioning applicant's name as spouse of the passport holder),
+            (provided the applicant's present address matches the address
+            mentioned in the spouse's passport)
+          </li>
+          <li>
+            Parent's passport copy, in case of minors(First and last page)
+          </li>
+          <li>Aadhaar Card</li>
+          <li>Rent Agreement</li>
+          <li>
+            Photo Passbook of running Bank Account (Scheduled Public Sector
+            Banks, Scheduled Private Sector Indian Banks and Regional Rural
+            Banks only)
+          </li>
+        </ul>
+      </label>
+      <input
+        type="file"
+        id="addressProof"
+        formControlName="addressProof"
+        (change)="onFileSelected($event, 'addressProof')"
+      />
+      <div
+        *ngIf="
+          uploadForm.get('addressProof')!.touched &&
+          uploadForm.get('addressProof')!.invalid
+        "
+        class="text-danger"
+      >
+        Address proof is required.
+      </div>
+    </div>
+    <hr />
+    <div>
+      <label for="dobProof" class="form-check-label">
+        Upload any of the below documents for verification of date of birth:
+        <ul>
+          <li>Birth certificated issued by government authority</li>
+          <li>Transfer/school leaving certificate</li>
+          <li>
+            Policy Bond issued by the Public Life Insurance
+            Corporations/Companies having the DOB of the holder of the insurance
+            policy
+          </li>
+          <li>
+            Election Photo Identity Card (EPIC) issued by the Election
+            Commission of India
+          </li>
+          <li>PAN Card issued by the Income Tax Department</li>
+          <li>
+            Driving License issued by the Transport department of concerned
+            state Government
+          </li>
+          <li>
+            A declaration given by the Head of the Orphanage/Child Care Home on
+            their official letter head of the organization confirming the DOB of
+            the applicant
+          </li>
+        </ul>
+      </label>
+      <input
+        type="file"
+        id="dobProof"
+        formControlName="dobProof"
+        (change)="onFileSelected($event, 'dobProof')"
+      />
+      <div
+        *ngIf="
+          uploadForm.get('dobProof')!.touched &&
+          uploadForm.get('dobProof')!.invalid
+        "
+        class="text-danger"
+      >
+        Date of birth proof is required.
+      </div>
+    </div>
+    <hr />
+    <div>
+      <label for="photo" class="form-check-label">
+        Upload passport size photo (taken in last 2 months)
+      </label>
+      <input
+        type="file"
+        id="photo"
+        formControlName="photo"
+        (change)="onFileSelected($event, 'photo')"
+      />
+      <div
+        *ngIf="
+          uploadForm.get('photo')!.touched && uploadForm.get('photo')!.invalid
+        "
+        class="text-danger"
+      >
+        Passport size photo is required.
+      </div>
+    </div>
+  </form>
+  <div class="d-flex justify-content-end">
+    <button
+      class="btn btn-primary nextButton btn-custom"
+      type="submit"
+      (click)="onSubmit()"
+      [disabled]="uploadForm.invalid"
+    >
+      Save & Pay
+    </button>
+  </div>
+</fieldset>

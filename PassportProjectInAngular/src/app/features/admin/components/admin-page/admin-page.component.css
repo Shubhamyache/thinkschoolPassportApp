@@ -1,0 +1,39 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.header-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+.card {
+  border: none;
+}
+.btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: #0056b3;
+}
+.admin-container {
+  margin-top: 50px;
+}
+.admin-heading {
+  font-size: 1.5rem;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.admin-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.admin-options .btn {
+  margin: 10px;
+  padding: 20px;
+  font-size: 1.2rem;
+}

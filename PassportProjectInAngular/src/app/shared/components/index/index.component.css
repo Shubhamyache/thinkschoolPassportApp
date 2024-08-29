@@ -1,0 +1,94 @@
+a {
+  color: white;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.header-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+.ticker {
+  font-size: 1rem;
+  font-weight: bold;
+  color: red;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.ticker span {
+  display: inline-block;
+  animation: ticker 10s linear infinite;
+}
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.left-section {
+  padding-top: 20px;
+}
+.left-section .btn {
+  margin: 10px 0;
+  width: 100%;
+}
+.right-section {
+  padding: 20px;
+}
+.slide-container {
+  height: 300px;
+  background-color: #f8f9fa;
+}
+.notice {
+  margin-top: 20px;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.notice-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.notice-item:last-child {
+  border-bottom: none;
+}
+.badge-new {
+  background-color: #dc3545;
+}
+/* index.component.css */
+
+body {
+  padding-top: 56px;
+}
+
+.ticker {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: fill;
+}
+
+.left-section {
+  margin-bottom: 30px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

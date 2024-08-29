@@ -1,0 +1,30 @@
+.hero {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.content-section {
+  padding: 40px 0;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.header-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+.footer-section {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-section a {
+  color: white;
+}

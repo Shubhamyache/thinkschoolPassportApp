@@ -1,0 +1,9 @@
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.header-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3;
+}

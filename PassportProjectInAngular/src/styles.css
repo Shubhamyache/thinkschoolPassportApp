@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Add this to your global styles.css or the component-specific CSS file */
+@keyframes hoverAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hover-box {
+  /* Ensures the box does not interfere with the content inside */
+  pointer-events: none;
+}

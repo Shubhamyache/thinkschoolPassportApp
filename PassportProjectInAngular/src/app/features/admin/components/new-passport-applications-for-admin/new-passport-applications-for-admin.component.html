@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="application-list">
+  <h2>Passport Applications</h2>
+  <table class="table ml-4 mr-4">
+    <thead>
+      <tr>
+        <th>Application Form Number</th>
+        <th>Given Name</th>
+        <th>Surname</th>
+        <th>Form Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let application of applications">
+        <td>{{ application.formNo }}</td>
+        <td>{{ application.applicationDetails.given_name }}</td>
+        <td>{{ application.applicationDetails.surname }}</td>
+        <td>{{ application.formStatus }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="viewApplication(application)"
+          >
+            View
+          </button>
+          <button
+            class="btn btn-success"
+            (click)="approveApplication(application)"
+          >
+            Approve
+          </button>
+          <button
+            class="btn btn-warning"
+            (click)="rejectApplication(application)"
+          >
+            Reject
+          </button>
+          <button
+            class="btn btn-danger"
+            (click)="deleteApplication(application.formNo)"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="fixed-header">
+  <app-footer></app-footer>
+</div>
