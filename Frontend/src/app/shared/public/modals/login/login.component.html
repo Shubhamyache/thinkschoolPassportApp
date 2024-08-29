@@ -1,0 +1,107 @@
+<div class="modal fade show" tabindex="-1" role="dialog" style="display: block">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">
+          Login To Passport Seva
+        </h1>
+        <button
+          type="button"
+          class="btn-close me-2"
+          aria-label="Close"
+          (click)="closeModal()"
+        ></button>
+      </div>
+      <div class="modal-body ms-5 me-5 p-2">
+        <form class="row g-3" [formGroup]="loginForm">
+          <div class="col-12 mt-4">
+            <label for="inputEmail"
+              >Email Address or Mobile<span class="required-asterisk"
+                >*</span
+              ></label
+            >
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your Number or Email"
+              id="inputEmail"
+              [formControl]="email"
+            />
+            <h5 class="red-text" [hidden]="email.valid || email.untouched">
+              Email is required and it should be correct
+            </h5>
+          </div>
+          <div class="col-12">
+            <label for="inputPassword"
+              >Password<span class="required-asterisk">*</span></label
+            >
+            <input
+              [type]="passwordFieldType"
+              class="form-control"
+              placeholder="Enter Your Password"
+              id="inputPassword"
+              [formControl]="password"
+            />
+            <h5
+              class="red-text"
+              [hidden]="password.valid || password.untouched"
+            >
+              Password is required and must be greater than 6 characters
+            </h5>
+          </div>
+          <div class="col-6 mt-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Captcha"
+              id="inputCaptchaTitle"
+              disabled
+              readonly
+            />
+          </div>
+          <div class="col-6 mt-2">
+            <div class="inner-div">
+              {{ updatedcaptcha }}
+            </div>
+          </div>
+          <div class="col-12 mt-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter captcha *"
+              id="inputCaptcha"
+              [formControl]="captcha"
+            />
+            <h5 class="red-text" [hidden]="captcha.valid || captcha.untouched">
+              Captcha is required
+            </h5>
+          </div>
+          <div class="col-12 d-flex align-items-center justify-content-between">
+            <div class="d-flex">
+              <input
+                type="checkbox"
+                class="form-check-input me-2"
+                id="rememberMe"
+              />
+              <label class="form-check-label" for="rememberMe">
+                Remember Me
+              </label>
+            </div>
+            <a class="forgot-password-link">Forgot Password?</a>
+          </div>
+          <div class="d-grid gap-2 mt-4 text-center">
+            <a class="btn-getstarted" (click)="login()">Login</a>
+          </div>
+
+          <div class="col-12 mt-3 mb-3 d-flex justify-content-center">
+            <a class="signup-link" (click)="openSignupModal()"
+              >Don't have an account? Sign Up</a
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

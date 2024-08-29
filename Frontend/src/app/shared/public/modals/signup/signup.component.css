@@ -1,0 +1,15 @@
+.red-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+btn-getstarted:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.modal-title {
+  font-size: 30px;
+}

@@ -13,14 +13,14 @@ namespace PassportApplicationWebApi.Data
         public DbSet<Passport> Passports { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
-        public DbSet<NewPassportApplication> PassportApplications { get; set; }
+        public DbSet<PassportApplication> PassportApplications { get; set; }
         public DbSet<PaymentDetails> PaymentDetails { get; set; }
         public DbSet<ApplicantDetails> ApplicantsDetails { get; set; }
         public DbSet<AddressDetails> AddressDetails { get; set; }
         public DbSet<EmergencyContactDetails> EmergencyContactDetails { get; set; }
         public DbSet<Documents> Documents { get; set; }
         public DbSet<FamilyDetails> FamilyDetails { get; set; }
-        public DbSet<RenewalPassportApplication> RenewalPassportApplications { get; set; }
+
 
 
 
@@ -52,17 +52,13 @@ namespace PassportApplicationWebApi.Data
                 .WithOne(c => c.User)
                 .HasForeignKey(c => c.UserId);
 
-            builder.Entity<User>()
-            .HasOne(u => u.NewRenewalApplication)
-            .WithOne(r => r.User)
-            .HasForeignKey<User>(u => u.RenewalApplicationId)
-            .OnDelete(DeleteBehavior.NoAction);
+
 
             builder.Entity<User>()
-           .HasOne(u => u.NewPassportApplication)
-           .WithOne(r => r.User)
-           .HasForeignKey<User>(u => u.NewPassportApplicationId)
-           .OnDelete(DeleteBehavior.NoAction);
+               .HasOne(u => u.PassportApplication)
+               .WithOne(r => r.User)
+               .HasForeignKey<User>(u => u.PassportApplicationId)
+               .OnDelete(DeleteBehavior.NoAction);
         }
 
     }

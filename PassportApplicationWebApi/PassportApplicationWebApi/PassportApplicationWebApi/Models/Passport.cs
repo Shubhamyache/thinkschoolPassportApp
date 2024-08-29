@@ -29,5 +29,14 @@ namespace PassportApplicationWebApi.Models
         public DateTime DateOfIssue { get; set; }
         [Required]
         public string Gender { get; set; } = string.Empty;
+
+        public PassportStatus PassportStatus { get; set; }
+    }
+
+    public enum PassportStatus
+    {
+        Active,
+        Expired,
+        Blocked
     }
 }

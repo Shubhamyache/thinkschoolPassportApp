@@ -1,0 +1,381 @@
+<form [formGroup]="presentAddressForm" (ngSubmit)="onSubmit()">
+  <fieldset>
+    <legend><b>Present Residential Address Details</b></legend>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div id="field4_1" class="form-group">
+          <div class="form-group mt-2">
+            <label for="present_house_street">House No. and Street Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="present_house_street"
+              id="present_house_street"
+              formControlName="present_house_street"
+            />
+            <div class="invalid-feedback">
+              Please enter your house number and street name.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="
+                present_house_street.valid || present_house_street.untouched
+              "
+            >
+              House number and street name are required and should be 1-40
+              characters long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="present_town">Village or Town or City:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="present_town"
+              id="present_town"
+              formControlName="present_town"
+            />
+            <div class="invalid-feedback">
+              Please enter your village, town, or city.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="present_town.valid || present_town.untouched"
+            >
+              Village, town, or city is required and should be 1-30 characters
+              long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="present_district">District:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="present_district"
+              id="present_district"
+              formControlName="present_district"
+            />
+            <div class="invalid-feedback">Please enter your district.</div>
+            <p
+              class="text-danger"
+              [hidden]="present_district.valid || present_district.untouched"
+            >
+              District is required and should be 1-30 characters long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="present_police_station">Police Station:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="present_police_station"
+              id="present_police_station"
+              formControlName="present_police_station"
+            />
+            <div class="invalid-feedback">
+              Please enter your police station.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="
+                present_police_station.valid || present_police_station.untouched
+              "
+            >
+              Police station is required and should be 1-30 characters long.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-group mt-2">
+          <label for="present_state">State/UT:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="present_state"
+            id="present_state"
+            formControlName="present_state"
+          />
+          <div class="invalid-feedback">Please enter your state or UT.</div>
+          <p
+            class="text-danger"
+            [hidden]="present_state.valid || present_state.untouched"
+          >
+            State/UT is required and should be 1-30 characters long.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="present_pin">PIN:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="present_pin"
+            id="present_pin"
+            formControlName="present_pin"
+          />
+          <div class="invalid-feedback">Please enter your PIN.</div>
+          <p
+            class="text-danger"
+            [hidden]="present_pin.valid || present_pin.untouched"
+          >
+            PIN is required and should be valid.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="present_mobile_number">Mobile Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="present_mobile_number"
+            id="present_mobile_number"
+            formControlName="present_mobile_number"
+          />
+          <div class="invalid-feedback">
+            Please enter a valid mobile number.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="
+              present_mobile_number.valid || present_mobile_number.untouched
+            "
+          >
+            Mobile number is required and should be valid.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="present_telephone_number">Telephone Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="present_telephone_number"
+            id="present_telephone_number"
+            formControlName="present_telephone_number"
+          />
+          <div class="invalid-feedback">
+            Please enter your telephone number.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="
+              present_telephone_number.valid ||
+              present_telephone_number.untouched
+            "
+          >
+            Telephone number should be valid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <div id="field4_2" class="form-group mt-2">
+    <label>Is permanent address same as present address?</label><br />
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        [formControl]="same_address"
+        formControlName="same_address"
+        value="yes"
+        id="same_address_yes"
+      />
+      <label class="form-check-label" for="same_address_yes">Yes</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input
+        class="form-check-input"
+        type="radio"
+        [formControl]="same_address"
+        formControlName="same_address"
+        value="no"
+        id="same_address_no"
+      />
+      <label class="form-check-label" for="same_address_no">No</label>
+    </div>
+  </div>
+  @if(same_address.value === 'no'){
+
+  <fieldset>
+    <legend><b>4.2 Permanent Residential Address Details</b></legend>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div id="field4_12" class="form-group mt-2">
+          <div class="form-group">
+            <label for="permanent_house_street"
+              >House No. and Street Name:</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="permanent_house_street"
+              id="permanent_house_street"
+              formControlName="permanent_house_street"
+            />
+            <div class="invalid-feedback">
+              Please enter your house number and street name.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="
+                permanent_house_street.valid || permanent_house_street.untouched
+              "
+            >
+              House number and street name are required and should be 1-40
+              characters long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="permanent_town">Village or Town or City:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="permanent_town"
+              id="permanent_town"
+              formControlName="permanent_town"
+            />
+            <div class="invalid-feedback">
+              Please enter your village, town, or city.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="permanent_town.valid || permanent_town.untouched"
+            >
+              Village, town, or city is required and should be 1-30 characters
+              long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="permanent_district">District:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="permanent_district"
+              id="permanent_district"
+              formControlName="permanent_district"
+            />
+            <div class="invalid-feedback">Please enter your district.</div>
+            <p
+              class="text-danger"
+              [hidden]="
+                permanent_district.valid || permanent_district.untouched
+              "
+            >
+              District is required and should be 1-30 characters long.
+            </p>
+          </div>
+          <div class="form-group mt-2">
+            <label for="permanent_police_station">Police Station:</label>
+            <input
+              type="text"
+              class="form-control"
+              [formControl]="permanent_police_station"
+              id="permanent_police_station"
+              formControlName="permanent_police_station"
+            />
+            <div class="invalid-feedback">
+              Please enter your police station.
+            </div>
+            <p
+              class="text-danger"
+              [hidden]="
+                permanent_police_station.valid ||
+                permanent_police_station.untouched
+              "
+            >
+              Police station is required and should be 1-30 characters long.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-group mt-2">
+          <label for="permanent_state">State/UT:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="permanent_state"
+            id="permanent_state"
+            formControlName="permanent_state"
+          />
+          <div class="invalid-feedback">Please enter your state or UT.</div>
+          <p
+            class="text-danger"
+            [hidden]="permanent_state.valid || permanent_state.untouched"
+          >
+            State/UT is required and should be 1-30 characters long.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="permanent_pin">PIN:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="permanent_pin"
+            id="permanent_pin"
+            formControlName="permanent_pin"
+          />
+          <div class="invalid-feedback">Please enter your PIN.</div>
+          <p
+            class="text-danger"
+            [hidden]="permanent_pin.valid || permanent_pin.untouched"
+          >
+            PIN is required and should be valid.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="permanent_mobile_number">Mobile Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="permanent_mobile_number"
+            id="permanent_mobile_number"
+            formControlName="permanent_mobile_number"
+          />
+          <div class="invalid-feedback">
+            Please enter a valid mobile number.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="
+              permanent_mobile_number.valid || permanent_mobile_number.untouched
+            "
+          >
+            Mobile number is required and should be valid.
+          </p>
+        </div>
+        <div class="form-group mt-2">
+          <label for="permanent_telephone_number">Telephone Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="permanent_telephone_number"
+            id="permanent_telephone_number"
+            formControlName="permanent_telephone_number"
+          />
+          <div class="invalid-feedback">
+            Please enter your telephone number.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="
+              permanent_telephone_number.valid ||
+              permanent_telephone_number.untouched
+            "
+          >
+            Telephone number should be valid.
+          </p>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  }
+
+  <div class="d-flex justify-content-end">
+    <button class="btn-getstarted nextButton btn-custom mt-2" type="submit">
+      Save & Next
+    </button>
+  </div>
+</form>

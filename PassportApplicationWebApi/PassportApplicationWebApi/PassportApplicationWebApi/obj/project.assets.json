@@ -4455,11 +4455,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
+      "projectUniqueName": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
       "projectName": "PassportApplicationWebApi",
-      "projectPath": "C:\\Users\\Lenovo\\Downloads\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
+      "projectPath": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Downloads\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\obj\\",
+      "outputPath": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

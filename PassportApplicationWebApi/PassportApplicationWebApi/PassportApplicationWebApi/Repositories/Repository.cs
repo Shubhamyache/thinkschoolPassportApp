@@ -19,7 +19,7 @@ namespace PassportApplicationWebApi.Repositories
             return entity;
         }
 
-        public async Task<TEntity> DeleteAsync(int id)
+        public async Task<TEntity?> DeleteAsync(int id)
         {
             var entity = await GetByIdAsync(id);
             if (entity == null)
@@ -37,13 +37,13 @@ namespace PassportApplicationWebApi.Repositories
             return await _context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity?> GetByIdAsync(int id)
         {
 
             return await _context.Set<TEntity>().FindAsync(id);
         }
 
-        public async Task<TEntity> UpdateAsync(TEntity entity)
+        public async Task<TEntity?> UpdateAsync(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();

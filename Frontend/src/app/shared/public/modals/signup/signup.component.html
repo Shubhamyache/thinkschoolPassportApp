@@ -1,0 +1,105 @@
+<div class="modal fade show" tabindex="-1" role="dialog" style="display: block">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title">Register</h1>
+        <button
+          type="button"
+          class="btn-close me-2"
+          aria-label="Close"
+          (click)="closeModal()"
+        ></button>
+      </div>
+      <div class="modal-body ms-5 me-5 p-2">
+        <form class="row g-3" [formGroup]="registerForm">
+          <div class="col-6 mt-3">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your first name"
+              id="firstName"
+              formControlName="firstName"
+            />
+            <h5 class="red-text" [hidden]="firstName.valid || firstName.untouched">
+                First name is required
+              </h5>
+          </div>
+          <div class="col-6 mt-">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your last name"
+              id="lastName"
+              formControlName="lastName"
+            />
+            <h5 class="red-text" [hidden]="lastName.valid || lastName.untouched">
+                Last name is required
+              </h5>
+          </div>
+
+          <div class="col-12 mt-3">
+            <label for="inputEmail">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your Number or Email"
+              id="inputEmail"
+              formControlName="email"
+            />
+            <h5 class="red-text" [hidden]="email.valid || email.untouched">
+                Enter a correct email
+              </h5>
+          </div>
+          <div class="col-12 mt-3">
+            <label for="mobileNumber">Mobile Number</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Mobile Number"
+              id="mobileNumber"
+              formControlName="mobileNumber"
+            />
+            <h5 class="red-text" [hidden]="mobileNumber.valid || mobileNumber.untouched">
+                10 digit mobile number is required
+              </h5>
+          </div>
+          <div class="col-12 mt-3">
+            <label for="newPassword">New Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter New Password"
+              id="newPassword"
+              formControlName="newPassword"
+            />
+            <h5 class="red-text" [hidden]="newPassword.valid || newPassword.untouched">
+                Password is required and must be greater than 6
+              </h5>
+          </div>
+          <div class="col-12 mt-3">
+            <label for="confirmPassword">Confirm New Password</label>
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Enter Confirm Password"
+              id="confirmPassword"
+              formControlName="confirmPassword"
+            />
+            <h5 class="red-text col-6" [hidden]="confirmPassword.valid || confirmPassword.untouched || newPassword.valid">
+                Confirm password is required
+              </h5>
+              <h5 class="red-text col-6" *ngIf="registerForm.errors?.['mismatch'] && registerForm.get('confirmPassword')?.touched">
+                Passwords do not match.
+              </h5>
+          </div>
+          <div class="mt-3 mb-3 text-center">
+            <button class="btn-getstarted" [disabled]="registerForm.invalid" (click)="registerUser()">Register</button>
+            <button class="btn-red" (click)="reset()">Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

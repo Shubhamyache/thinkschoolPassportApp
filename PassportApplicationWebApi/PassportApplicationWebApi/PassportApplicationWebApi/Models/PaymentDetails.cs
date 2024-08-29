@@ -45,6 +45,8 @@ namespace PassportApplicationWebApi.Models
         [ForeignKey("UserId")]
         public User? User { get; set; }
 
+        public PassportApplication? PassportApplication { get; set; }
+
     }
 
     public enum PaymentStatus

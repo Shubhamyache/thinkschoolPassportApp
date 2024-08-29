@@ -1,0 +1,58 @@
+.inner-div {
+  background-color: #e9ecef;
+  padding: 3px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-top: 15px;
+  padding-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.required-asterisk {
+  margin-left: 3px;
+  color: red;
+}
+
+.modal-title {
+  font-size: 25px;
+}
+
+
+.toggle-btn{
+  margin-top: 23px;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin-right: 8px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #ccc; 
+}
+
+.red-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.forgot-password-link,
+.signup-link {
+  color: #2487ce;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.forgot-password-link:hover,
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+

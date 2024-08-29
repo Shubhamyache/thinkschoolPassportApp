@@ -1,0 +1,1551 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="application-details-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#application_details-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="application-details-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">1</span>Application Details
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="family-details-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#family-details-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="family-details-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">2</span>Family Details
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="address-details-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#address-details-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="address-details-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">3</span>Address Details
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="emergency-contact-details-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#emergency-contact-details-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="emergency-contact-details-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">4</span>Emergency Contact Details
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="other-details-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#other-details-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="other-details-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">5</span>Other Details
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="payment-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#payment-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="payment-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">6</span>Payment
+            <span class="arrow"><i class="bi bi-chevron-right"></i> </span>
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="Declaration-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#declaration-tab-pane"
+            type="button"
+            role="tab"
+            aria-controls="declaration-tab-pane"
+            aria-selected="true"
+          >
+            <span class="badge">7</span>Declaration
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="tab-content" id="myTabContent">
+  <div
+    class="tab-pane fade show active"
+    id="application_details-tab-pane"
+    role="tabpanel"
+    aria-labelledby="application-details-tab"
+    tabindex="0"
+  >
+    <div class="form-section me-5 ms-5 mt-3 p-3 mb-5 border">
+      <h2>Applicant Details</h2>
+      <hr />
+      <form [formGroup]="applicantForm">
+        <div class="row mb-3">
+          <div class="form-group col-6">
+            <label for="applicantGivenName">Applicant's Given Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="applicantGivenName"
+              placeholder="Enter given name"
+              formControlName="applicantGivenName"
+            />
+            <h5
+                    class="red-text"
+                    [hidden]="applicantGivenName.valid || applicantGivenName.untouched"
+                  >
+                    Email is required and it should be correct
+                  </h5>
+          </div>
+          <div class="form-group col-6">
+            <label for="applicantSurname">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="applicantSurname"
+              placeholder="Enter Your Surname"
+              formControlName="applicantSurname"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label>Are you known by any other names (aliases)?</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="alias"
+                id="aliasYes"
+                value="yes"
+                formControlName="alias"
+              />
+              <label class="form-check-label" for="aliasYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="alias"
+                id="aliasNo"
+                value="no"
+                formControlName="alias"
+              />
+              <label class="form-check-label" for="aliasNo">No</label>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Have you ever changed your name?</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="changedName"
+                id="changedNameYes"
+                value="yes"
+              />
+              <label class="form-check-label" for="changedNameYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="changedName"
+                id="changedNameNo"
+                value="no"
+                checked
+              />
+              <label class="form-check-label" for="changedNameNo">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="dateOfBirth">Date of Birth (DD-MM-YYYY)</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dateOfBirth"
+              formControlName="dateOfBirth"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="placeOfBirth"
+              >Place of Birth (Village or Town or City)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="placeOfBirth"
+              placeholder="Enter place of birth"
+              formControlName="placeOfBirth"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="district">District (If born in India)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="district"
+              placeholder="Enter district"
+              formControlName="district"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="state">State/UT (If born in India)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              placeholder="Enter state/UT"
+              formControlName="state"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="region">Country (If born abroad)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="region"
+              placeholder="Enter country"
+              formControlName="country"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label>Gender</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                formControlName="gender"
+              />
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                formControlName="gender"
+              />
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="gender"
+                id="transgender"
+                value="transgender"
+                formControlName="gender"
+              />
+              <label class="form-check-label" for="transgender"
+                >Transgender</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label>Marital Status</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maritalStatus"
+                id="single"
+                value="single"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="single">Single</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maritalStatus"
+                id="married"
+                value="married"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="married">Married</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maritalStatus"
+                id="divorced"
+                value="divorced"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="divorced">Divorced</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maritalStatus"
+                id="widowed"
+                value="widowed"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="widowed"
+                >Widow/Widower</label
+              >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maritalStatus"
+                id="separated"
+                value="separated"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="separated">Separated</label>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Citizenship of India by</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="citizenship"
+                id="birth"
+                value="birth"
+                formControlName="citizenship"
+              />
+              <label class="form-check-label" for="birth">Birth</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="citizenship"
+                id="descent"
+                value="descent"
+                formControlName="citizenship"
+              />
+              <label class="form-check-label" for="descent">Descent</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="citizenship"
+                id="registration"
+                value="registration"
+                formControlName="citizenship"
+              />
+              <label class="form-check-label" for="registration"
+                >Registration/Naturalization</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="panCard">PAN (If available)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="panCard"
+              placeholder="Enter PAN number"
+              formControlName="panCard"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="voterId">Voter ID (If available)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="voterId"
+              placeholder="Enter Voter ID"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label>Employment Type</label>
+            <select
+              class="form-control"
+              id="employmentType"
+              formControlName="employmentType"
+              size="1"
+            >
+              <option value="select" disabled selected>Select employment type</option>
+              <option value="psu">PSU</option>
+              <option value="government">Government</option>
+              <option value="statutoryBody">Statutory Body</option>
+              <option value="retiredGovernment">
+                Retired Government Servant
+              </option>
+              <option value="selfEmployed">Self Employed</option>
+              <option value="private">Private</option>
+              <option value="homemaker">Homemaker</option>
+              <option value="notEmployed">Not Employed</option>
+              <option value="retiredPrivate">Retired-Private Service</option>
+              <option value="student">Student</option>
+              <option value="others">Others</option>
+              <option value="ciifacci">
+                Owners, Partners & Directors of companies which are members of
+                CII, FICCI & ASSOCHAM
+              </option>
+            </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="organization"
+              >If employed in Government/ Statutory Body/ PSU, specify
+              organization name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="organization"
+              placeholder="Enter organization name"
+              formControlName="organization"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label
+              >Is either of your parent (in case of minor)/ spouse, a government
+              servant?</label
+            >
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="govServant"
+                id="govServantYes"
+                value="yes"
+                formControlName="govServant"
+              />
+              <label class="form-check-label" for="govServantYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="govServant"
+                id="govServantNo"
+                value="no"
+                formControlName="govServant"
+              />
+              <label class="form-check-label" for="govServantNo">No</label>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label>Educational Qualification</label>
+            <select class="form-control" id="education" formControlName="education">
+              <option value="" disabled selected>Select qualification</option>
+              <option value="7th">7th pass or less</option>
+              <option value="8th9th">Between 8th and 9th Standard</option>
+              <option value="10th">10th pass and above</option>
+              <option value="graduate">Graduate and above</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label>Are you eligible for Non-ECR category?</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="nonECR"
+                id="nonECRYes"
+                value="yes"
+                formControlName="nonECR"
+              />
+              <label class="form-check-label" for="nonECRYes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="nonECR"
+                id="nonECRNo"
+                value="no"
+                formControlName="nonECR"
+              />
+              <label class="form-check-label" for="nonECRNo">No</label>
+            </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="distinguishingMark">Visible Distinguishing Mark</label>
+            <input
+              type="text"
+              class="form-control"
+              id="distinguishingMark"
+              placeholder="Enter distinguishing mark"
+              formControlName="distinguishingMark"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="aadhaar">Aadhaar Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="aadhaar"
+              placeholder="Enter Aadhaar number"
+              formControlName="aadhaar"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-end me-5 mt-5">
+          <button
+            type="button"
+            id="btnNext"
+            class="btn-getstarted"
+            (click)="showNextTab(1)"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="family-details-tab-pane"
+    role="tabpanel"
+    aria-labelledby="family-details-tab"
+    tabindex="0"
+  >
+    <div class="form-section me-5 ms-5 mt-3 p-3 mb-5 border">
+      <h2>Family Details</h2>
+      <hr />
+      <form [formGroup]="familyDetailsForm">
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="fatherName"
+              >Father's Given Name (Given Name means First name followed by
+              Middle name)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fatherName"
+              placeholder="Enter father's given name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="fatherSurname">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="fatherSurname"
+              placeholder="Enter father's surname"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="motherName"
+              >Mother's Given Name (Given Name means First name followed by
+              Middle name)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="motherName"
+              placeholder="Enter mother's given name"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="motherSurname">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="motherSurname"
+              placeholder="Enter mother's surname"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="guardianName"
+              >Legal Guardian's Given Name (If applicable)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="guardianName"
+              placeholder="Enter legal guardian's given name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="guardianSurname">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="guardianSurname"
+              placeholder="Enter legal guardian's surname"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="spouseName"
+              >Spouse's Given Name (Given Name means First name followed by
+              Middle name)</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="spouseName"
+              placeholder="Enter spouse's given name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="spouseSurname">Surname</label>
+            <input
+              type="text"
+              class="form-control"
+              id="spouseSurname"
+              placeholder="Enter spouse's surname"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="fatherPassport"
+              >Father/ Legal Guardian's File/ Passport Number</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fatherPassport"
+              placeholder="Enter father's passport number"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="fatherNationality"
+              >Father/ Legal Guardian's Nationality, if not Indian</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fatherNationality"
+              placeholder="Enter father's nationality"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="form-group col-md-6">
+            <label for="motherPassport"
+              >Mother/ Legal Guardian's File/ Passport Number</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="motherPassport"
+              placeholder="Enter mother's passport number"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="motherNationality"
+              >Mother/ Legal Guardian's Nationality, if not Indian</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="motherNationality"
+              placeholder="Enter mother's nationality"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-6 d-flex justify-content-start mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="application_details.html"
+              >Previous</a
+            > -->
+            <button
+              type="button"
+              id="btnPrev"
+              class="btn-getstarted"
+              (click)="showPreviousTab()"
+            >
+              Previous
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="address_details.html"
+              >Next</a
+            > -->
+            <button
+              type="button"
+              id="btnNext"
+              class="btn-getstarted"
+              (click)="showNextTab(2)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="address-details-tab-pane"
+    role="tabpanel"
+    aria-labelledby="address-details-tab"
+    tabindex="0"
+  >
+    <div class="form-section my-5 me-5 ms-5 mt-3 p-3 mb-5 border">
+      <h2>
+        Present Residential Address Details (Where applicant presently resides)
+      </h2>
+      <hr />
+      <form [formGroup]="addressDetailsForm">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="houseNo" class="form-label"
+              >House No. and Street Name</label
+            >
+            <input type="text" class="form-control" id="houseNo" required />
+          </div>
+          <div class="col-md-6">
+            <label for="village" class="form-label"
+              >Village or Town or City</label
+            >
+            <input type="text" class="form-control" id="village" required />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="district" class="form-label">District</label>
+            <input type="text" class="form-control" id="district" required />
+          </div>
+          <div class="col-md-6">
+            <label for="policeStation" class="form-label">Police Station</label>
+            <input
+              type="text"
+              class="form-control"
+              id="policeStation"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="state" class="form-label">State/ UT</label>
+            <input type="text" class="form-control" id="state" required />
+          </div>
+          <div class="col-md-6">
+            <label for="pin" class="form-label">PIN</label>
+            <input type="text" class="form-control" id="pin" required />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="mobile" class="form-label">Mobile Number</label>
+            <input type="text" class="form-control" id="mobile" required />
+          </div>
+          <div class="col-md-6">
+            <label for="telephone" class="form-label">Telephone Number</label>
+            <input type="text" class="form-control" id="telephone" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="email" class="form-label">E-mail ID</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label>Is permanent address same as present address?</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="sameAddress"
+              id="sameAddressYes"
+              value="yes"
+              checked
+            />
+            <label class="form-check-label" for="sameAddressYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="sameAddress"
+              id="sameAddressNo"
+              value="no"
+            />
+            <label class="form-check-label" for="sameAddressNo">No</label>
+          </div>
+        </div>
+        <div id="permanentAddress" class="hidden">
+          <h3>Permanent Address Details</h3>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="permanentHouseNo" class="form-label"
+                >House No. and Street Name</label
+              >
+              <input type="text" class="form-control" id="permanentHouseNo" />
+            </div>
+            <div class="col-md-6">
+              <label for="permanentVillage" class="form-label"
+                >Village or Town or City</label
+              >
+              <input type="text" class="form-control" id="permanentVillage" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="permanentDistrict" class="form-label">District</label>
+              <input type="text" class="form-control" id="permanentDistrict" />
+            </div>
+            <div class="col-md-6">
+              <label for="permanentPoliceStation" class="form-label"
+                >Police Station</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="permanentPoliceStation"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="permanentState" class="form-label">State/ UT</label>
+              <input type="text" class="form-control" id="permanentState" />
+            </div>
+            <div class="col-md-6">
+              <label for="permanentPin" class="form-label">PIN</label>
+              <input type="text" class="form-control" id="permanentPin" />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 d-flex justify-content-start mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="family_details.html"
+              >Previous</a
+            > -->
+            <button
+              type="button"
+              id="btnPrev"
+              class="btn-getstarted"
+              (click)="showPreviousTab()"
+            >
+              Previous
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end mt-5">
+            <!-- <a
+              class="login-btn btn-getstarted"
+              href="emergency_contact_details.html"
+              >Next</a
+            > -->
+            <button
+              type="button"
+              id="btnNext"
+              class="btn-getstarted"
+              (click)="showNextTab(2)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="emergency-contact-details-tab-pane"
+    role="tabpanel"
+    aria-labelledby="emergency-contact-details-tab"
+    tabindex="0"
+  >
+    <div
+      class="form-section my-5 me-5 ms-5 mt-3 p-3 mb-5 border"
+      [formGroup]="emergencyContactDetailsForm"
+    >
+      <h2>Emergency Contact Details</h2>
+      <hr />
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="emergencyName" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="emergencyName"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="emergencyAddress" class="form-label"
+              >Address (Mention address only if different from present
+              residential address)</label
+            >
+            <input type="text" class="form-control" id="emergencyAddress" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="emergencyMobile" class="form-label"
+              >Mobile Number</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="emergencyMobile"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="emergencyTelephone" class="form-label"
+              >Telephone Number</label
+            >
+            <input type="text" class="form-control" id="emergencyTelephone" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="emergencyEmail" class="form-label">E-mail ID</label>
+            <input
+              type="email"
+              class="form-control"
+              id="emergencyEmail"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 d-flex justify-content-start mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="address_details.html"
+              >Previous</a
+            > -->
+            <button
+              type="button"
+              id="btnPrev"
+              class="btn-getstarted"
+              (click)="showPreviousTab()"
+            >
+              Previous
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="other_details.html"
+              >Next</a
+            > -->
+            <button
+              type="button"
+              id="btnNext"
+              class="btn-getstarted"
+              (click)="showNextTab(2)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="other-details-tab-pane"
+    role="tabpanel"
+    aria-labelledby="other-details-tab"
+    tabindex="0"
+  >
+    <div
+      class="form-section me-5 ms-5 mt-3 p-3 mb-5 border"
+      [formGroup]="otherDetailsForm"
+    >
+      <h2>Other Details</h2>
+      <hr />
+      <form>
+        <div class="row mb-3">
+          <h5>
+            Provide the following details if there are any criminal proceedings
+            pending against the applicant.
+          </h5>
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Are any proceedings in respect of an offence alleged to have
+                been committed by you pending before a criminal court in
+                India?</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Has any warrant or summons for your appearance been issued &
+                pending before a court under any law for the time being in
+                force? If yes, fill Column 6.2 of Supplementary Form</label
+              >
+            </div>
+
+            <!-- Add similar structure for other questions -->
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Has a warrant for your arrest been issued by a court under any
+                law for the time being in force? If yes, fill Column 6.3 of
+                Supplementary Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Has an order prohibiting your departure from India been made by
+                any court? If yes, fill Column 6.4 of Supplementary Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <h5>
+            Provide the following details if applicant has applied for or been
+            granted foreign citizenship.
+          </h5>
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Have you ever been granted citizenship by any other
+                region/country? If yes, fill Column 6.9 of Supplementary
+                Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Have you ever held the passport of any other region/country at
+                any time? If yes, fill Column 6.10 of Supplementary Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Have you ever surrendered your Indian passport? If yes, fill
+                Column 6.11 of Supplementary Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-10">
+            <div class="form-group">
+              <label
+                >Have you ever applied for renunciation of Indian citizenship?
+                If yes, fill Column 6.12 of Supplementary Form</label
+              >
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="row align-items-center">
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingYes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingYes"
+                    >Yes</label
+                  >
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="proceedingsPending"
+                    id="proceedingsPendingNo"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="proceedingsPendingNo"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-6 d-flex justify-content-start mt-5">
+            <!-- <a
+              class="login-btn btn-getstarted"
+              href="emergency_contact_details.html"
+              >Previous</a
+            > -->
+            <button
+              type="button"
+              id="btnPrev"
+              class="btn-getstarted"
+              (click)="showPreviousTab()"
+            >
+              Previous
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end mt-5">
+            <!-- <a class="login-btn btn-getstarted" href="payment_page.html"
+              >Next</a
+            > -->
+            <button
+              type="button"
+              id="btnNext"
+              class="btn-getstarted"
+              (click)="showNextTab(2)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade"
+    id="payment-tab-pane"
+    role="tabpanel"
+    aria-labelledby="payment-tab"
+    tabindex="0"
+  >
+    <div class="container me-5 ms-5 mt-3 p-3 mb-5 border">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card shadow">
+            <div class="card-header text-center">
+              <h4>Passport Payment</h4>
+            </div>
+            <div class="card-body text-center">
+              <h5>Select Payment Method</h5>
+              <button
+                type="button"
+                class="btn login-btn btn-getstarted btn-block mt-3"
+                data-toggle="modal"
+                data-target="#upiModal"
+              >
+                UPI
+              </button>
+
+              <button
+                type="button"
+                class="btn login-btn btn-getstarted btn-block mt-3"
+                data-toggle="modal"
+                data-target="#debitCardModal"
+              >
+                Debit Card
+              </button>
+              <button
+                type="button"
+                class="btn login-btn btn-getstarted btn-block mt-3"
+                data-toggle="modal"
+                data-target="#creditCardModal"
+              >
+                Credit Card
+              </button>
+              <button
+                type="button"
+                class="btn login-btn btn-getstarted btn-block mt-3"
+                data-toggle="modal"
+                data-target="#netBankingModal"
+              >
+                Net Banking
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="tab-pane fade show"
+    id="declaration-tab-pane"
+    role="tabpanel"
+    aria-labelledby="declaration-tab"
+    tabindex="0"
+  >
+    <div class="form-section me-5 ms-5 mt-3 p-3 mb-5 border">
+      <h2>Self Declaration</h2>
+      <hr />
+      <form [formGroup]="declarationForm">
+        <div class="row">
+          <div class="col-md-12">
+            <p>
+              I owe allegiance to the sovereignty, unity & integrity of India,
+              and have not voluntarily acquired citizenship or travel document
+              of any other country. I have not lost, surrendered or been
+              deprived of the citizenship of India. I have not contravened any
+              of the conditions relating to the possession and use of an Indian
+              passport.
+            </p>
+            <p>
+              I affirm that the information and particulars given by me in this
+              form are true and correct. I further state that I am not
+              suppressing any material information in this regard. I further
+              affirm that the enclosures and documentary proof submitted in
+              support of my application for an Indian passport are authentic and
+              solely pertain to me and I am fully responsible for the accuracy
+              of the same. I am liable to be penalized or prosecuted if found
+              otherwise. I am aware that under the Passports Act, 1967 it is a
+              criminal offence to furnish any false information or to suppress
+              any material information with a view to obtaining passport or
+              travel document.
+            </p>
+            <p>
+              I have read and understood the contents of the above and by
+              submitting this form certify that all the information submitted by
+              me in the form is bonafide.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="date">Date (DD-MM-YYYY)</label>
+              <input type="date" class="form-control" id="date" />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="signature">Signature/Upload Picture</label>
+              <input type="file" class="form-control-file" id="signature" />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="place">Place:</label>
+          <input type="text" class="form-control" id="place" />
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="acceptTerms" />
+          <label class="form-check-label" for="acceptTerms"
+            >I accept all the terms and conditions</label
+          >
+        </div>
+        <div class="d-flex justify-content-center me-5 mt-5">
+          <button
+            type="submit"
+            class="login-btn btn-getstarted mt-3"
+            data-toggle="modal"
+            data-target="#successModal"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

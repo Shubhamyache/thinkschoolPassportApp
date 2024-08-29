@@ -653,49 +653,6 @@ namespace PassportApplicationWebApi.Migrations
                     b.ToTable("Feedbacks");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.NewPassportApplication", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ApplicantDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ApplicationNumber")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("DocumentsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EmergencyContactDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FamilyDetailsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressDetailsId");
-
-                    b.HasIndex("ApplicantDetailsId");
-
-                    b.HasIndex("DocumentsId");
-
-                    b.HasIndex("EmergencyContactDetailsId");
-
-                    b.HasIndex("FamilyDetailsId");
-
-                    b.ToTable("PassportApplications");
-                });
-
             modelBuilder.Entity("PassportApplicationWebApi.Models.Passport", b =>
                 {
                     b.Property<int>("PassportId")
@@ -744,6 +701,78 @@ namespace PassportApplicationWebApi.Migrations
                     b.HasKey("PassportId");
 
                     b.ToTable("Passports");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AddressDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApplicantDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ApplicationNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ChangesInExistingDetails")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DocumentsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmergencyContactDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FamilyDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRenewalApplication")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PassportNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PaymentDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PreviousPassportDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReIssueReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RejectedMessage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("validityInYears")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressDetailsId");
+
+                    b.HasIndex("ApplicantDetailsId");
+
+                    b.HasIndex("DocumentsId");
+
+                    b.HasIndex("EmergencyContactDetailsId");
+
+                    b.HasIndex("FamilyDetailsId");
+
+                    b.HasIndex("PaymentDetailsId")
+                        .IsUnique();
+
+                    b.HasIndex("PreviousPassportDetailsId");
+
+                    b.ToTable("PassportApplications");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
@@ -795,60 +824,12 @@ namespace PassportApplicationWebApi.Migrations
                     b.ToTable("PaymentDetails");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.RenewalPassportApplication", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("AddressDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ApplicantDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ApplicationNumber")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("DocumentsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EmergencyContactDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("FamilyDetailsId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PreviousPassportDetailsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AddressDetailsId");
-
-                    b.HasIndex("ApplicantDetailsId");
-
-                    b.HasIndex("DocumentsId");
-
-                    b.HasIndex("EmergencyContactDetailsId");
-
-                    b.HasIndex("FamilyDetailsId");
-
-                    b.HasIndex("PreviousPassportDetailsId");
-
-                    b.ToTable("RenewalPassportApplications");
-                });
-
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("ApplicationId")
+                    b.Property<int?>("ApplicationNumber")
                         .HasColumnType("int");
 
                     b.Property<int?>("ApplicationStatus")
@@ -868,10 +849,7 @@ namespace PassportApplicationWebApi.Migrations
                         .HasMaxLength(55)
                         .HasColumnType("nvarchar(55)");
 
-                    b.Property<int>("NewPassportApplicationId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NewRenewalApplicationId")
+                    b.Property<int>("PassportApplicationId")
                         .HasColumnType("int");
 
                     b.Property<int?>("PassportId")
@@ -887,22 +865,12 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("RenewalApplicationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RenewalApplicationStatus")
-                        .HasColumnType("int");
-
                     b.HasKey("UserId");
 
-                    b.HasIndex("NewPassportApplicationId")
+                    b.HasIndex("PassportApplicationId")
                         .IsUnique();
 
                     b.HasIndex("PassportId");
-
-                    b.HasIndex("RenewalApplicationId")
-                        .IsUnique()
-                        .HasFilter("[RenewalApplicationId] IS NOT NULL");
 
                     b.ToTable("Users");
                 });
@@ -980,7 +948,7 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.NewPassportApplication", b =>
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
                 {
                     b.HasOne("PassportApplicationWebApi.Models.AddressDetails", "AddressDetails")
                         .WithMany()
@@ -1012,6 +980,16 @@ namespace PassportApplicationWebApi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PassportApplicationWebApi.Models.PaymentDetails", "PaymentDetails")
+                        .WithOne("PassportApplication")
+                        .HasForeignKey("PassportApplicationWebApi.Models.PassportApplication", "PaymentDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PassportApplicationWebApi.Models.Passport", "PreviousPassportDetails")
+                        .WithMany()
+                        .HasForeignKey("PreviousPassportDetailsId");
+
                     b.Navigation("AddressDetails");
 
                     b.Navigation("ApplicantDetails");
@@ -1021,12 +999,16 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("EmergencyContactDetails");
 
                     b.Navigation("FamilyDetails");
+
+                    b.Navigation("PaymentDetails");
+
+                    b.Navigation("PreviousPassportDetails");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
                 {
                     b.HasOne("PassportApplicationWebApi.Models.User", "User")
-                        .WithMany()
+                        .WithMany("PaymentDetails")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1034,62 +1016,11 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.RenewalPassportApplication", b =>
-                {
-                    b.HasOne("PassportApplicationWebApi.Models.AddressDetails", "AddressDetails")
-                        .WithMany()
-                        .HasForeignKey("AddressDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PassportApplicationWebApi.Models.ApplicantDetails", "ApplicantDetails")
-                        .WithMany()
-                        .HasForeignKey("ApplicantDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PassportApplicationWebApi.Models.Documents", "Documents")
-                        .WithMany()
-                        .HasForeignKey("DocumentsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PassportApplicationWebApi.Models.EmergencyContactDetails", "EmergencyContactDetails")
-                        .WithMany()
-                        .HasForeignKey("EmergencyContactDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PassportApplicationWebApi.Models.FamilyDetails", "FamilyDetails")
-                        .WithMany()
-                        .HasForeignKey("FamilyDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PassportApplicationWebApi.Models.Passport", "PreviousPassportDetails")
-                        .WithMany()
-                        .HasForeignKey("PreviousPassportDetailsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AddressDetails");
-
-                    b.Navigation("ApplicantDetails");
-
-                    b.Navigation("Documents");
-
-                    b.Navigation("EmergencyContactDetails");
-
-                    b.Navigation("FamilyDetails");
-
-                    b.Navigation("PreviousPassportDetails");
-                });
-
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
                 {
-                    b.HasOne("PassportApplicationWebApi.Models.NewPassportApplication", "NewPassportApplication")
+                    b.HasOne("PassportApplicationWebApi.Models.PassportApplication", "PassportApplication")
                         .WithOne("User")
-                        .HasForeignKey("PassportApplicationWebApi.Models.User", "NewPassportApplicationId")
+                        .HasForeignKey("PassportApplicationWebApi.Models.User", "PassportApplicationId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
@@ -1097,11 +1028,6 @@ namespace PassportApplicationWebApi.Migrations
                         .WithMany()
                         .HasForeignKey("PassportId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("PassportApplicationWebApi.Models.RenewalPassportApplication", "NewRenewalApplication")
-                        .WithOne("User")
-                        .HasForeignKey("PassportApplicationWebApi.Models.User", "RenewalApplicationId")
-                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("PassportApplicationWebApi.Models.ApplicationUser", "AppUser")
                         .WithOne("User")
@@ -1111,11 +1037,9 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Navigation("AppUser");
 
-                    b.Navigation("NewPassportApplication");
-
-                    b.Navigation("NewRenewalApplication");
-
                     b.Navigation("Passport");
+
+                    b.Navigation("PassportApplication");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.ApplicationUser", b =>
@@ -1123,15 +1047,14 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.NewPassportApplication", b =>
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
                 {
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("PassportApplicationWebApi.Models.RenewalPassportApplication", b =>
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
                 {
-                    b.Navigation("User")
-                        .IsRequired();
+                    b.Navigation("PassportApplication");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
@@ -1139,6 +1062,8 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("Complaints");
 
                     b.Navigation("Feedbacks");
+
+                    b.Navigation("PaymentDetails");
                 });
 #pragma warning restore 612, 618
         }

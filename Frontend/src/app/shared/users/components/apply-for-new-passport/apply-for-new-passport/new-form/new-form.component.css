@@ -1,0 +1,29 @@
+.form-body {
+  min-height: 100vh;
+}
+.form-group {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
+.tab-content {
+  background-color: white;
+  min-height: 100vh;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color:#2487ce;
+  border-bottom: 0;
+}
+
+.nav-link{
+  color: black;
+}
+
+.btn-custom {
+  margin-top: 20px;
+}
