@@ -21,6 +21,7 @@ builder.Services.AddDbContext<PassportContext>(options =>
 builder.Services.AddScoped<JwtTokenHelper>();
 
 builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IRepository<Complaint>, Repository<Complaint>>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>

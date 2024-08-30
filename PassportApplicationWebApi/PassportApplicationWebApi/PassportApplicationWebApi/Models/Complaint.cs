@@ -21,6 +21,7 @@ namespace PassportApplicationWebApi.Models
         [StringLength(500)]
         public string ComplaintDetails { get; set; } = string.Empty;
         [Required]
+        [Range(0,1)]
         public ComplaintStatus ComplaintStatus { get; set; }
     }
 
