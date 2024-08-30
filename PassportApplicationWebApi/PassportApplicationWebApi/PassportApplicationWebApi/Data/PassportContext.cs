@@ -32,7 +32,8 @@ namespace PassportApplicationWebApi.Data
             builder.Entity<ApplicationUser>()
                 .HasOne(a => a.User)
                 .WithOne(u => u.AppUser)
-                .HasForeignKey<User>(u => u.UserId);
+                .HasForeignKey<User>(u => u.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Configure the relationship between User and Passport
             builder.Entity<User>()

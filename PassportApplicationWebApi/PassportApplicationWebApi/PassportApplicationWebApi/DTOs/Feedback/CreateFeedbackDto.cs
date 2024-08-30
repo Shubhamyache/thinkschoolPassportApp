@@ -20,4 +20,4 @@ namespace PassportApplicationWebApi.DTOs.Feedback
         public string FeedbackDetails { get; set; } = string.Empty;
     }
 }
-}
+

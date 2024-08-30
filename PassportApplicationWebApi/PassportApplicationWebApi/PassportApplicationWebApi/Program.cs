@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.HelperClass;
+using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
+using PassportApplicationWebApi.Repositories;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program));
@@ -19,6 +19,9 @@ builder.Services.AddDbContext<PassportContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<JwtTokenHelper>();
+
+builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

@@ -19,14 +19,9 @@ namespace PassportApplicationWebApi.Repositories
             return entity;
         }
 
-        public async Task<TEntity?> DeleteAsync(int id)
+        public async Task<TEntity?> DeleteAsync(TEntity entity)
         {
-            var entity = await GetByIdAsync(id);
-            if (entity == null)
-            {
-                return null;
-            }
-
+           if(entity == null) return null;
             _context.Set<TEntity>().Remove(entity);
             await _context.SaveChangesAsync();
             return entity;
@@ -43,11 +38,22 @@ namespace PassportApplicationWebApi.Repositories
             return await _context.Set<TEntity>().FindAsync(id);
         }
 
+
+
         public async Task<TEntity?> UpdateAsync(TEntity entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Set<TEntity>().Update(entity);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw new Exception("The entity has been modified or deleted by another process.");
+            }
+
             return entity;
         }
+
     }
 }

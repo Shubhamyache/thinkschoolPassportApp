@@ -6,9 +6,6 @@ namespace PassportApplicationWebApi.DTOs.User
 {
     public class UserDto
     {
-        [Key]
-        public string UserId { get; set; } = string.Empty;
-
         [Required]
         [StringLength(55, MinimumLength = 2)]
         public string FirstName { get; set; } = string.Empty;
