@@ -698,6 +698,9 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PassportStatus")
+                        .HasColumnType("int");
+
                     b.HasKey("PassportId");
 
                     b.ToTable("Passports");
@@ -721,6 +724,9 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("ApplicationStatus")
+                        .HasColumnType("int");
 
                     b.Property<string>("ChangesInExistingDetails")
                         .HasColumnType("nvarchar(max)");
@@ -752,6 +758,10 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("RejectedMessage")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("validityInYears")
                         .HasColumnType("int");
 
@@ -771,6 +781,8 @@ namespace PassportApplicationWebApi.Migrations
                         .IsUnique();
 
                     b.HasIndex("PreviousPassportDetailsId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("PassportApplications");
                 });
@@ -832,9 +844,6 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<int?>("ApplicationNumber")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ApplicationStatus")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -849,26 +858,17 @@ namespace PassportApplicationWebApi.Migrations
                         .HasMaxLength(55)
                         .HasColumnType("nvarchar(55)");
 
-                    b.Property<int>("PassportApplicationId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("PassportId")
                         .HasColumnType("int");
 
                     b.Property<string>("PassportNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PassportStatus")
-                        .HasColumnType("int");
-
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId");
-
-                    b.HasIndex("PassportApplicationId")
-                        .IsUnique();
 
                     b.HasIndex("PassportId");
 
@@ -990,6 +990,12 @@ namespace PassportApplicationWebApi.Migrations
                         .WithMany()
                         .HasForeignKey("PreviousPassportDetailsId");
 
+                    b.HasOne("PassportApplicationWebApi.Models.User", "User")
+                        .WithMany("PassportApplications")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
                     b.Navigation("AddressDetails");
 
                     b.Navigation("ApplicantDetails");
@@ -1003,6 +1009,8 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("PaymentDetails");
 
                     b.Navigation("PreviousPassportDetails");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
@@ -1018,12 +1026,6 @@ namespace PassportApplicationWebApi.Migrations
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
                 {
-                    b.HasOne("PassportApplicationWebApi.Models.PassportApplication", "PassportApplication")
-                        .WithOne("User")
-                        .HasForeignKey("PassportApplicationWebApi.Models.User", "PassportApplicationId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
                     b.HasOne("PassportApplicationWebApi.Models.Passport", "Passport")
                         .WithMany()
                         .HasForeignKey("PassportId")
@@ -1038,16 +1040,9 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("AppUser");
 
                     b.Navigation("Passport");
-
-                    b.Navigation("PassportApplication");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.ApplicationUser", b =>
-                {
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
                 {
                     b.Navigation("User");
                 });
@@ -1062,6 +1057,8 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("Complaints");
 
                     b.Navigation("Feedbacks");
+
+                    b.Navigation("PassportApplications");
 
                     b.Navigation("PaymentDetails");
                 });

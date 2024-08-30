@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PassportApplicationWebApi.DTOs.ApplicantDetailsDto
+namespace PassportApplicationWebApi.DTOs.ApplicantDetails
 {
     public class ApplicantDetailsDto
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -26,8 +27,7 @@ namespace PassportApplicationWebApi.DTOs.ApplicantDetailsDto
         public string PreviousName { get; set; } = String.Empty;
 
         [Required]
-        [DataType(DataType.Date)]
-        public DateOnly DOB { get; set; }
+        public DateTime DOB { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -83,3 +83,4 @@ namespace PassportApplicationWebApi.DTOs.ApplicantDetailsDto
         public string Aadhaar { get; set; } = String.Empty;
     }
 }
+

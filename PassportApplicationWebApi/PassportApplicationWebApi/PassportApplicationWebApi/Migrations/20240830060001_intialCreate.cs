@@ -6,13 +6,21 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PassportApplicationWebApi.Migrations
 {
     /// <inheritdoc />
-    public partial class initialCreate : Migration
+    public partial class intialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
                 name: "ApplicationId",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "ApplicationStatus",
+                table: "Users");
+
+            migrationBuilder.DropColumn(
+                name: "PassportStatus",
                 table: "Users");
 
             migrationBuilder.DropColumn(
@@ -25,8 +33,8 @@ namespace PassportApplicationWebApi.Migrations
                 newName: "ApplicationNumber");
 
             migrationBuilder.AddColumn<int>(
-                name: "PassportApplicationId",
-                table: "Users",
+                name: "PassportStatus",
+                table: "Passports",
                 type: "int",
                 nullable: false,
                 defaultValue: 0);
@@ -198,9 +206,11 @@ namespace PassportApplicationWebApi.Migrations
                     EmergencyContactDetailsId = table.Column<int>(type: "int", nullable: false),
                     PreviousPassportDetailsId = table.Column<int>(type: "int", nullable: true),
                     DocumentsId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     PaymentDetailsId = table.Column<int>(type: "int", nullable: false),
                     IsRenewalApplication = table.Column<bool>(type: "bit", nullable: false),
-                    RejectedMessage = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    RejectedMessage = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ApplicationStatus = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -246,13 +256,12 @@ namespace PassportApplicationWebApi.Migrations
                         principalTable: "PaymentDetails",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_PassportApplications_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId");
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Users_PassportApplicationId",
-                table: "Users",
-                column: "PassportApplicationId",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_PassportApplications_AddressDetailsId",
@@ -291,25 +300,19 @@ namespace PassportApplicationWebApi.Migrations
                 column: "PreviousPassportDetailsId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PassportApplications_UserId",
+                table: "PassportApplications",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PaymentDetails_UserId",
                 table: "PaymentDetails",
                 column: "UserId");
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_Users_PassportApplications_PassportApplicationId",
-                table: "Users",
-                column: "PassportApplicationId",
-                principalTable: "PassportApplications",
-                principalColumn: "Id");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_Users_PassportApplications_PassportApplicationId",
-                table: "Users");
-
             migrationBuilder.DropTable(
                 name: "PassportApplications");
 
@@ -331,13 +334,9 @@ namespace PassportApplicationWebApi.Migrations
             migrationBuilder.DropTable(
                 name: "PaymentDetails");
 
-            migrationBuilder.DropIndex(
-                name: "IX_Users_PassportApplicationId",
-                table: "Users");
-
             migrationBuilder.DropColumn(
-                name: "PassportApplicationId",
-                table: "Users");
+                name: "PassportStatus",
+                table: "Passports");
 
             migrationBuilder.RenameColumn(
                 name: "ApplicationNumber",
@@ -346,6 +345,18 @@ namespace PassportApplicationWebApi.Migrations
 
             migrationBuilder.AddColumn<int>(
                 name: "ApplicationId",
+                table: "Users",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.AddColumn<int>(
+                name: "ApplicationStatus",
+                table: "Users",
+                type: "int",
+                nullable: true);
+
+            migrationBuilder.AddColumn<int>(
+                name: "PassportStatus",
                 table: "Users",
                 type: "int",
                 nullable: true);

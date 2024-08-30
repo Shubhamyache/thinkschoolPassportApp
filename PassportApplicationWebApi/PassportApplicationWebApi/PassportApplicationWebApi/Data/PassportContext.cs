@@ -52,16 +52,12 @@ namespace PassportApplicationWebApi.Data
                 .WithOne(c => c.User)
                 .HasForeignKey(c => c.UserId);
 
-
-
             builder.Entity<User>()
-               .HasOne(u => u.PassportApplication)
-               .WithOne(r => r.User)
-               .HasForeignKey<User>(u => u.PassportApplicationId)
-               .OnDelete(DeleteBehavior.NoAction);
+                .HasMany(u => u.PassportApplications)
+                .WithOne(c => c.User)
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
 
     }
-
-
 }

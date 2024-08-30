@@ -64,7 +64,5 @@ namespace PassportApplicationWebApi.Models
         [StringLength(15)]
         [Phone]
         public string PermanentTelephoneNumber { get; set; } = string.Empty;
-
-        public bool IsAddressDetailsValid { get; set; }
     }
 }
