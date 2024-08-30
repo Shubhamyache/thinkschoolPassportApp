@@ -1,10 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mappers\**" />
+    <Compile Remove="Services\**" />
+    <Content Remove="Mappers\**" />
+    <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Mappers\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Mappers\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
@@ -17,11 +28,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Mappers\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
