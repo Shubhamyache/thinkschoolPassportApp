@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831082317_addedSomeFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PassportApplicationWebApi\\Migrations\\20240831082317_addedSomeFields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831082317_addedsomefields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831082317_addedsomefields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\passportapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -282,8 +282,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\Complaint.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAwwAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:43:20.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:43:20.004Z"
             },
             {
               "$type": "Document",
@@ -295,8 +294,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAYwCQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T11:57:38.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T11:57:38.389Z"
             },
             {
               "$type": "Document",
@@ -308,8 +306,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwHEAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:07:18.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:07:18.193Z"
             },
             {
               "$type": "Document",
@@ -321,8 +318,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Data\\PassportContext.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAgwCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T05:43:17.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T05:43:17.453Z"
             },
             {
               "$type": "Document",
@@ -334,8 +330,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
               "ViewState": "AQIAACUAAAAAAAAAAAAwwDEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:36:00.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:36:00.534Z"
             },
             {
               "$type": "Document",
@@ -347,8 +342,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\PassportApplication.cs",
               "ViewState": "AQIAACMAAAAAAAAAAAAIwDUAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:08:19.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T13:08:19.137Z"
             },
             {
               "$type": "Document",
@@ -360,8 +354,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:02.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:39:02.597Z"
             },
             {
               "$type": "Document",
@@ -373,8 +366,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAQwBcAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:06.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:39:06.868Z"
             },
             {
               "$type": "Document",
@@ -386,8 +378,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\Feedback.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAmwA0AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:43:34.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:43:34.505Z"
             },
             {
               "$type": "Document",
@@ -399,8 +390,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
               "ViewState": "AQIAADcAAAAAAAAAAAA5wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T11:14:17.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T11:14:17.117Z"
             },
             {
               "$type": "Document",
@@ -412,8 +402,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:37:15.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:37:15.68Z"
             },
             {
               "$type": "Document",
@@ -425,8 +414,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwAcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:37:10.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:37:10.876Z"
             },
             {
               "$type": "Document",
@@ -438,8 +426,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T05:24:01.649Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T05:24:01.649Z"
             },
             {
               "$type": "Document",
@@ -451,8 +438,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\User.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAgwAUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T10:41:30.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T10:41:30.114Z"
             },
             {
               "$type": "Document",
@@ -464,8 +450,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Passport\\CreatePassportDto.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAswAIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:36:39.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:36:39.897Z"
             },
             {
               "$type": "Document",
