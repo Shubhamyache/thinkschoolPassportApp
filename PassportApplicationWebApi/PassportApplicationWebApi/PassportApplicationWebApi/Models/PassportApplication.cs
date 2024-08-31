@@ -51,7 +51,7 @@ namespace PassportApplicationWebApi.Models
         public Passport? PreviousPassportDetails { get; set; }
 
         [Required]
-        public int DocumentsId { get; set; }
+        public int? DocumentsId { get; set; }
 
         [ForeignKey("DocumentsId")]
         public Documents? Documents { get; set; }

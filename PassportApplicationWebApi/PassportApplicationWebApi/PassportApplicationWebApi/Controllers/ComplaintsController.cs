@@ -29,6 +29,12 @@ namespace PassportApplicationWebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateComplaint(CreateComplaintDto complaintDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
+
             var complaint = _mapper.Map<Complaint>(complaintDto);
             var result = await _repo.AddAsync(complaint);
             return Ok(_mapper.Map<ComplaintDto>(result));

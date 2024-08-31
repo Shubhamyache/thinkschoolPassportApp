@@ -46,7 +46,8 @@ namespace PassportApplicationWebApi.DTOs.PassportApplication
         
 
         [Required]
-        public int DocumentsId { get; set; }
+        public int? DocumentsId { get; set; }
+        
 
         
 

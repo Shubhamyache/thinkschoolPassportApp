@@ -9,7 +9,8 @@ namespace PassportApplicationWebApi.Models
         public int Id { get; set; }
         [Required]
         [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
-        public string PassportNumber { get; set; } = string.Empty;
+        public string PassportNumberorApplicationNuber { get; set; } = string.Empty;
+
         [Required]
         public string UserId { get; set; }
         [ForeignKey("UserId")]

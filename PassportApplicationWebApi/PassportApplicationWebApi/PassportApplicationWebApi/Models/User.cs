@@ -33,7 +33,6 @@ namespace PassportApplicationWebApi.Models
         [ForeignKey("PassportId")]
         public Passport? Passport { get; set; }
         public ICollection<PassportApplication> PassportApplications { get; set; } = new List<PassportApplication>();
-        public ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
         public ICollection<Complaint> Complaints { get; set; } = new List<Complaint>();
         public ICollection<PaymentDetails> PaymentDetails { get; set; } = new List<PaymentDetails>();
         public ApplicationUser? AppUser { get; set; }
