@@ -4,7 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.HelperClass;
+using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
+using PassportApplicationWebApi.Repositories;
+using PassportApplicationWebApi.UnitOfWork;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -35,14 +38,15 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
+   
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings.GetSection("validIssuer").Value,
-        ValidAudience = jwtSettings.GetSection("validAudience").Value,
+        ValidIssuer = jwtSettings.GetSection("Issuer").Value,
+        ValidAudience = jwtSettings.GetSection("Audience").Value,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:SecretKey"]))
     };
 });
@@ -92,6 +96,12 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
 });
 
+
+
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddAutoMapper(typeof(Program));
 
 // Add services to the container.
 builder.Services.AddControllers();

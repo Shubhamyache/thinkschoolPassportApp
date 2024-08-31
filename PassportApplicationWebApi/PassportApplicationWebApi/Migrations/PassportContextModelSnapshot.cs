@@ -155,6 +155,227 @@ namespace PassportApplicationWebApi.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("PassportApplicationWebApi.Models.AddressDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("PermanentDistrict")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PermanentHouseStreet")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PermanentMobileNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("PermanentPin")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("PermanentPoliceStation")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PermanentState")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PermanentTelephoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("PermanentTown")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Pincode")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PresentDistrict")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PresentHouseStreet")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PresentPoliceStation")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PresentState")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("PresentTown")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("SameAddress")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TelephoneNumber")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AddressDetails");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.ApplicantDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Aadhaar")
+                        .IsRequired()
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)");
+
+                    b.Property<string>("Alias")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("ChangedName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Citizenship")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DistinguishingMark")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("District")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Education")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("EmploymentType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("GivenName")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("KnownByOtherNames")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("MaritalStatus")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<bool>("NonECR")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("OrganizationName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PanNumber")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<bool>("ParentSpouseGovernmentServant")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PlaceOfBirth")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PreviousName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("RegionCountry")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("VoterId")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ApplicantsDetails");
+                });
+
             modelBuilder.Entity("PassportApplicationWebApi.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -256,6 +477,148 @@ namespace PassportApplicationWebApi.Migrations
                     b.ToTable("Complaints");
                 });
 
+            modelBuilder.Entity("PassportApplicationWebApi.Models.Documents", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AddressProof")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("AgeProof")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("IdentityProof")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PassportPhoto")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Documents");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.EmergencyContactDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EmergencyContactEmail")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("EmergencyContactMobile")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("EmergencyContactName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("EmergencyContactTelephone")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EmergencyContactDetails");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.FamilyDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("ApplicantMinor")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FatherGivenName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("FatherNationality")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("FatherPassportNumber")
+                        .IsRequired()
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
+
+                    b.Property<string>("FatherSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LegalGuardianGivenName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("LegalGuardianSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MotherGivenName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MotherNationality")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("MotherPassportNumber")
+                        .IsRequired()
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
+
+                    b.Property<string>("MotherSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("SpouseGivenName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("SpouseSurname")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FamilyDetails");
+                });
+
             modelBuilder.Entity("PassportApplicationWebApi.Models.Feedback", b =>
                 {
                     b.Property<int>("FeedbackId")
@@ -308,7 +671,6 @@ namespace PassportApplicationWebApi.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DateOfIssue")
-                        .HasMaxLength(55)
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("ExpiryDate")
@@ -332,9 +694,143 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("PassportStatus")
+                        .HasColumnType("int");
+
                     b.HasKey("PassportId");
 
                     b.ToTable("Passports");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AddressDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApplicantDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ApplicationNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("ApplicationStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChangesInExistingDetails")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("DocumentsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmergencyContactDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FamilyDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRenewalApplication")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PassportNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PaymentDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PreviousPassportDetailsId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReIssueReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RejectedMessage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("validityInYears")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressDetailsId");
+
+                    b.HasIndex("ApplicantDetailsId");
+
+                    b.HasIndex("DocumentsId");
+
+                    b.HasIndex("EmergencyContactDetailsId");
+
+                    b.HasIndex("FamilyDetailsId");
+
+                    b.HasIndex("PaymentDetailsId")
+                        .IsUnique()
+                        .HasFilter("[PaymentDetailsId] IS NOT NULL");
+
+                    b.HasIndex("PreviousPassportDetailsId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PassportApplications");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("Decimal(10,2)");
+
+                    b.Property<int>("ApplicationId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApplicationType")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentDetail")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int>("PaymentStatus")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TransactionNumber")
+                        .HasMaxLength(50)
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PaymentDetails");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
@@ -342,10 +838,7 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("ApplicationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ApplicationStatus")
+                    b.Property<int?>("ApplicationNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -368,18 +861,9 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("PassportNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PassportStatus")
-                        .HasColumnType("int");
-
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("RenewalApplicationId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RenewalApplicationStatus")
-                        .HasColumnType("int");
 
                     b.HasKey("UserId");
 
@@ -461,6 +945,78 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
+                {
+                    b.HasOne("PassportApplicationWebApi.Models.AddressDetails", "AddressDetails")
+                        .WithMany()
+                        .HasForeignKey("AddressDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PassportApplicationWebApi.Models.ApplicantDetails", "ApplicantDetails")
+                        .WithMany()
+                        .HasForeignKey("ApplicantDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PassportApplicationWebApi.Models.Documents", "Documents")
+                        .WithMany()
+                        .HasForeignKey("DocumentsId");
+
+                    b.HasOne("PassportApplicationWebApi.Models.EmergencyContactDetails", "EmergencyContactDetails")
+                        .WithMany()
+                        .HasForeignKey("EmergencyContactDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PassportApplicationWebApi.Models.FamilyDetails", "FamilyDetails")
+                        .WithMany()
+                        .HasForeignKey("FamilyDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PassportApplicationWebApi.Models.PaymentDetails", "PaymentDetails")
+                        .WithOne("PassportApplication")
+                        .HasForeignKey("PassportApplicationWebApi.Models.PassportApplication", "PaymentDetailsId");
+
+                    b.HasOne("PassportApplicationWebApi.Models.Passport", "PreviousPassportDetails")
+                        .WithMany()
+                        .HasForeignKey("PreviousPassportDetailsId");
+
+                    b.HasOne("PassportApplicationWebApi.Models.User", "User")
+                        .WithMany("PassportApplications")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AddressDetails");
+
+                    b.Navigation("ApplicantDetails");
+
+                    b.Navigation("Documents");
+
+                    b.Navigation("EmergencyContactDetails");
+
+                    b.Navigation("FamilyDetails");
+
+                    b.Navigation("PaymentDetails");
+
+                    b.Navigation("PreviousPassportDetails");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
+                {
+                    b.HasOne("PassportApplicationWebApi.Models.User", "User")
+                        .WithMany("PaymentDetails")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
                 {
                     b.HasOne("PassportApplicationWebApi.Models.Passport", "Passport")
@@ -481,8 +1037,12 @@ namespace PassportApplicationWebApi.Migrations
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("User")
-                        .IsRequired();
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PassportApplicationWebApi.Models.PaymentDetails", b =>
+                {
+                    b.Navigation("PassportApplication");
                 });
 
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
@@ -490,6 +1050,10 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("Complaints");
 
                     b.Navigation("Feedbacks");
+
+                    b.Navigation("PassportApplications");
+
+                    b.Navigation("PaymentDetails");
                 });
 #pragma warning restore 612, 618
         }

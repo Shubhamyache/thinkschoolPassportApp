@@ -4454,11 +4454,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PassportProjectCloud\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
+      "projectUniqueName": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
       "projectName": "PassportApplicationWebApi",
-      "projectPath": "D:\\PassportProjectCloud\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
+      "projectPath": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\PassportProjectCloud\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\obj\\",
+      "outputPath": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

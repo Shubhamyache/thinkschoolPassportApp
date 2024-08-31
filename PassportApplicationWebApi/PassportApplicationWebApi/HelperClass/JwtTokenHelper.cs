@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace PassportApplicationWebApi.HelperClass
@@ -11,11 +14,13 @@ namespace PassportApplicationWebApi.HelperClass
     {
         private readonly IConfiguration _configuration;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly PassportContext _context;
 
-        public JwtTokenHelper(IConfiguration configuration, UserManager<ApplicationUser> userManager)
+        public JwtTokenHelper(IConfiguration configuration, UserManager<ApplicationUser> userManager, PassportContext context)
         {
             _configuration = configuration;
             _userManager = userManager;
+            _context = context;
         }
 
         public async Task<string> GenerateToken(ApplicationUser appUser)
@@ -27,16 +32,31 @@ namespace PassportApplicationWebApi.HelperClass
             var roles = await _userManager.GetRolesAsync(appUser);
             var user = await _userManager.FindByEmailAsync(appUser.Email);
 
+            //write an query which fetch the user from Users table the same email which user has
+            var realUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == appUser.Email);    
+
+            if (realUser == null) 
+            {
+                throw new Exception("User not found");
+            }
+
+                      
+
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, appUser.Id),
                 new Claim(JwtRegisteredClaimNames.Email, appUser.Email),
-                new Claim(ClaimTypes.Role, roles.FirstOrDefault()), //Use ClaimTypes.Role
+                new Claim(ClaimTypes.Role, roles.FirstOrDefault()??""), //Use ClaimTypes.Role
                 new Claim("Role", roles.FirstOrDefault()), //Use ClaimTypes.Role
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim("FirstName", realUser.FirstName?? ""),
+                new Claim("LastName", realUser.LastName?? ""),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(JwtRegisteredClaimNames.Aud, jwtSettings["Audience"]),
+                new Claim(JwtRegisteredClaimNames.Iss, jwtSettings["Issuer"])
             };
 
             var tokenOptions = new JwtSecurityToken(
+                
                 issuer: jwtSettings["Issuer"],
                 audience: jwtSettings["Audience"],
                 claims: claims,

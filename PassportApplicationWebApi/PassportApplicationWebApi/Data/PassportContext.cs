@@ -12,6 +12,13 @@ namespace PassportApplicationWebApi.Data
         public DbSet<Passport> Passports { get; set; }
         public DbSet<Feedback> Feedbacks { get; set; }
         public DbSet<Complaint> Complaints { get; set; }
+        public DbSet<PassportApplication> PassportApplications { get; set; }
+        public DbSet<PaymentDetails> PaymentDetails { get; set; }
+        public DbSet<ApplicantDetails> ApplicantsDetails { get; set; }
+        public DbSet<AddressDetails> AddressDetails { get; set; }
+        public DbSet<EmergencyContactDetails> EmergencyContactDetails { get; set; }
+        public DbSet<Documents> Documents { get; set; }
+        public DbSet<FamilyDetails> FamilyDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -40,6 +47,15 @@ namespace PassportApplicationWebApi.Data
                 .HasMany(u=>u.Complaints)
                 .WithOne(c=>c.User)
                 .HasForeignKey(c=>c.UserId);
+
+            builder.Entity<User>()
+                .HasMany(u => u.PassportApplications)
+                .WithOne(c => c.User)
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<PaymentDetails>().Property(p=>p.Amount).HasColumnType("Decimal(10,2)");
+
         }
 
     }

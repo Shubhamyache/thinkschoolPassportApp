@@ -35,7 +35,7 @@ namespace PassportApplicationWebApi.Controllers
                 return Ok(new { Message = "User already exists" });
             }
 
-            return NotFound(new { Message = "User does not exist" });
+            return Ok(new { Message = "User does not exist" });
         }
 
         [HttpPost("register")]
