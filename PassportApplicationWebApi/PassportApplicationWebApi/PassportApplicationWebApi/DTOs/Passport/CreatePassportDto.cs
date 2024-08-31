@@ -24,7 +24,6 @@ namespace PassportApplicationWebApi.DTOs.Passport
         [StringLength(55, MinimumLength = 2)]
         public string Country { get; set; } = string.Empty;
         [Required]
-        [StringLength(55, MinimumLength = 2)]
         public DateTime DateOfIssue { get; set; }
         [Required]
         public string Gender { get; set; } = string.Empty;

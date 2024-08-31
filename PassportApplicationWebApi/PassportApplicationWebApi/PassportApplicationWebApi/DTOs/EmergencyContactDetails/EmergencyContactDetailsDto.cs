@@ -12,12 +12,8 @@ namespace PassportApplicationWebApi.DTOs.EmergencyContactDetails
         public string EmergencyContactName { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(15)]
-        [Phone]
         public string EmergencyContactMobile { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
         public string EmergencyContactTelephone { get; set; } = string.Empty;
 
         [StringLength(256)]

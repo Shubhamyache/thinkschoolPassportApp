@@ -7,6 +7,7 @@ using PassportApplicationWebApi.HelperClass;
 using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
 using PassportApplicationWebApi.Repositories;
+using PassportApplicationWebApi.UnitOfWork;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,9 +21,12 @@ builder.Services.AddDbContext<PassportContext>(options =>
 });
 builder.Services.AddScoped<JwtTokenHelper>();
 
-builder.Services.AddScoped<IRepository<User>, Repository<User>>();
-builder.Services.AddScoped<IRepository<Complaint>, Repository<Complaint>>();
+//builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+//builder.Services.AddScoped<IRepository<Complaint>, Repository<Complaint>>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IApplicationsRepository, ApplicationsRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

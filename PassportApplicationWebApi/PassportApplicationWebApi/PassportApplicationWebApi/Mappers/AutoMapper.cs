@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using PassportApplicationWebApi.DTOs.AddressDetails;
 using PassportApplicationWebApi.DTOs.ApplicantDetails;
+using PassportApplicationWebApi.DTOs.ApplicationForm;
 using PassportApplicationWebApi.DTOs.Complaint;
 using PassportApplicationWebApi.DTOs.Documents;
 using PassportApplicationWebApi.DTOs.EmergencyContactDetails;
@@ -39,6 +40,15 @@ namespace PassportApplicationWebApi.Mappers
             CreateMap<PassportApplication, CreatePassportApplicationDto>().ReverseMap();
             CreateMap<PaymentDetails, PaymentDetailsDto>().ReverseMap();
             CreateMap<PaymentDetails, CreatePaymentDetailsDto>().ReverseMap();
+            CreateMap<PassportApplication, GetPassportApplicationDto>()
+           .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.User.Email))
+           .ForMember(dest => dest.ApplicationNumber, opt => opt.MapFrom(src => src.ApplicationNumber))
+           .ForMember(dest => dest.ApplicantDetails, opt => opt.MapFrom(src => src.ApplicantDetails))
+           .ForMember(dest => dest.AddressDetails, opt => opt.MapFrom(src => src.AddressDetails))
+           .ForMember(dest => dest.EmergencyContactDetails, opt => opt.MapFrom(src => src.EmergencyContactDetails))
+           .ForMember(dest => dest.Documents, opt => opt.MapFrom(src => src.Documents))
+           .ForMember(dest => dest.PaymentDetails, opt => opt.MapFrom(src => src.PaymentDetails))
+           .ForMember(dest => dest.ApplicationStatus, opt => opt.MapFrom(src => src.ApplicationStatus));
         }
     }
 }

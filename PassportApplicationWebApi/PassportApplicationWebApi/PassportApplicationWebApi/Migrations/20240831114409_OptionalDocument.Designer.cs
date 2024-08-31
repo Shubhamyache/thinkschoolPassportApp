@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PassportApplicationWebApi.Data;
 
@@ -11,9 +12,11 @@ using PassportApplicationWebApi.Data;
 namespace PassportApplicationWebApi.Migrations
 {
     [DbContext(typeof(PassportContext))]
-    partial class PassportContextModelSnapshot : ModelSnapshot
+    [Migration("20240831114409_OptionalDocument")]
+    partial class OptionalDocument
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -741,7 +744,7 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("PassportNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PaymentDetailsId")
+                    b.Property<int>("PaymentDetailsId")
                         .HasColumnType("int");
 
                     b.Property<int?>("PreviousPassportDetailsId")
@@ -773,8 +776,7 @@ namespace PassportApplicationWebApi.Migrations
                     b.HasIndex("FamilyDetailsId");
 
                     b.HasIndex("PaymentDetailsId")
-                        .IsUnique()
-                        .HasFilter("[PaymentDetailsId] IS NOT NULL");
+                        .IsUnique();
 
                     b.HasIndex("PreviousPassportDetailsId");
 
@@ -965,7 +967,9 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.HasOne("PassportApplicationWebApi.Models.PaymentDetails", "PaymentDetails")
                         .WithOne("PassportApplication")
-                        .HasForeignKey("PassportApplicationWebApi.Models.PassportApplication", "PaymentDetailsId");
+                        .HasForeignKey("PassportApplicationWebApi.Models.PassportApplication", "PaymentDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("PassportApplicationWebApi.Models.Passport", "PreviousPassportDetails")
                         .WithMany()

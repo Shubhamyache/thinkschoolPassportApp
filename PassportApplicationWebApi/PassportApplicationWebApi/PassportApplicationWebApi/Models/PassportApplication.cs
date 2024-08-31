@@ -50,7 +50,6 @@ namespace PassportApplicationWebApi.Models
         [ForeignKey("PreviousPassportDetailsId")]
         public Passport? PreviousPassportDetails { get; set; }
 
-        [Required]
         public int? DocumentsId { get; set; }
 
         [ForeignKey("DocumentsId")]
@@ -59,7 +58,7 @@ namespace PassportApplicationWebApi.Models
         public string UserId { get; set; }
         public User? User { get; set; }
 
-        public int PaymentDetailsId { get; set; }
+        public int? PaymentDetailsId { get; set; }
         public PaymentDetails? PaymentDetails { get; set; }
 
         public bool IsRenewalApplication { get; set; }

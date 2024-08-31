@@ -15,6 +15,7 @@ namespace PassportApplicationWebApi.DTOs.Complaint
         [StringLength(55, MinimumLength = 2)]
         public string ComplaintType { get; set; } = string.Empty;
 
+
         [Required]
         [StringLength(500)]
         public string ComplaintDetails { get; set; } = string.Empty;
@@ -22,5 +23,8 @@ namespace PassportApplicationWebApi.DTOs.Complaint
         [Required]
         [Range(0, 1)]
         public ComplaintStatus ComplaintStatus { get; set; }
+
+        [Required]
+        public string UserId { get; set; } = string.Empty;
     }
 }
