@@ -108,6 +108,15 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    SeedData.Initialize(services, userManager).Wait();
+}
+
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -116,12 +125,6 @@ if (app.Environment.IsDevelopment())
 }
 
 
-using (var scope = app.Services.CreateScope())
-{
-    var services = scope.ServiceProvider;
-    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
-    SeedData.Initialize(services, userManager).Wait();
-}
 
 app.UseCors("AllowAll");
 app.UseHttpsRedirection();

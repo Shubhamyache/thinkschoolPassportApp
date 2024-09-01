@@ -22,8 +22,8 @@ namespace PassportApplicationWebApi.Data
             // Seed an admin user
             var adminUser = new ApplicationUser
             {
-                UserName = "pradeep@gmail.com",
-                Email = "pradeep@gmail.com"
+                UserName = "Admin@gmail.com",
+                Email = "Admin@gmail.com"
             };
             var user = await userManager.FindByEmailAsync(adminUser.Email);
             if (user == null)

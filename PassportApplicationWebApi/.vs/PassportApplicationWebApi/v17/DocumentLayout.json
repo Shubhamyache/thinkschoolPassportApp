@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\newapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\newapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\applicationform\\renewpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\applicationform\\renewpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RenewPassportApplicationDto.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\RenewPassportApplicationDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\RenewPassportApplicationDto.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\RenewPassportApplicationDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\RenewPassportApplicationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T12:56:17.249Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -56,9 +73,9 @@
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAgwF8AAAANAAAA",
+              "ViewState": "AQIAAJEAAAAAAAAAAAAkwKAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T19:01:43.701Z",
+              "WhenOpened": "2024-09-01T12:55:31.358Z",
               "EditorCaption": ""
             }
           ]

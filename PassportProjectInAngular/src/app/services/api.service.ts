@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 export class ApiService {
   private apiUrl = `${environment.apiUrl}/members`;
   private newFormUrl = `${environment.apiUrl}/NewApplication`;
+  private renewFormUrl = `${environment.apiUrl}/NewApplication/ReNewPassportApplication`;
 
   constructor(private router: Router, private http: HttpClient) {}
 
@@ -29,5 +30,9 @@ export class ApiService {
 
   submitFormData(formsArray: any): Observable<any> {
     return this.http.post(this.newFormUrl, formsArray);
+  }
+
+  submitRenewFormData(formsArray: any): Observable<any> {
+    return this.http.post(this.renewFormUrl, formsArray);
   }
 }

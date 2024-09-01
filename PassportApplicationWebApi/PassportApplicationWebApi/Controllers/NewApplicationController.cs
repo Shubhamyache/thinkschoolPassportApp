@@ -85,6 +85,9 @@ namespace PassportApplicationWebApi.Controllers
                 // Add the whole passport application at once
                 await _unitOfWork._repositoryPassportApplication.AddAsync(passportApplication);
 
+                user.ApplicationNumber = newPassportForm.UserDetails.ApplicationId;
+                await _unitOfWork._repositoryUser.UpdateAsync(user);
+
                 // Save all changes to the database in one transaction
                 await _unitOfWork.SaveChangesAsync();
 
@@ -99,8 +102,8 @@ namespace PassportApplicationWebApi.Controllers
         }
 
         //Renew passport application endpoint 
-        [HttpPost(Name = "ReNewPassportApplication")]
-        public async Task<ActionResult> ReNewApplication(NewPassportApplicationDto reNewPassportFormDto)
+        [HttpPost("ReNewPassportApplication")]
+        public async Task<ActionResult> ReNewApplication(RenewPassportApplicationDto reNewPassportFormDto)
         {
             // Check if the model state is valid
             if (!ModelState.IsValid)
@@ -111,7 +114,7 @@ namespace PassportApplicationWebApi.Controllers
             try
             {
                 // Check if the user exists in the database
-                var userEmail = reNewPassportFormDto.UserDetails.Email;
+                var userEmail = reNewPassportFormDto.RenewUserDetails.Email;
                 var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
 
                 if (user == null)
@@ -142,8 +145,10 @@ namespace PassportApplicationWebApi.Controllers
                     PreviousPassportDetails = passport,
                     UserId = user.UserId,
                     ApplicationStatus = ApplicationStatus.New,
-                    IsRenewalApplication = false,
-                    ApplicationNumber = reNewPassportFormDto.UserDetails.ApplicationId.ToString()
+                    IsRenewalApplication = true,
+                    ApplicationNumber = reNewPassportFormDto.RenewUserDetails.ApplicationId.ToString(),
+                    ReIssueReason = reNewPassportFormDto.RenewUserDetails.RenewalReason,
+
                 };
 
                 // Add the whole passport application at once

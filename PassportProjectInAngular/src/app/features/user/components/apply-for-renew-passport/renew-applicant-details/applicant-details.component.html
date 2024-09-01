@@ -1,4 +1,24 @@
 <form [formGroup]="applicantForm" (ngSubmit)="onSubmit()">
+  <div class="form-group text-center">
+    <label for="reissueReason" class="fw-bold fs-4"
+      >Select Reason for Renewal</label
+    >
+    <select
+      class="form-control"
+      id="reissueReason"
+      (change)="saveReasonToSessionStorage($event)"
+    >
+      <option value="">Select</option>
+      <option>Validity Expired within 3 years/ Due to Expire</option>
+      <option>Exhaustion of Pages</option>
+      <option>Validity Expired more than 3 years ago</option>
+      <option>Lost Passport</option>
+      <option>Change in Existing Personal Particulars</option>
+      <option>Damaged Passport</option>
+      <option>Other Reason</option>
+    </select>
+  </div>
+
   <fieldset>
     <legend><b>Applicant Details</b></legend>
     <div class="row">

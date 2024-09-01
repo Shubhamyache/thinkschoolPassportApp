@@ -82,11 +82,13 @@ export class RenewUploadDocumentsComponent {
           var emaiL = sessionStorage.getItem('loggedEmail');
           //write method to generate random application id
           const randomApplication = Math.floor(Math.random() * 1000000);
+          var renewalReasonT = sessionStorage.getItem('reissueReason');
 
           const formsArray = {
             userDetails: {
               email: emaiL,
               applicationId: randomApplication,
+              renewalReason: renewalReasonT,
             },
             applicantDetails: parseApplicantDetails,
             addressDetails: parseAddressDetails,
@@ -99,7 +101,7 @@ export class RenewUploadDocumentsComponent {
 
           console.log('Form Data:', formsArray);
 
-          this.apiService.submitFormData(formsArray).subscribe(
+          this.apiService.submitRenewFormData(formsArray).subscribe(
             (response) => {
               // Log the response for debugging
               console.log('Server response:', response);

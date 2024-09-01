@@ -18,7 +18,7 @@ namespace PassportApplicationWebApi.Models
         public string KnownByOtherNames { get; set; } = String.Empty;
 
         [StringLength(50)]
-        public string Alias { get; set; } = String.Empty;
+        public string Alias { get; set; } =     String.Empty;
 
         [StringLength(50)]
         public string ChangedName { get; set; } = String.Empty;

@@ -211,6 +211,13 @@ export class RenewApplicantDetailsComponent implements OnInit {
       this.applicantForm.markAllAsTouched();
     }
   }
+  saveReasonToSessionStorage(event: any) {
+    const selectedReason = event.target.value;
+    if (selectedReason) {
+      sessionStorage.setItem('reissueReason', selectedReason);
+      console.log('Selected reason saved to sessionStorage:', selectedReason);
+    }
+  }
 
   nextTab() {
     this.nextTabEvent.emit();
