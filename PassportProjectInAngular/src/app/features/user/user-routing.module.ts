@@ -5,17 +5,17 @@ import { ApplicationStatusComponent } from './components/application-status/appl
 import { ContactComponent } from '../../shared/components/contact/contact.component';
 import { FeedbackPageComponent } from '../../shared/components/feedback-page/feedback-page.component';
 import { PaymentComponent } from './components/payment/payment.component';
-import { RenewPassportComponent } from './components/renew-passport/renew-passport.component';
 
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { WhatsNewComponent } from '../../shared/components/whats-new/whats-new.component';
 import { NewFormComponent } from './components/apply-for-new-passport/new-form/new-form.component';
 import { AddressDetailsComponent } from './components/apply-for-new-passport/address-details/address-details.component';
+import { ReNewFormComponent } from './components/apply-for-renew-passport/renew-form/new-form.component';
 
 export const routes: Routes = [
   { path: '', component: UserDashboardComponent },
   { path: 'apply_for_new_passport', component: NewFormComponent },
-  { path: 'renew_passport', component: RenewPassportComponent },
+  { path: 'renew_passport', component: ReNewFormComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'about_us', component: AboutUsComponent },
   { path: 'whats_new', component: WhatsNewComponent },

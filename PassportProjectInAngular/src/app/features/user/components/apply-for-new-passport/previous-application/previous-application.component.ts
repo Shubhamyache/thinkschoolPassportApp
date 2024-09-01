@@ -7,7 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { PreviousApplication } from '../../../../../shared/Interfaces/Iforms/previous-application';
+import { PreviousApplication } from '../../../../../shared/models/FormInterfaces/previous-application';
 @Component({
   selector: 'app-previous-application',
   standalone: true,
@@ -63,33 +63,28 @@ export class PreviousApplicationComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.previousPassportForm.valid) {
-      const formData = this.createFormObject();
-      localStorage.setItem('previousApplication', JSON.stringify(formData));
-      console.log('Form Submitted!', formData);
-      // Emit the event to move to the next tab
-      this.nextTabEvent.emit();
-    } else {
-      console.log('Form is invalid!');
-    }
+    const formData = this.createFormObject();
+    localStorage.setItem('previousApplication', JSON.stringify(formData));
+    console.log('Form Submitted!', formData);
+    // Emit the event to move to the next tab
+    this.nextTabEvent.emit();
   }
 
   createFormObject(): PreviousApplication | null {
     if (this.previousPassportForm.valid) {
       return {
-        previous_passport_number:
+        previousPassportNumber:
           this.previousPassportForm.value.previous_passport_number,
-        previous_issue_date:
-          this.previousPassportForm.value.previous_issue_date,
-        previous_expiry_date:
+        previousIssueDate: this.previousPassportForm.value.previous_issue_date,
+        previousExpiryDate:
           this.previousPassportForm.value.previous_expiry_date,
-        applied_but_not_issued:
+        appliedButNotIssued:
           this.previousPassportForm.value.applied_but_not_issued === 'yes',
-        file_number: this.previousPassportForm.value.file_number,
-        application_month_year:
+        fileNumber: this.previousPassportForm.value.file_number,
+        applicationMonthYear:
           this.previousPassportForm.value.application_month_year,
-        passport_office: this.previousPassportForm.value.passport_office,
-        is_previous_application_valid: true,
+        passportOffice: this.previousPassportForm.value.passport_office,
+        // isPreviousApplicationValid: true,
       };
     } else {
       console.log('Form is invalid!');

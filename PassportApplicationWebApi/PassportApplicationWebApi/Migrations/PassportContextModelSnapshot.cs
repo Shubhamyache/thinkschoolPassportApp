@@ -164,14 +164,13 @@ namespace PassportApplicationWebApi.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("MobileNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PermanentDistrict")
                         .IsRequired()
@@ -185,8 +184,8 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Property<string>("PermanentMobileNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PermanentPin")
                         .IsRequired()
@@ -205,16 +204,18 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Property<string>("PermanentTelephoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("PermanentTown")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Pincode")
-                        .HasColumnType("int");
+                    b.Property<string>("Pincode")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
 
                     b.Property<string>("PresentDistrict")
                         .IsRequired()
@@ -246,8 +247,8 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Property<string>("TelephoneNumber")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("Id");
 
@@ -525,8 +526,8 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Property<string>("EmergencyContactMobile")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("EmergencyContactName")
                         .IsRequired()
@@ -535,8 +536,8 @@ namespace PassportApplicationWebApi.Migrations
 
                     b.Property<string>("EmergencyContactTelephone")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("Id");
 
@@ -565,9 +566,8 @@ namespace PassportApplicationWebApi.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("FatherPassportNumber")
-                        .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("nvarchar(9)");
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
 
                     b.Property<string>("FatherSurname")
                         .IsRequired()
@@ -595,9 +595,8 @@ namespace PassportApplicationWebApi.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("MotherPassportNumber")
-                        .IsRequired()
-                        .HasMaxLength(9)
-                        .HasColumnType("nvarchar(9)");
+                        .HasMaxLength(8)
+                        .HasColumnType("nvarchar(8)");
 
                     b.Property<string>("MotherSurname")
                         .IsRequired()
@@ -758,7 +757,7 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("validityInYears")
+                    b.Property<int?>("ValidityInYears")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

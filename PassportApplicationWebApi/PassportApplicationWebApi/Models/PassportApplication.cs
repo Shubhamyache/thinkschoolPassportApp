@@ -16,7 +16,7 @@ namespace PassportApplicationWebApi.Models
 
         public string? ReIssueReason { get; set; }
 
-        public int? validityInYears { get; set; }
+        public int? ValidityInYears { get; set; }
 
 
         public string? ChangesInExistingDetails { get; set; }

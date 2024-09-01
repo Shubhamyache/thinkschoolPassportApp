@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../layout/components/header/header.component';
 import { FooterComponent } from '../../layout/components/footer/footer.component';
 import { jwtDecode } from 'jwt-decode';
+import { decode } from 'node:punycode';
 
 @Component({
   standalone: true,
@@ -31,10 +32,11 @@ export class LoginComponent implements OnInit {
   username: string = '';
   password: string = '';
   errorMessage: string = '';
+  authService = inject(UserService);
 
   constructor(
     private fb: FormBuilder,
-    private authService: UserService,
+
     private router: Router
   ) {
     this.loginForm = this.fb.group({
@@ -47,7 +49,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      const { username, password } = this.loginForm.value;
+      const { username, password } = this.loginForm.value; //here username is email
       console.log('In onsubmit' + username + password);
 
       // Call the authentication service to login
@@ -62,15 +64,30 @@ export class LoginComponent implements OnInit {
           // Decode JWT token to get user information
           const decodedToken: any = jwtDecode(token);
           const role = decodedToken.Role;
+          localStorage.setItem('role', role); // Save the role in local storage
+          const firstName = decodedToken.FirstName;
+          sessionStorage.setItem('firstName', firstName); // Save the first name in local storage
+          const lastName = decodedToken.LastName;
+          sessionStorage.setItem('lastName', lastName); // Save the last name in local storage
+          const email = decodedToken.email;
+          sessionStorage.setItem('loggedEmail', email); // Save the email in local storage
+
+          //debug
+          console.log('Role:', role); // Log the role
+          console.log('First Name:', firstName); // Log the first name
+          console.log('Last Name:', lastName); // Log the last name
+          console.log('Email:', email); // Log the email
           console.log('Decoded Token:', decodedToken); // Log the decoded token
 
           // Navigate to appropriate dashboard based on role
           if (role === 'User') {
-            Swal.fire('Login', 'Login successful as Student', 'success').then(
-              () => {
-                this.router.navigate(['user']);
-              }
-            );
+            Swal.fire(
+              'Login',
+              'Login successful as Passport User',
+              'success'
+            ).then(() => {
+              this.router.navigate(['user']);
+            });
           } else if (role === 'Admin') {
             Swal.fire('Login', 'Login successful as Admin', 'success').then(
               () => {

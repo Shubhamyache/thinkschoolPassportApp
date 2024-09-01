@@ -7,7 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ApplicantDetails } from '../../../../../shared/Interfaces/Iforms/applicant-details';
+import { ApplicantDetails } from '../../../../../shared/models/FormInterfaces/applicant-details';
 import { FamilyDetailsComponent } from '../family-details/family-details.component';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
@@ -219,31 +219,32 @@ export class ApplicantDetailsComponent implements OnInit {
   createFormObject(): ApplicantDetails | null {
     if (this.applicantForm.valid) {
       return {
-        given_name: this.applicantForm.value.given_name,
+        givenName: this.applicantForm.value.given_name,
         surname: this.applicantForm.value.surname,
-        known_by_other_names: this.applicantForm.value.known_by_other_names,
+        knownByOtherNames: this.applicantForm.value.known_by_other_names,
         alias: this.applicantForm.value.alias || '',
-        changed_name: this.applicantForm.value.changed_name,
-        previous_name: this.applicantForm.value.previous_name || '',
-        dob: this.applicantForm.value.dob,
-        place_of_birth: this.applicantForm.value.place_of_birth,
+        changedName: this.applicantForm.value.changed_name,
+        previousName: this.applicantForm.value.previous_name || '',
+        dob: new Date(this.applicantForm.value.dob).toISOString().split('T')[0], // 'YYYY-MM-DD'
+        //,
+        placeOfBirth: this.applicantForm.value.place_of_birth,
         district: this.applicantForm.value.district,
         state: this.applicantForm.value.state,
-        region_country: this.applicantForm.value.region_country,
+        regionCountry: this.applicantForm.value.region_country,
         gender: this.applicantForm.value.gender,
-        marital_status: this.applicantForm.value.marital_status,
+        maritalStatus: this.applicantForm.value.marital_status,
         citizenship: this.applicantForm.value.citizenship,
-        pan: this.applicantForm.value.pan || '',
-        voter_id: this.applicantForm.value.voter_id || '',
-        employment_type: this.applicantForm.value.employment_type,
-        organization_name: this.applicantForm.value.organization_name || '',
-        parent_spouse_government_servant:
-          this.applicantForm.value.parent_spouse_government_servant,
+        panNumber: this.applicantForm.value.pan || '',
+        voterId: this.applicantForm.value.voter_id || '',
+        employmentType: this.applicantForm.value.employment_type,
+        organizationName: this.applicantForm.value.organization_name || '',
+        parentSpouseGovernmentServant: false,
+        // this.applicantForm.value.parent_spouse_government_servant,
         education: this.applicantForm.value.education,
-        non_ecr: this.applicantForm.value.non_ecr,
-        distinguishing_mark: this.applicantForm.value.distinguishing_mark || '',
+        nonEcr: false, //this.applicantForm.value.non_ecr,
+        distinguishingMark: this.applicantForm.value.distinguishing_mark || '',
         aadhaar: this.applicantForm.value.aadhaar,
-        is_applicant_details_valid: true,
+        // isApplicantDetailsValid: true,
       };
     } else {
       console.log('Form is invalid!');

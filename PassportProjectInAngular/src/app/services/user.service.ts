@@ -9,6 +9,7 @@ import { User } from '../shared/models/user.model';
 })
 export class UserService {
   private apiUrl = 'https://localhost:7291/api/Authentication';
+  private tokenKey = '';
 
   constructor(private http: HttpClient) {}
   //method to add user
@@ -17,17 +18,14 @@ export class UserService {
   }
 
   login(email: string, password: string) {
-    // const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    // const body = JSON.stringify({ email, password });
-
     return this.http.post<any>(`${this.apiUrl}/login`, {
       Email: email,
       Password: password,
     });
-    // .pipe(
-    //   tap((response) => console.log('Login successful', response)),
-    //   catchError(this.handleError<any>('login'))
-    // );
+  }
+
+  getToken() {
+    return (this.tokenKey = localStorage.getItem('token') || '');
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
@@ -38,7 +36,7 @@ export class UserService {
   }
 
   //method to check existing user
-  checkUsernameExists(username: string): Observable<boolean> {
+  checkUserNameExists(username: string): Observable<boolean> {
     return this.http
       .get<any>(`${this.apiUrl}/checkUserNameExists?email=${username}`)
       .pipe(
@@ -50,35 +48,5 @@ export class UserService {
           }
         })
       );
-  }
-
-  //method to check if usr exists
-  checkUserExists(username: string, password: string): Observable<boolean> {
-    return this.http.get<any[]>(`${this.apiUrl}?username=${username}`).pipe(
-      map((users) => {
-        if (users.length > 0) {
-          const user = users[0];
-          return user.password === password;
-        } else {
-          return false;
-        }
-      })
-    );
-  }
-
-  //method to check role of user
-  checkUserRole(
-    username: string
-  ): Observable<{ username: string; role: string }> {
-    return this.http.get<any[]>(`${this.apiUrl}?username=${username}`).pipe(
-      map((users) => {
-        if (users.length > 0) {
-          const user = users[0];
-          return { username: user.username, role: user.role };
-        } else {
-          throw new Error('User not found');
-        }
-      })
-    );
   }
 }

@@ -11,12 +11,12 @@ namespace PassportApplicationWebApi.DTOs.EmergencyContactDetails
         public string EmergencyContactName { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(15)]
-        [Phone]
+        [StringLength(10, ErrorMessage ="{0} should have 10 digits")]
         public string EmergencyContactMobile { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
+   
+       
+        [StringLength(10, ErrorMessage = "{0} should have 10 digits")]
         public string EmergencyContactTelephone { get; set; } = string.Empty;
 
         [StringLength(256)]

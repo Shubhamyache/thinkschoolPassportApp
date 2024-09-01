@@ -4,7 +4,6 @@ namespace PassportApplicationWebApi.DTOs.ApplicantDetails
 {
     public class CreateApplicantDetailsDto
     {
-        
 
         [Required]
         [StringLength(20)]

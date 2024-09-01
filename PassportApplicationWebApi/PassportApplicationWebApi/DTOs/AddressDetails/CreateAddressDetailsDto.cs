@@ -19,20 +19,15 @@ namespace PassportApplicationWebApi.DTOs.AddressDetails
         [StringLength(50)]  
         public string PresentState { get; set; } = string.Empty;
 
+        [StringLength(6)]
+        public string Pincode { get; set; } = string.Empty;
 
-        public int Pincode { get; set; }
-
-        [StringLength(15)]
-        [Phone]
+        [StringLength(10)]
+        
         public string MobileNumber { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
+        [StringLength(10)]
         public string TelephoneNumber { get; set; } = string.Empty;
-
-        [StringLength(256)]
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
 
         public bool SameAddress { get; set; }
 
@@ -54,12 +49,12 @@ namespace PassportApplicationWebApi.DTOs.AddressDetails
         [StringLength(6)]
         public string PermanentPin { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
+
+        [StringLength(10)]
         public string PermanentMobileNumber { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
+
+        [StringLength(10)]
         public string PermanentTelephoneNumber { get; set; } = string.Empty;
     }
 }

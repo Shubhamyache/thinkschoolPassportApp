@@ -1,0 +1,303 @@
+<div class="mb-4">
+  <!-- Header Section -->
+  <div class="container-fluid">
+    <div class="d-flex align-items-start">
+      <img
+        src="assets/images/passportlogo.jpeg"
+        alt="Logo"
+        class="logo mr-3"
+        (click)="goHome()"
+        style="cursor: pointer"
+      />
+      <div class="header-message">
+        Passport Seva<br />
+        PSP Division<br />
+        Ministry of External Affairs, Government of India
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-3 pl-5 pr-5">
+    <a class="navbar-brand" (click)="goHome()">Passport Seva</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/" routerLinkActive="active"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/feedback_page"
+            routerLinkActive="active"
+            >Feedback</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about_us" routerLinkActive="active"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/whats_new" routerLinkActive="active"
+            >What's New</a
+          >
+        </li>
+      </ul>
+
+      <!-- Search Bar -->
+      <form class="form-inline mr-auto">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+
+      <!-- Profile Section -->
+      <div class="dropdown">
+        <a
+          class="nav-link dropdown-toggle d-flex align-items-center"
+          href="#"
+          id="profileDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <img
+            src="assets/images/profile-icon.png"
+            alt="Profile Icon"
+            class="rounded-circle"
+            width="30"
+            height="30"
+          />
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-right pr-5"
+          aria-labelledby="profileDropdown"
+        >
+          <div class="dropdown-item-text text-center">
+            <strong>{{ loggedEmail }}</strong>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a
+            class="dropdown-item text-danger d-flex align-items-center"
+            (click)="logout()"
+          >
+            <i class="fas fa-sign-out-alt mr-2"></i> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container form-body">
+  <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="applicant-details-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#applicant-details-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="applicant-details-tab-pane"
+        aria-selected="false"
+      >
+        Application Details
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="family-details-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#family-details-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="family-details-tab-pane"
+        aria-selected="false"
+      >
+        Family Details
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="address-details-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#address-details-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="address-details-tab-pane"
+        aria-selected="false"
+      >
+        Address Details
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="emergency-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#emergency-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="emergency-tab-pane"
+        aria-selected="false"
+      >
+        Emergency Contact Details
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="previous-application-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#previous-application-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="previous-application-tab-pane"
+        aria-selected="false"
+      >
+        Previous Application
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="other-details-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#other-details-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="other-details-tab-pane"
+        aria-selected="false"
+      >
+        Other Details
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="upload-documents-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#upload-documents-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="upload-documents-tab-pane"
+        aria-selected="false"
+      >
+        Upload Documents
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content w-100 p-5 mb-2" id="myTabContent">
+    <div
+      class="tab-pane fade show active"
+      id="applicant-details-tab-pane"
+      role="tabpanel"
+      aria-labelledby="applicant-details-tab"
+      tabindex="0"
+    >
+      <renew-app-applicant-details
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-applicant-details>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="family-details-tab-pane"
+      role="tabpanel"
+      aria-labelledby="family-details-tab"
+      tabindex="0"
+    >
+      <renew-app-family-details
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-family-details>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="address-details-tab-pane"
+      role="tabpanel"
+      aria-labelledby="address-details-tab"
+      tabindex="0"
+    >
+      <renew-app-address-details
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-address-details>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="emergency-tab-pane"
+      role="tabpanel"
+      aria-labelledby="emergency-tab"
+      tabindex="0"
+    >
+      <renew-app-emergency-details
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-emergency-details>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="previous-application-tab-pane"
+      role="tabpanel"
+      aria-labelledby="previous-application-tab"
+      tabindex="0"
+    >
+      <renew-app-previous-application
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-previous-application>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="other-details-tab-pane"
+      role="tabpanel"
+      aria-labelledby="other-details-tab"
+      tabindex="0"
+    >
+      <renew-app-other-details
+        (nextTabEvent)="onNextTab()"
+      ></renew-app-other-details>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="upload-documents-tab-pane"
+      role="tabpanel"
+      aria-labelledby="upload-documents-tab"
+      tabindex="0"
+    >
+      <renew-app-upload-documents></renew-app-upload-documents>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

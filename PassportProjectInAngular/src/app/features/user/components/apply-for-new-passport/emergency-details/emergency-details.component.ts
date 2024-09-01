@@ -7,7 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { EmergencyContact } from '../../../../../shared/Interfaces/Iforms/emergency-contact';
+import { EmergencyContact } from '../../../../../shared/models/FormInterfaces/emergency-contact';
 @Component({
   selector: 'app-emergency-details',
   standalone: true,
@@ -54,21 +54,22 @@ export class EmergencyDetailsComponent implements OnInit {
       this.nextTabEvent.emit();
     } else {
       console.log('Form is invalid!');
+      this.emergencyContactForm.markAllAsTouched();
     }
   }
 
   createFormObject(): EmergencyContact | null {
     if (this.emergencyContactForm.valid) {
       return {
-        emergency_contact_name:
+        emergencyContactName:
           this.emergencyContactForm.value.emergency_contact_name,
-        emergency_contact_mobile:
+        emergencyContactMobile:
           this.emergencyContactForm.value.emergency_contact_mobile,
-        emergency_contact_telephone:
+        emergencyContactTelephone:
           this.emergencyContactForm.value.emergency_contact_telephone || '',
-        emergency_contact_email:
+        emergencyContactEmail:
           this.emergencyContactForm.value.emergency_contact_email,
-        is_emergency_contact_valid: true,
+        // isEmergencyContactValid: true,
       };
     } else {
       console.log('Form is invalid!');

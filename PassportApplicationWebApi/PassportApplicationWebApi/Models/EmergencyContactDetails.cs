@@ -12,12 +12,10 @@ namespace PassportApplicationWebApi.Models
         public string EmergencyContactName { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(15)]
-        [Phone]
+        [StringLength(10)]
         public string EmergencyContactMobile { get; set; } = string.Empty;
 
-        [StringLength(15)]
-        [Phone]
+        [StringLength(10)]
         public string EmergencyContactTelephone { get; set; } = string.Empty;
 
         [StringLength(256)]

@@ -33,14 +33,14 @@ namespace PassportApplicationWebApi.Models
 
         public bool ApplicantMinor { get; set; }
 
-        [StringLength(9)]
-        public string FatherPassportNumber { get; set; } =  string.Empty;
+        [StringLength(8)]
+        public string? FatherPassportNumber { get; set; } =  string.Empty;
 
         [StringLength(50)]
         public string FatherNationality { get; set; } = string.Empty;
 
-        [StringLength(9)]
-        public string MotherPassportNumber { get; set; } = string.Empty;
+        [StringLength(8)]
+        public string? MotherPassportNumber { get; set; } = string.Empty;
 
         [StringLength(50)]
         public string MotherNationality { get; set; } = string.Empty;

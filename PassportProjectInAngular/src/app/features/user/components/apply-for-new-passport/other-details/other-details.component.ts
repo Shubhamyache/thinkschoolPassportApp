@@ -7,7 +7,7 @@ import {
   FormControl,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { OtherDetails } from '../../../../../shared/Interfaces/Iforms/other-details';
+import { OtherDetails } from '../../../../../shared/models/FormInterfaces/other-details';
 @Component({
   selector: 'app-other-details',
   standalone: true,
@@ -63,38 +63,37 @@ export class OtherDetailsComponent implements OnInit {
       console.log('Form Submitted!', formData);
     } else {
       console.log('Form is invalid!');
+      this.otherDetailsForm.markAllAsTouched();
     }
   }
 
   createFormObject(): OtherDetails | null {
     if (this.otherDetailsForm.valid) {
       return {
-        criminal_proceedings:
+        criminalProceedings:
           this.otherDetailsForm.value.criminal_proceedings === 'yes',
-        criminal_convictions:
+        criminalConvictions:
           this.otherDetailsForm.value.criminal_convictions === 'yes',
-        refused_passport:
-          this.otherDetailsForm.value.refused_passport === 'yes',
-        impounded_passport:
+        refusedPassport: this.otherDetailsForm.value.refused_passport === 'yes',
+        impoundedPassport:
           this.otherDetailsForm.value.impounded_passport === 'yes',
-        revoked_passport:
-          this.otherDetailsForm.value.revoked_passport === 'yes',
-        granted_citizenship:
+        revokedPassport: this.otherDetailsForm.value.revoked_passport === 'yes',
+        grantedCitizenship:
           this.otherDetailsForm.value.granted_citizenship === 'yes',
-        held_foreign_passport:
+        heldForeignPassport:
           this.otherDetailsForm.value.held_foreign_passport === 'yes',
-        surrendered_indian_passport:
+        surrenderedIndianPassport:
           this.otherDetailsForm.value.surrendered_indian_passport === 'yes',
-        applied_renunciation:
+        appliedRenunciation:
           this.otherDetailsForm.value.applied_renunciation === 'yes',
-        returned_on_ec: this.otherDetailsForm.value.returned_on_ec === 'yes',
-        deported_from_country:
+        returnedOnEc: this.otherDetailsForm.value.returned_on_ec === 'yes',
+        deportedFromCountry:
           this.otherDetailsForm.value.deported_from_country === 'yes',
-        repatriated_to_india:
+        repatriatedToIndia:
           this.otherDetailsForm.value.repatriated_to_india === 'yes',
-        registered_mission_name:
+        registeredMissionName:
           this.otherDetailsForm.value.registered_mission_name,
-        is_other_details_valid: true,
+        // isOtherDetailsValid: true,
       };
     } else {
       console.log('Form is invalid!');

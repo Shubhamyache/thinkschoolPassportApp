@@ -72,7 +72,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     if (this.signupForm.valid) {
       this.userService
-        .checkUsernameExists(this.signupForm.value.username)
+        .checkUserNameExists(this.signupForm.value.email)
         .subscribe((exists) => {
           if (exists) {
             Swal.fire({

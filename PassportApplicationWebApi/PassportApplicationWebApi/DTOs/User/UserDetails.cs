@@ -10,5 +10,7 @@ namespace PassportApplicationWebApi.DTOs.User
 
         [Required]
         public int ApplicationId { get; set; }
+
+
     }
 }

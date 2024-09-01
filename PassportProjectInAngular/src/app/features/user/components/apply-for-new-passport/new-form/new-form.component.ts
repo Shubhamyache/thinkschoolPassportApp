@@ -15,8 +15,6 @@ import { FooterComponent } from '../../../../../layout/components/footer/footer.
   selector: 'app-new-form',
   standalone: true,
   imports: [
-    HeaderComponent,
-    FooterComponent,
     ApplicantDetailsComponent,
     FamilyDetailsComponent,
     HttpClientModule,
@@ -25,6 +23,8 @@ import { FooterComponent } from '../../../../../layout/components/footer/footer.
     PreviousApplicationComponent,
     OtherDetailsComponent,
     UploadDocumentsComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   templateUrl: './new-form.component.html',
   styleUrl: './new-form.component.css',

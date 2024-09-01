@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -9,6 +9,8 @@ import {
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { ApplicantDetails } from '../../../../../shared/models/FormInterfaces/applicant-details';
+import { ApiService } from '../../../../../services/api.service';
 @Component({
   standalone: true,
   imports: [RouterLink, CommonModule, ReactiveFormsModule],
@@ -19,7 +21,12 @@ import Swal from 'sweetalert2';
 export class UploadDocumentsComponent {
   uploadForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private apiService: ApiService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.uploadForm = this.fb.group({
       identityProof: [null, Validators.required],
       addressProof: [null, Validators.required],
@@ -54,7 +61,109 @@ export class UploadDocumentsComponent {
         cancelButtonText: 'Back To Form',
       }).then((result) => {
         if (result.isConfirmed) {
-          this.router.navigate(['/user/payment']);
+          const parseApplicantDetails: ApplicantDetails = JSON.parse(
+            localStorage.getItem('applicantDetails') as string
+          );
+          const parseAddressDetails: ApplicantDetails = JSON.parse(
+            localStorage.getItem('addressDetails') as string
+          );
+          const parseFamilyDetails: ApplicantDetails = JSON.parse(
+            localStorage.getItem('familyDetails') as string
+          );
+          const parseOtherDetails: ApplicantDetails = JSON.parse(
+            localStorage.getItem('otherDetails') as string
+          );
+          const parseEmergencyContactDetails: ApplicantDetails = JSON.parse(
+            localStorage.getItem('emergencyContactDetails') as string
+          );
+          const parsePreviousApplication: ApplicantDetails = JSON.parse(
+            localStorage.getItem('previousApplication') as string
+          );
+          var emaiL = sessionStorage.getItem('loggedEmail');
+          //write method to generate random application id
+          const randomApplication = Math.floor(Math.random() * 1000000);
+
+          const formsArray = {
+            userDetails: {
+              email: emaiL,
+              applicationId: randomApplication,
+            },
+            applicantDetails: parseApplicantDetails,
+            addressDetails: parseAddressDetails,
+            familyDetails: parseFamilyDetails,
+            emergencyContactDetails: parseEmergencyContactDetails,
+            previousPassportDetails: parsePreviousApplication,
+          };
+
+          console.log('The form data to post on the server !');
+
+          console.log('Form Data:', formsArray);
+
+          this.apiService.submitFormData(formsArray).subscribe(
+            (response) => {
+              // Log the response for debugging
+              console.log('Server response:', response);
+
+              // Check if the response is valid and has the expected success property
+              if (response && response.success) {
+                console.log('Form submitted successfully:', response);
+
+                Swal.fire(
+                  'Success',
+                  'Your application has been submitted.',
+                  'success'
+                ).then(() => {
+                  this.router.navigate(['/user/payment']);
+                });
+              } else {
+                // Log unexpected response for debugging
+                console.error('Unexpected response structure:', response);
+                Swal.fire(
+                  'Error',
+                  'Unexpected response from server. Please try again.',
+                  'error'
+                );
+              }
+            },
+            (error) => {
+              // Log the error for debugging
+              console.error('Error submitting form:', error);
+
+              if (error.status === 0) {
+                // Network or connection error
+                Swal.fire(
+                  'Network Error',
+                  'Unable to connect to the server. Please check your network connection.',
+                  'error'
+                );
+              } else if (error.status === 400) {
+                // Validation error from the server
+                if (error.error && error.error.message) {
+                  Swal.fire('Validation Error', error.error.message, 'error');
+                } else {
+                  Swal.fire(
+                    'Error',
+                    'There were validation errors with your submission. Please review the form and try again.',
+                    'error'
+                  );
+                }
+              } else if (error.status === 500) {
+                // Server error
+                Swal.fire(
+                  'Server Error',
+                  'An error occurred on the server. Please try again later.',
+                  'error'
+                );
+              } else {
+                // Other unexpected errors
+                Swal.fire(
+                  'Error',
+                  'An unexpected error occurred. Please try again.',
+                  'error'
+                );
+              }
+            }
+          );
         } else {
           Swal.close();
         }

@@ -21,13 +21,13 @@
         <input
           type="text"
           class="form-control"
-          formControlName="previous_passport_number"
+          
           id="previous_passport_number"
         />
         <div class="invalid-feedback">
           Please enter the passport/identity certificate number.
         </div>
-        <p
+        <!-- <p
           class="text-danger"
           [hidden]="
             previousPassportForm.get('previous_passport_number')?.valid ||
@@ -35,7 +35,7 @@
           "
         >
           Passport/ Identity Certificate Number is required.
-        </p>
+        </p> -->
       </div>
 
       <div class="form-group">
@@ -43,11 +43,11 @@
         <input
           type="date"
           class="form-control"
-          formControlName="previous_issue_date"
+          
           id="previous_issue_date"
         />
         <div class="invalid-feedback">Please enter the date of issue.</div>
-        <p
+        <!-- <p
           class="text-danger"
           [hidden]="
             previousPassportForm.get('previous_issue_date')?.valid ||
@@ -55,7 +55,7 @@
           "
         >
           Date of Issue is required.
-        </p>
+        </p> -->
       </div>
 
       <div class="form-group">
@@ -63,11 +63,11 @@
         <input
           type="date"
           class="form-control"
-          formControlName="previous_expiry_date"
+          
           id="previous_expiry_date"
         />
         <div class="invalid-feedback">Please enter the date of expiry.</div>
-        <p
+        <!-- <p
           class="text-danger"
           [hidden]="
             previousPassportForm.get('previous_expiry_date')?.valid ||
@@ -75,7 +75,7 @@
           "
         >
           Date of Expiry is required.
-        </p>
+        </p> -->
       </div>
     </div>
 
@@ -193,7 +193,7 @@
   </fieldset>
 
   <div class="d-flex justify-content-end">
-    <button class="btn btn-primary nextButton btn-custom" type="submit">
+    <button class="btn-getstarted nextButton btn-custom" type="submit">
       Save & Next
     </button>
   </div>
