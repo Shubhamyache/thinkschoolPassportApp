@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PassportApplicationWebApi.Data;
 
@@ -11,9 +12,11 @@ using PassportApplicationWebApi.Data;
 namespace PassportApplicationWebApi.Migrations
 {
     [DbContext(typeof(PassportContext))]
-    partial class PassportContextModelSnapshot : ModelSnapshot
+    [Migration("20240831210607_complaintEdit")]
+    partial class complaintEdit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -466,17 +469,7 @@ namespace PassportApplicationWebApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(55)
-                        .HasColumnType("nvarchar(55)");
-
-                    b.Property<string>("MobileNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<string>("PassportNumberOrApplicationNumber")
+                    b.Property<string>("PassportNumberorApplicationNuber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -650,6 +643,10 @@ namespace PassportApplicationWebApi.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<string>("PassportNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
@@ -807,16 +804,9 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<int>("ApplicationId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ApplicationNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("ApplicationType")
+                        .HasMaxLength(20)
                         .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
@@ -835,6 +825,7 @@ namespace PassportApplicationWebApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<Guid>("TransactionNumber")
+                        .HasMaxLength(50)
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")

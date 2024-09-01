@@ -9,10 +9,19 @@ namespace PassportApplicationWebApi.Models
         public int Id { get; set; }
         [Required]
         [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
-        public string PassportNumberorApplicationNuber { get; set; } = string.Empty;
-
+        public string PassportNumberOrApplicationNumber { get; set; } = string.Empty;
         [Required]
-        public string UserId { get; set; }
+        [StringLength(55, MinimumLength = 2)]
+        public string FullName { get; set; } = string.Empty;
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+        [Required]
+        [Phone(ErrorMessage = "Invalid Phone Number")]
+        [StringLength(15, MinimumLength = 10)]
+        public string MobileNumber { get; set; } = string.Empty;
+        [Required]
+        public string UserId { get; set; } = string.Empty;
         [ForeignKey("UserId")]
         public User? User { get; set; }
         [Required]

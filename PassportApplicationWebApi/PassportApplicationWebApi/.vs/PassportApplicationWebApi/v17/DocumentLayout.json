@@ -3,20 +3,127 @@
   "WorkspaceRootPath": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\feedbackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\newapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\newapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\iapplicationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\iapplicationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\passportapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\passportapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PassportAppDbUpdated/True/SqlTable/dbo.PassportApplications.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\repositories\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\repositories\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\iapplicationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\iapplicationsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\passport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\passport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\applicantdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\applicantdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passport\\passportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passport\\passportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\paymentdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\paymentdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passport\\createpassportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passport\\createpassportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\helperclass\\passportnumbergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\helperclass\\passportnumbergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\feedback\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\feedback\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\complaint\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\createcomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\complaint\\createcomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\data\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\paymentdetails\\createpaymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\paymentdetails\\createpaymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\paymentdetails\\paymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\paymentdetails\\paymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\paymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\paymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passportapplication\\createpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passportapplication\\createpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\applicantdetails\\createapplicantdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\applicantdetails\\createapplicantdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\mappers\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +134,12 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\applicationform\\getpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passportapplication\\passportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passportapplication\\passportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\applicationform\\newpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\applicationform\\newpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\passportapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\passportapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\applicantdetails\\applicantdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,25 +150,6 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PassportAppDbUpdated/True/SqlTable/dbo.PassportApplications.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passportapplication\\createpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passportapplication\\createpassportapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\addressdetails\\createaddressdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\addressdetails\\createaddressdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,40 +158,12 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\emergencycontactdetails\\emergencycontactdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passport\\createpassportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passport\\createpassportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\authdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\authdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\applicantdetails\\createapplicantdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\applicantdetails\\createapplicantdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\applicantdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\applicantdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\createcomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\complaint\\createcomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\complaint\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\data\\passportcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,35 +174,7 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\user\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\feedback\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\feedback\\feedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\feedback\\createfeedbackdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\updatecomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\complaint\\updatecomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PassportAppDbUpdated/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -169,14 +193,6 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\documents\\documentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\paymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\paymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\passport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\passport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\familydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\familydetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -191,18 +207,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\models\\addressdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\models\\addressdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\paymentdetails\\paymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\paymentdetails\\paymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\paymentdetails\\createpaymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\paymentdetails\\createpaymentdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\passport\\passportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\dtos\\passport\\passportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\familydetails\\familydetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -255,6 +259,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240830060001_intialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240830060001_intialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831114550_paymentdetailsoptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831114550_paymentdetailsoptional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831114409_optionaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831114409_optionaldocument.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240901015934_complaintupdatedfieldsadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240901015934_complaintupdatedfieldsadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831214938_updatedpaymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831214938_updatedpaymentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831211501_complainteditupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831211501_complainteditupdated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|d:\\passport_collab\\thinkschoolpassportapp\\passportapplicationwebapi\\passportapplicationwebapi\\passportapplicationwebapi\\migrations\\20240831210607_complaintedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\migrations\\20240831210607_complaintedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -292,176 +320,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationRepository.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAgwDMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T11:54:41.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetPassportApplicationDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAowBcAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T12:18:28.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "NewApplicationController.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowDEAAABUAAAA",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAgwHEAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T08:41:23.517Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IApplicationsRepository.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAsAAABbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T11:53:02.54Z",
+              "WhenOpened": "2024-09-01T10:40:19.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AutoMapper.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAQwDIAAAALAAAA",
+              "Title": "ApplicationRepository.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAqwC0AAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:46:07.479Z",
+              "WhenOpened": "2024-08-31T11:54:41.758Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAowE0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T11:14:17.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T12:35:13.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PassportApplicationDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAA4wAMAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:36:08.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NewPassportApplicationDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T12:16:03.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PassportApplication.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PassportApplication.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\PassportApplication.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PassportApplication.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\PassportApplication.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAcwDwAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:08:19.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Program.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAYwBsAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:02:03.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ApplicantDetailsDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA1wEEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:36.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20240831114550_PaymentDetailsOptional.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T11:45:50.914Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 3,
               "Title": "dbo.PassportApplications [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PassportAppDbUpdated/True/SqlTable/dbo.PassportApplications.sql",
               "ToolTip": "dbo.PassportApplications [Data]",
@@ -471,98 +356,357 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
+              "Title": "Passport.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Passport.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Passport.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Passport.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Passport.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAwwAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T13:11:05.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PassportApplication.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PassportApplication.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\PassportApplication.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PassportApplication.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\PassportApplication.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T13:08:19.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FeedbackController.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAiwDwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T21:19:27.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IApplicationsRepository.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IApplicationsRepository.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAiwAgAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T11:53:02.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\Repository.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\Repository.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\Repository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T07:22:12.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IRepository.cs",
               "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IRepository.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T12:01:25.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20240831114409_OptionalDocument.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 9,
+              "Title": "ApplicantDetails.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T11:44:09.612Z",
+              "WhenOpened": "2024-08-30T06:43:13.393Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CreateAddressDetailsDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAmwEEAAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "PassportDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA7wAQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:40:07.005Z",
+              "WhenOpened": "2024-08-30T06:36:45.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CreatePassportApplicationDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAIwDEAAAAIAAAA",
+              "DocumentIndex": 11,
+              "Title": "PaymentDetailsController.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAgwFUAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:36:00.534Z",
+              "WhenOpened": "2024-08-31T21:35:35.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "EmergencyContactDetailsDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:38:13.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 12,
               "Title": "CreatePassportDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\CreatePassportDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Passport\\CreatePassportDto.cs",
               "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\CreatePassportDto.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Passport\\CreatePassportDto.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBkAAAASAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABwAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-30T06:36:39.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "DocumentIndex": 13,
+              "Title": "PassportNumberGenerator.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T12:33:42.218Z",
+              "WhenOpened": "2024-09-01T09:15:53.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FeedbackDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:37:15.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Feedback.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Feedback.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Feedback.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Feedback.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Feedback.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAA6wAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:43:34.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ComplaintsController.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAIA6wCIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T11:57:38.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ComplaintDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:39:06.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JwtTokenHelper.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:07:34.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CreateComplaintDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:39:02.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Complaint.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Complaint.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Complaint.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Complaint.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Complaint.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAwwCUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:43:20.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "20240901015934_complaintUpdatedfieldsAdded.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240901015934_complaintUpdatedfieldsAdded.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240901015934_complaintUpdatedfieldsAdded.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240901015934_complaintUpdatedfieldsAdded.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240901015934_complaintUpdatedfieldsAdded.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-01T01:59:35.016Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAowCMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T11:14:17.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwBoAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T05:24:01.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CreatePassportApplicationDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PassportApplication\\CreatePassportApplicationDto.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAswDEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:36:00.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreatePaymentDetailsDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAswA0AAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:35:21.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PaymentDetails.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PaymentDetails.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PaymentDetails.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwCEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T13:15:55.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Data\\SeedData.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Data\\SeedData.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Data\\SeedData.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Data\\SeedData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T22:32:41.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "20240831214938_updatedPaymentDetails.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831214938_updatedPaymentDetails.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831214938_updatedPaymentDetails.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831214938_updatedPaymentDetails.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831214938_updatedPaymentDetails.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T21:49:38.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PaymentDetailsDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:35:51.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CreateFeedbackDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:37:10.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "CreateApplicantDetailsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicantDetails\\CreateApplicantDetailsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\CreateApplicantDetailsDto.cs",
@@ -570,51 +714,179 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\CreateApplicantDetailsDto.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAewBwAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:31.965Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:39:31.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ApplicantDetails.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAA3wAAAAAAAAAAA",
+              "DocumentIndex": 69,
+              "Title": "20240831211501_complaintEditupdated.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831211501_complaintEditupdated.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831211501_complaintEditupdated.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831211501_complaintEditupdated.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831211501_complaintEditupdated.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:43:13.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T21:15:01.613Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CreateComplaintDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAADwvxsAAAA6AAAA",
+              "DocumentIndex": 70,
+              "Title": "20240831210607_complaintEdit.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831210607_complaintEdit.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831210607_complaintEdit.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831210607_complaintEdit.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831210607_complaintEdit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:02.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T21:06:07.358Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ComplaintDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "DocumentIndex": 32,
+              "Title": "GetPassportApplicationDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\GetPassportApplicationDto.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowBcAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:39:06.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T12:18:28.748Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T12:35:13.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AutoMapper.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Mappers\\AutoMapper.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwDIAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:46:07.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PassportApplicationDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PassportApplication\\PassportApplicationDto.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAA4wAMAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:36:08.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "NewPassportApplicationDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T12:16:03.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Program.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAYwBsAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:02:03.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ApplicantDetailsDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicantDetails\\ApplicantDetailsDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:39:36.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "20240831114550_PaymentDetailsOptional.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831114550_PaymentDetailsOptional.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T11:45:50.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "20240831114409_OptionalDocument.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Migrations\\20240831114409_OptionalDocument.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-31T11:44:09.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CreateAddressDetailsDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\AddressDetails\\CreateAddressDetailsDto.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAmwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:40:07.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "EmergencyContactDetailsDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\EmergencyContactDetailsDto.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T06:38:13.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
+              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\AuthDto\\LoginDto.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-30T12:33:42.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
@@ -626,32 +898,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ComplaintsController.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T11:57:38.389Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Complaint.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Complaint.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Complaint.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Complaint.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Complaint.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAwwAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:43:20.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 41,
               "Title": "PassportContext.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Data\\PassportContext.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Data\\PassportContext.cs",
@@ -663,55 +910,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Feedback.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Feedback.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Feedback.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Feedback.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Feedback.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAmwA0AAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:43:34.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "FeedbackDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\FeedbackDto.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:37:15.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "CreateFeedbackDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Feedback\\CreateFeedbackDto.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAcAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:37:10.876Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\User\\UserDto.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T05:24:01.649Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 42,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\User.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\User.cs",
@@ -723,19 +922,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "UpdateComplaintDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\UpdateComplaintDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\UpdateComplaintDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\UpdateComplaintDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\UpdateComplaintDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T12:59:51.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 43,
               "Title": "dbo.AspNetUsers [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PassportAppDbUpdated/True/SqlTable/dbo.AspNetUsers.sql",
               "ToolTip": "dbo.AspNetUsers [Data]",
@@ -744,31 +931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "JwtTokenHelper.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:07:34.243Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\Repository.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\Repository.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\Repository.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAkwCIAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T07:22:12.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 44,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\UserRepository.cs",
@@ -780,7 +943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 45,
               "Title": "RegistrationDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AuthDto\\RegistrationDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AuthDto\\RegistrationDto.cs",
@@ -792,7 +955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 46,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\ApplicationUser.cs",
@@ -804,7 +967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "FamilyDetails.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\FamilyDetails.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\FamilyDetails.cs",
@@ -816,7 +979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 47,
               "Title": "DocumentsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Documents\\DocumentsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Documents\\DocumentsDto.cs",
@@ -828,19 +991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Passport.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Passport.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Passport.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Passport.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\Passport.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAswCgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:11:05.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "EmergencyContactDetails.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\EmergencyContactDetails.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\EmergencyContactDetails.cs",
@@ -852,19 +1003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "PaymentDetails.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PaymentDetails.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PaymentDetails.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAiwAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:15:55.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "Documents.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Documents.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Documents.cs",
@@ -876,7 +1015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "AddressDetails.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\AddressDetails.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\AddressDetails.cs",
@@ -888,43 +1027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "CreatePaymentDetailsDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAswAkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:35:21.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "PaymentDetailsDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAADwvwQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:35:51.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "PassportDto.cs",
-              "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
-              "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Passport\\PassportDto.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA7wAIAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:36:45.108Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "FamilyDetailsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\FamilyDetails\\FamilyDetailsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\FamilyDetails\\FamilyDetailsDto.cs",
@@ -936,7 +1039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "CreateFamilyDetailsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\FamilyDetails\\CreateFamilyDetailsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\FamilyDetails\\CreateFamilyDetailsDto.cs",
@@ -948,7 +1051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "CreateEmergencyContactDetailsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\CreateEmergencyContactDetailsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\EmergencyContactDetails\\CreateEmergencyContactDetailsDto.cs",
@@ -960,7 +1063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "CreateDocumentsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Documents\\CreateDocumentsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Documents\\CreateDocumentsDto.cs",
@@ -972,7 +1075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "AddressDetailsDto.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\AddressDetails\\AddressDetailsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\AddressDetails\\AddressDetailsDto.cs",
@@ -984,7 +1087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Properties\\launchSettings.json",
@@ -996,7 +1099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\appsettings.json",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\appsettings.json",
@@ -1008,7 +1111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "20240830060420_seedData.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240830060420_seedData.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240830060420_seedData.cs",
@@ -1020,7 +1123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "20240830060001_intialCreate.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240830060001_intialCreate.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240830060001_intialCreate.cs",
@@ -1032,7 +1135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "20240830055656_intialCreate.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240830055656_intialCreate.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240830055656_intialCreate.cs",
@@ -1044,7 +1147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "20240830055915_intialCreate.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Migrations\\20240830055915_intialCreate.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Migrations\\20240830055915_intialCreate.cs",
@@ -1056,7 +1159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\WeatherForecastController.cs",
@@ -1068,7 +1171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": ".gitignore",
               "DocumentMoniker": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\.gitignore",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\.gitignore",

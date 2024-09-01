@@ -33,7 +33,7 @@ namespace PassportApplicationWebApi.Controllers
             return Ok(_mapper.Map<IEnumerable<UserDto>>(users));
         }
 
-        [HttpPut]
+        [HttpPut("{email}")]
         public async Task<IActionResult> Update(string email, UserDto userDto)
         {
             var existingUser = await _userRepo.GetByEmailAsync(email);
@@ -74,7 +74,5 @@ namespace PassportApplicationWebApi.Controllers
             await _repo.DeleteAsync(user);
             return NoContent();
         }
-
-
     }
 }

@@ -1,13 +1,17 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.EntityFrameworkCore;
 using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.DTOs.ApplicantDetails;
 using PassportApplicationWebApi.DTOs.ApplicationForm;
+using PassportApplicationWebApi.DTOs.Passport;
 using PassportApplicationWebApi.DTOs.PassportApplication;
+using PassportApplicationWebApi.HelperClass;
 using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace PassportApplicationWebApi.Controllers
 {
@@ -20,15 +24,19 @@ namespace PassportApplicationWebApi.Controllers
         private readonly PassportContext _context;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IApplicationsRepository _applicationsRepository;
+        private readonly IRepository<Passport> _passportRepository;
+        private readonly IRepository<User> _userRepository;
 
 
-        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork, IApplicationsRepository applicationsRepository)
+        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork, IApplicationsRepository applicationsRepository, IRepository<Passport> passportRepository, IRepository<User> userRepository)
 
         {
             _context = context;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
             _applicationsRepository = applicationsRepository;
+            _passportRepository = passportRepository;
+            _userRepository = userRepository;
         }
 
         [HttpGet]
@@ -36,7 +44,7 @@ namespace PassportApplicationWebApi.Controllers
         {
             var applications = await _applicationsRepository.GetAllApplicationsAsync();
 
-            if(applications == null)
+            if (applications == null)
             {
                 return NotFound("No applications found");
             }
@@ -47,19 +55,51 @@ namespace PassportApplicationWebApi.Controllers
         }
 
         [HttpPut("{ApplicationNumber}")]
-        public async Task<IActionResult> UpdateApplication(string ApplicationNumber,ApplicationStatus updatedApplicationStatus)
+        public async Task<IActionResult> UpdateApplication(string ApplicationNumber, ApplicationStatus updatedApplicationStatus, [FromBody] string rejectedMessage)
         {
             var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(ApplicationNumber);
+            var applicationDto = _mapper.Map<GetPassportApplicationDto>(application);
 
-            if(application == null)
+            if (application == null)
             {
                 return NotFound("Application not found");
+            }
+
+            if (application.User.Passport == null)
+            {
+                return BadRequest("Passport already Available");
+            }
+
+            if (updatedApplicationStatus == ApplicationStatus.Completed)
+            {
+                var newPassport = new Passport
+                {
+                    PassportNumber = PassportNumberGenerator.GeneratePassportNumber(),
+                    FirstName = applicationDto.ApplicantDetails.GivenName,
+                    LastName = applicationDto.ApplicantDetails.Surname,
+                    Address = applicationDto.AddressDetails.PresentHouseStreet,
+                    ExpiryDate = DateTime.Now.AddYears(10),
+                    DOB = applicationDto.ApplicantDetails.DOB,
+                    Country = applicationDto.ApplicantDetails.RegionCountry,
+                    DateOfIssue = DateTime.Now,
+                    Gender = applicationDto.ApplicantDetails.Gender,
+                    PassportStatus = PassportStatus.Active
+                };
+
+                var newCreatedPassport = await _passportRepository.AddAsync(newPassport);
+                application.User.PassportNumber = newCreatedPassport.PassportNumber;
+                application.User.PassportId = newCreatedPassport.PassportId;
+            }
+
+            if (updatedApplicationStatus == ApplicationStatus.Rejected)
+            {
+                application.RejectedMessage = rejectedMessage;
             }
 
             application.ApplicationStatus = updatedApplicationStatus;
             var updatedApplication = await _applicationsRepository.UpdateApplicationAsync(application);
 
-            return Ok(updatedApplication);
+            return NoContent();
         }
 
         [HttpGet("{ApplicationNumber}")]
@@ -67,11 +107,11 @@ namespace PassportApplicationWebApi.Controllers
         {
             var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(ApplicationNumber);
 
-            if(application == null)
+            if (application == null)
             {
                 return NotFound("Application not found");
             }
-            return Ok(application);
+            return Ok(_mapper.Map<GetPassportApplicationDto>(application));
         }
 
 

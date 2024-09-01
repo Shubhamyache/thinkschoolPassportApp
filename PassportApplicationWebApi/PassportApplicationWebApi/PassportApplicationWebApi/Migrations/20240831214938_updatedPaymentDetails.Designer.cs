@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PassportApplicationWebApi.Data;
 
@@ -11,9 +12,11 @@ using PassportApplicationWebApi.Data;
 namespace PassportApplicationWebApi.Migrations
 {
     [DbContext(typeof(PassportContext))]
-    partial class PassportContextModelSnapshot : ModelSnapshot
+    [Migration("20240831214938_updatedPaymentDetails")]
+    partial class updatedPaymentDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -465,16 +468,6 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(55)
-                        .HasColumnType("nvarchar(55)");
-
-                    b.Property<string>("MobileNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("PassportNumberOrApplicationNumber")
                         .IsRequired()

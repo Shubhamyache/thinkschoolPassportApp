@@ -35,7 +35,15 @@ namespace PassportApplicationWebApi.Repositories
         public async Task<PassportApplication?> GetApplicationByApplicationNumberAsync(string applicationNumber)
         {
             var application = await _context.PassportApplications
+                .Include(p => p.User)
+                .Include(p => p.ApplicantDetails)
+                .Include(p => p.AddressDetails)
+                .Include(p => p.EmergencyContactDetails)
+                .Include(p => p.FamilyDetails)
+                .Include(p => p.Documents)
+                .Include(p => p.PaymentDetails)
                 .FirstOrDefaultAsync(p => p.ApplicationNumber == applicationNumber);
+               
 
             if(application == null)
             {

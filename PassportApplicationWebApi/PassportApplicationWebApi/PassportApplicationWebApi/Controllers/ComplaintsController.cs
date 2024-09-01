@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PassportApplicationWebApi.DTOs.Complaint;
 using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
+using PassportApplicationWebApi.Repositories;
 
 namespace PassportApplicationWebApi.Controllers
 {
@@ -11,69 +12,89 @@ namespace PassportApplicationWebApi.Controllers
     [ApiController]
     public class ComplaintsController : ControllerBase
     {
-        private readonly IRepository<Complaint> _repo;
+        private readonly IRepository<Complaint> _repository;
         private readonly IMapper _mapper;
-        public ComplaintsController(IRepository<Complaint> repo, IMapper mapper)
+        private readonly IUserRepository _userRepo;
+        public ComplaintsController(IRepository<Complaint> repository, IMapper mapper, IUserRepository userRepo)
         {
-            _repo = repo;
+            _repository = repository;
             _mapper = mapper;
+            _userRepo = userRepo;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllComplaints()
+        public async Task<ActionResult<IEnumerable<ComplaintDto>>> GetComplaints()
         {
-            var complaints = await _repo.GetAllAsync();
-            return Ok(_mapper.Map<IEnumerable<ComplaintDto>>(complaints));
+            var complaints = await _repository.GetAllAsync();
+            var complaintsDto = _mapper.Map<IEnumerable<ComplaintDto>>(complaints);
+            return Ok(complaintsDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateComplaint(CreateComplaintDto complaintDto)
+        public async Task<ActionResult<ComplaintDto>> PostComplaint(CreateComplaintDto createComplaintDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            
+            // Get the UserId based on the email from the DTO
+            var User = await _userRepo.GetByEmailAsync(createComplaintDto.Email);
 
-            var complaint = _mapper.Map<Complaint>(complaintDto);
-            var result = await _repo.AddAsync(complaint);
-            return Ok(_mapper.Map<ComplaintDto>(result));
+            if (User == null)
+            {
+                return NotFound($"User with email {createComplaintDto.Email} not found.");
+            }
+
+            // Map DTO to entity
+            var complaint = _mapper.Map<Complaint>(createComplaintDto);
+            complaint.ComplaintStatus = ComplaintStatus.Pending; // Set status to Pending
+            complaint.UserId = User.UserId; // Set the UserId of the current user
+
+            // Add the complaint to the repository
+            var addedComplaint = await _repository.AddAsync(complaint);
+            var complaintDto = _mapper.Map<ComplaintDto>(addedComplaint);
+
+            return CreatedAtAction(nameof(GetComplaint), new { id = complaintDto.Id }, complaintDto);
         }
 
+
+        // GET: api/complaint/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetComplaintById(int id)
+        public async Task<ActionResult<ComplaintDto>> GetComplaint(int id)
         {
-            var complaint = await _repo.GetByIdAsync(id);
+            var complaint = await _repository.GetByIdAsync(id);
+
             if (complaint == null)
             {
-                return NotFound("Complaint not found");
+                return NotFound();
             }
 
             return Ok(_mapper.Map<ComplaintDto>(complaint));
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateComplaint(int id, UpdateComplaintDto complaintDto)
+        public async Task<IActionResult> PutComplaint(int id, ComplaintStatus complaintStatus)
         {
-            var existingComplaint  = await _repo.GetByIdAsync(id);
+            var existingComplaint = await _repository.GetByIdAsync(id);
             if (existingComplaint == null)
             {
                 return NotFound("Complaint not found");
             }
-            existingComplaint.ComplaintStatus = complaintDto.ComplaintStatus;
-            var result = await _repo.UpdateAsync(existingComplaint);
-            return Ok(_mapper.Map<ComplaintDto>(result));
+            existingComplaint.ComplaintStatus = complaintStatus;
+            var updatedComplaint = await _repository.UpdateAsync(existingComplaint);
+            return Ok(_mapper.Map<ComplaintDto>(updatedComplaint));
         }
 
+
+        // DELETE: api/complaint/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComplaint(int id)
         {
-            var complaint = await _repo.GetByIdAsync(id);
+            var complaint = await _repository.GetByIdAsync(id);
+
             if (complaint == null)
             {
-                return NotFound("Complaint not found");
+                return NotFound();
             }
-            await _repo.DeleteAsync(complaint);
+
+            await _repository.DeleteAsync(complaint);
+
             return NoContent();
         }
     }
