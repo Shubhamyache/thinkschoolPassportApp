@@ -9,7 +9,7 @@ namespace PassportApplicationWebApi.DTOs.User
         public string Email { get; set; }
 
         [Required]
-        public int ApplicationId { get; set; }
+        public string ApplicationId { get; set; }
 
         [Required]
         public string RenewalReason { get; set; }

@@ -39,11 +39,6 @@ namespace PassportApplicationWebApi.Data
 
 
             builder.Entity<User>()
-                .HasMany(u=>u.Feedbacks)
-                .WithOne(f=>f.User)
-                .HasForeignKey(f=>f.UserId);
-
-            builder.Entity<User>()
                 .HasMany(u=>u.Complaints)
                 .WithOne(c=>c.User)
                 .HasForeignKey(c=>c.UserId);

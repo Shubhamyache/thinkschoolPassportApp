@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.InteropServices;
 
 namespace PassportApplicationWebApi.Models
 {
@@ -9,12 +10,14 @@ namespace PassportApplicationWebApi.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50)]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
         public Guid TransactionNumber { get; set; }
 
         [Required]
-        [Range(0, double.MaxValue)]
-        [DataType("Decimal(10,2)")]
+        [Range(0, 10000)]
         public decimal Amount { get; set; }
 
         [Required]
@@ -29,24 +32,25 @@ namespace PassportApplicationWebApi.Models
         public string PaymentDetail { get; set; } = string.Empty;
 
         [Required]
+        [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
+        public string ApplicationNumber { get; set; } = string.Empty;
+
         public int ApplicationId { get; set; }
+        public PassportApplication? PassportApplication { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public ApplicationType ApplicationType { get; set; } // Discriminator column for application type
+        public ApplicationType ApplicationType { get; set; }
 
         [Required]
         public PaymentStatus PaymentStatus { get; set; }
 
-        [Required]
-        public string UserId { get; set; }
+        public string UserId { get; set; } = string.Empty;
 
         [ForeignKey("UserId")]
         public User? User { get; set; }
 
-        public PassportApplication? PassportApplication { get; set; }
-
     }
+
 
     public enum PaymentStatus
     {

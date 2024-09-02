@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.DTOs.AuthDto;
 using PassportApplicationWebApi.HelperClass;
@@ -16,6 +17,7 @@ namespace PassportApplicationWebApi.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly JwtTokenHelper _jwtTokenHelper;
         private readonly PassportContext _passportContext;
+        
 
         public AuthenticationController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, JwtTokenHelper jwtTokenHelper, PassportContext passportContext)
         {
@@ -98,11 +100,11 @@ namespace PassportApplicationWebApi.Controllers
             }
 
             var result = await _signInManager.PasswordSignInAsync(username, loginDto.Password, false, lockoutOnFailure:true);
-
+            var user = await _passportContext.Users.FirstOrDefaultAsync(u => u.Email == username.Email);
             if (result.Succeeded)
             {
                 var token = await _jwtTokenHelper.GenerateToken(username);
-                return Ok(new { Token = token });
+                return Ok(new { Token = token  });
             }
             else if(result.IsLockedOut)
             {

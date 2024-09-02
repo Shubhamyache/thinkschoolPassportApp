@@ -1,9 +1,71 @@
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: auto;
 }
 .header-message {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #0056b3;
+  color: #343a40;
+}
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.footer-section {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 170px;
+}
+.footer-section a {
+  color: white;
+}
+.welcome-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0fbf38;
+  margin-top: 10px;
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+}
+
+.new {
+  background-color: #007bff;
+}
+
+.applied {
+  background-color: #17a2b8;
+}
+
+.under-process {
+  background-color: #ffc107;
+}
+
+.completed {
+  background-color: #28a745;
+}
+
+.rejected {
+  background-color: #dc3545;
+}
+
+.unknown {
+  background-color: #6c757d;
 }
