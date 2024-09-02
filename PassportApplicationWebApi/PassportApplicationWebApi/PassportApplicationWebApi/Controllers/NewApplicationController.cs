@@ -26,9 +26,10 @@ namespace PassportApplicationWebApi.Controllers
         private readonly IApplicationsRepository _applicationsRepository;
         private readonly IRepository<Passport> _passportRepository;
         private readonly IRepository<User> _userRepository;
+        private readonly IRepository<PassportApplication> _passportAppRepo;
 
 
-        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork, IApplicationsRepository applicationsRepository, IRepository<Passport> passportRepository, IRepository<User> userRepository)
+        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork, IApplicationsRepository applicationsRepository, IRepository<Passport> passportRepository, IRepository<User> userRepository, IRepository<PassportApplication> passportAppRepo)
 
         {
             _context = context;
@@ -37,6 +38,7 @@ namespace PassportApplicationWebApi.Controllers
             _applicationsRepository = applicationsRepository;
             _passportRepository = passportRepository;
             _userRepository = userRepository;
+            _passportAppRepo = passportAppRepo;
         }
 
         [HttpGet]
@@ -49,13 +51,24 @@ namespace PassportApplicationWebApi.Controllers
                 return NotFound("No applications found");
             }
 
-            var applicationsDto = applications.Select(a => _mapper.Map<GetPassportApplicationDto>(a)).ToList();
+            //var applicationsDto = applications.Where(a=> a.IsRenewalApplication == false).Select(a => _mapper.Map<GetPassportApplicationDto>(a)).ToList();
+            var applicationsDto = applications.Where(a => a.IsRenewalApplication == false).Select(a => new GetNewPassportApplicationDto
+            {
+                ApplicationNumber = a.ApplicationNumber,
+                GivenName = a.ApplicantDetails.GivenName,
+                Surname = a.ApplicantDetails.Surname,
+                DOB = a.ApplicantDetails.DOB,
+                District = a.ApplicantDetails.District,
+                RegionCountry = a.ApplicantDetails.RegionCountry,
+                Aadhar = a.ApplicantDetails.Aadhaar,
+                ApplicationStatus = a.ApplicationStatus
+            }).ToList();
 
             return Ok(applicationsDto);
         }
 
         [HttpPut("{ApplicationNumber}")]
-        public async Task<IActionResult> UpdateApplication(string ApplicationNumber, ApplicationStatus updatedApplicationStatus, [FromBody] string rejectedMessage)
+        public async Task<IActionResult> UpdateApplication(string ApplicationNumber, [FromQuery] ApplicationStatus updatedApplicationStatus, [FromBody] string? rejectedMessage)
         {
             var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(ApplicationNumber);
             var applicationDto = _mapper.Map<GetPassportApplicationDto>(application);
@@ -65,9 +78,9 @@ namespace PassportApplicationWebApi.Controllers
                 return NotFound("Application not found");
             }
 
-            if (application.User.Passport == null)
+            if (applicationDto.ApplicationStatus == ApplicationStatus.Completed)
             {
-                return BadRequest("Passport already Available");
+                return BadRequest("Application already Processed");
             }
 
             if (updatedApplicationStatus == ApplicationStatus.Completed)
@@ -116,7 +129,7 @@ namespace PassportApplicationWebApi.Controllers
 
 
 
-        [HttpPost(Name = "AddNewPassportApplication")]
+        [HttpPost("NewPassportApplication")]
         public async Task<ActionResult> AddNewApplication(NewPassportApplicationDto newPassportForm)
         {
             // Check if the user exists in the database
@@ -158,5 +171,17 @@ namespace PassportApplicationWebApi.Controllers
             return Ok("Passport application added successfully.");
         }
 
+        [HttpDelete("{applicationNumber}")]
+        public async Task<IActionResult> DeleteApplication(string applicationNumber)
+        {
+            var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(applicationNumber);
+            if (application == null)
+            {
+                return BadRequest("Application not found");
+            }
+            await _passportAppRepo.DeleteAsync(application);
+
+            return NoContent();
+        }
     }
 }

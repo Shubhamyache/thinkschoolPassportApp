@@ -43,6 +43,7 @@ namespace PassportApplicationWebApi.Mappers
             CreateMap<PassportApplication, GetPassportApplicationDto>()
            .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.User.Email))
            .ForMember(dest => dest.ApplicationNumber, opt => opt.MapFrom(src => src.ApplicationNumber))
+           .ForMember(dest => dest.UserDto, opt => opt.MapFrom(src => src.User))
            .ForMember(dest => dest.ApplicantDetails, opt => opt.MapFrom(src => src.ApplicantDetails))
            .ForMember(dest => dest.AddressDetails, opt => opt.MapFrom(src => src.AddressDetails))
            .ForMember(dest => dest.EmergencyContactDetails, opt => opt.MapFrom(src => src.EmergencyContactDetails))

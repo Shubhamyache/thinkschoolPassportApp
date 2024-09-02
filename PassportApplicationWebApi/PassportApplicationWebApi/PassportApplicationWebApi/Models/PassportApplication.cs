@@ -12,7 +12,7 @@ namespace PassportApplicationWebApi.Models
         [StringLength(50)]
         public string ApplicationNumber { get; set; } = string.Empty;
 
-        [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
+        //[RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
         public string? PassportNumber { get; set; }
 
         public string? ReIssueReason { get; set; }
