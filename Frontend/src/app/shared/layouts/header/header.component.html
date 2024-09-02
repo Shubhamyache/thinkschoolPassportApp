@@ -28,7 +28,8 @@
       </nav>
     </div>
     <div class="container-fluid container-xl position-relative d-flex justify-content-end"> 
-      <button class="btn-getstarted" (click)="OpenLogin()">Login</button>
-      <button class="btn-getstarted" (click)="OpenSignup()">Signup</button>
+      <button *ngIf = '!isloggedIn()' class="btn-getstarted" (click)="OpenLogin()">Login</button>
+      <button *ngIf = '!isloggedIn()' class="btn-getstarted" (click)="OpenSignup()">Signup</button>
+      <button *ngIf = 'isloggedIn()' class="btn-getstarted" (click)="logout()">Logout</button>
     </div>
   </header>

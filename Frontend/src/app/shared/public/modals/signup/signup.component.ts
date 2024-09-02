@@ -12,7 +12,6 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ApiService } from '../../../services/api.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -21,19 +20,14 @@ import { Router } from '@angular/router';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
 })
-export class SignupComponent implements OnInit, OnDestroy {
-  allUsers: Member[] = [];
+export class SignupComponent implements OnDestroy {
+  
   private subscriptions$ = new Subscription();
   constructor(
     public activeModal: NgbActiveModal,
     private apiService: ApiService,
-    private router: Router,
     private modalService: NgbModal
   ) {}
-
-  ngOnInit(): void {
-    this.getAllUsers();
-  }
 
   firstName = new FormControl('', [Validators.required]);
 
@@ -72,58 +66,57 @@ export class SignupComponent implements OnInit, OnDestroy {
       : { mismatch: true };
   }
 
-  getAllUsers() {
-    const getAllUsers$ = this.apiService.getAllUsers().subscribe({
-      next: (allUsers: Member[]) => {
-        this.allUsers = allUsers;
-      },
-    });
-    this.subscriptions$.add(getAllUsers$);
-  }
+  // getAllUsers() {
+  //   const getAllUsers$ = this.apiService.getAllUsers().subscribe({
+  //     next: (allUsers: Member[]) => {
+  //       this.allUsers = allUsers;
+  //     },
+  //   });
+  //   this.subscriptions$.add(getAllUsers$);
+  // }
 
-  generateNewId(): string {
-    if (this.allUsers.length > 0) {
-      // Find the maximum ID value, parse it as an integer, increment by 1, and convert it back to a string
-      const maxId = Math.max(
-        ...this.allUsers.map((user) => parseInt(user.id, 10))
-      );
-      return (maxId + 1).toString();
-    } else {
-      return '1';
-    }
-  }
+  // generateNewId(): string {
+  //   if (this.allUsers.length > 0) {
+  //     // Find the maximum ID value, parse it as an integer, increment by 1, and convert it back to a string
+  //     const maxId = Math.max(
+  //       ...this.allUsers.map((user) => parseInt(user.id, 10))
+  //     );
+  //     return (maxId + 1).toString();
+  //   } else {
+  //     return '1';
+  //   }
+  // }
 
-  checkUserExistOrNot(email: string, mobileNumber: string): boolean {
-    return !!this.allUsers.find(
-      (member: Member) =>
-        member.email === email || member.mobileNumber === mobileNumber
-    );
-  }
+
+  // checkUserExistOrNot(email: string, mobileNumber: string): boolean {
+  //   return !!this.allUsers.find(
+  //     (member: Member) =>
+  //       member.email === email || member.mobileNumber === mobileNumber
+  //   );
+  // }
 
   registerUser(): void {
     const member: Member = {
-      id: this.generateNewId(),
       firstName: this.registerForm.value.firstName as string,
       lastName: this.registerForm.value.lastName as string,
       email: this.registerForm.value.email as string,
-      mobileNumber: this.registerForm.value.mobileNumber as string,
+      phoneNumber: this.registerForm.value.mobileNumber as string,
       password: this.registerForm.value.confirmPassword as string,
-      isAdmin: 'User',
-      applicationStatus: 'New',
-      passportStatus: 'NA',
     };
 
-    if (this.checkUserExistOrNot(member.email, member.mobileNumber)) {
-      Swal.fire('Success', 'Member already register', 'warning');
-      this.closeModal();
+    // if (this.checkUserExistOrNot(member.email, member.mobileNumber)) {
+    //   Swal.fire('Success', 'Member already register', 'warning');
+    //   this.closeModal();
 
-      return;
-    }
+    //   return;
+    // }
 
     console.log('In register User');
     const registerUser$ = this.apiService.registerUser(member).subscribe({
-      next: (member) => {
+      next: (data) => {
         Swal.fire('Success', 'member register successfully', 'success');
+        console.log(data + 'Register successfully');
+        this.closeModal();
       },
       error: (err) => {
         console.log('Error while registering the user ' + err);
@@ -134,7 +127,7 @@ export class SignupComponent implements OnInit, OnDestroy {
         );
       },
     });
-    this.closeModal();
+   
     this.subscriptions$.add(registerUser$);
   }
 

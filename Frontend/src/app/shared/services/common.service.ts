@@ -11,7 +11,7 @@ export class CommonService {
 
   isAuthenticated(): boolean {
     if (typeof window !== 'undefined') {
-      return !!localStorage.getItem(this.tokenKey);
+      return !!localStorage.getItem('token');
     } else {
       return false;
     }
