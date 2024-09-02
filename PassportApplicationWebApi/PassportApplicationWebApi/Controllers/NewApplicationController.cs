@@ -29,9 +29,9 @@ namespace PassportApplicationWebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllApplications()
         {
-            //var newPassportApplication = await _unitOfWork._repositoryPassportApplication.GetAllAsync
+            var newPassportApplication = await _unitOfWork._repositoryPassportApplication.GetAllAsync();
 
-            return Ok();
+            return Ok(newPassportApplication);
 
         }
 
@@ -154,6 +154,9 @@ namespace PassportApplicationWebApi.Controllers
                 // Add the whole passport application at once
                 await _unitOfWork._repositoryPassportApplication.AddAsync(passportApplication);
 
+                user.ApplicationNumber = reNewPassportFormDto.RenewUserDetails.ApplicationId;
+                await _unitOfWork._repositoryUser.UpdateAsync(user);
+
                 // Save all changes to the database in one transaction
                 await _unitOfWork.SaveChangesAsync();
 
@@ -166,6 +169,39 @@ namespace PassportApplicationWebApi.Controllers
                 return StatusCode(500, new { message = "An error occurred while submitting the application.", error = ex.Message });
             }
         }
+
+        [HttpGet("GetApplicationStatus")]
+        public async Task<ActionResult> GetApplicationStatus(string applicationNumber)
+        {
+            // Check if the application exists
+            var tempPassportApplication = await _context.PassportApplications
+                .FirstOrDefaultAsync(p => p.ApplicationNumber == applicationNumber);
+
+            if (tempPassportApplication == null)
+            {
+                return NotFound(new { Message = "Application not found." });
+            }
+
+            // Retrieve full application details using repository pattern
+            var passportApplication = await _unitOfWork._repositoryPassportApplication
+                .GetByIdAsync(tempPassportApplication.Id);
+
+            if (passportApplication == null)
+            {
+                return NotFound(new { Message = "Application details not found." });
+            }
+
+            // Return only the relevant data (DTO)
+            var applicationStatusDto = new
+            {
+                ApplicationNumber = passportApplication.ApplicationNumber,
+                Status = passportApplication.ApplicationStatus,  // Assuming status is an integer enum
+                RejectedMessage = passportApplication.RejectedMessage
+            };
+
+            return Ok(applicationStatusDto);
+        }
+
 
     }
 }

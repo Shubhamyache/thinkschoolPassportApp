@@ -5,16 +5,17 @@ using System.ComponentModel.DataAnnotations;
 namespace PassportApplicationWebApi.DTOs.PaymentDetails
 {
     public class CreatePaymentDetailsDto
-    {
-
-        
+    { 
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
 
         [Required]
-        [StringLength(50)]
-        public Guid TransactionNumber { get; set; }
+        //[RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
+        public string ApplicationNumber { get; set; } = string.Empty;
 
         [Required]
-        [Range(0, double.MaxValue)]
+        [Range(0, 10000)]
         public decimal Amount { get; set; }
 
         [Required]
@@ -28,19 +29,7 @@ namespace PassportApplicationWebApi.DTOs.PaymentDetails
         [StringLength(256)]
         public string PaymentDetail { get; set; } = string.Empty;
 
-
-
         [Required]
-        public int ApplicationId { get; set; }
-
-        [Required]
-        [StringLength(20)]
-        public ApplicationType ApplicationType { get; set; }// Discriminator column for application type
-
-        [Required]
-        public PaymentStatus PaymentStatus { get; set; }
-
-        [Required]
-        public string UserId { get; set; }
+        public ApplicationType ApplicationType { get; set; }
     }
 }

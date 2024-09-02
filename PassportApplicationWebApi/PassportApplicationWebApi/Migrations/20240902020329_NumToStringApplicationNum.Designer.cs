@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PassportApplicationWebApi.Data;
 
@@ -11,9 +12,11 @@ using PassportApplicationWebApi.Data;
 namespace PassportApplicationWebApi.Migrations
 {
     [DbContext(typeof(PassportContext))]
-    partial class PassportContextModelSnapshot : ModelSnapshot
+    [Migration("20240902020329_NumToStringApplicationNum")]
+    partial class NumToStringApplicationNum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -463,21 +466,7 @@ namespace PassportApplicationWebApi.Migrations
                         .HasMaxLength(55)
                         .HasColumnType("nvarchar(55)");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasMaxLength(55)
-                        .HasColumnType("nvarchar(55)");
-
-                    b.Property<string>("MobileNumber")
-                        .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("nvarchar(15)");
-
-                    b.Property<string>("PassportNumberOrApplicationNumber")
+                    b.Property<string>("PassportNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -640,19 +629,25 @@ namespace PassportApplicationWebApi.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeedbackId"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FeedbackDetails")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<string>("PassportNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Rating")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("FeedbackId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Feedbacks");
                 });
@@ -805,16 +800,9 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<int>("ApplicationId")
                         .HasColumnType("int");
 
-                    b.Property<string>("ApplicationNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("ApplicationType")
+                        .HasMaxLength(20)
                         .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("PaymentDate")
                         .HasColumnType("datetime2");
@@ -833,6 +821,7 @@ namespace PassportApplicationWebApi.Migrations
                         .HasColumnType("int");
 
                     b.Property<Guid>("TransactionNumber")
+                        .HasMaxLength(50)
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("UserId")
@@ -947,6 +936,17 @@ namespace PassportApplicationWebApi.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("PassportApplicationWebApi.Models.Feedback", b =>
+                {
+                    b.HasOne("PassportApplicationWebApi.Models.User", "User")
+                        .WithMany("Feedbacks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PassportApplicationWebApi.Models.PassportApplication", b =>
                 {
                     b.HasOne("PassportApplicationWebApi.Models.AddressDetails", "AddressDetails")
@@ -1050,6 +1050,8 @@ namespace PassportApplicationWebApi.Migrations
             modelBuilder.Entity("PassportApplicationWebApi.Models.User", b =>
                 {
                     b.Navigation("Complaints");
+
+                    b.Navigation("Feedbacks");
 
                     b.Navigation("PassportApplications");
 

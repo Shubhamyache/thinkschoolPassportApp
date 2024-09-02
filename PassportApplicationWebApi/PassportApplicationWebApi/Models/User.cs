@@ -23,17 +23,15 @@ namespace PassportApplicationWebApi.Models
         [Required]
         [Phone(ErrorMessage = "Invalid Phone Number")]
         public string PhoneNumber { get; set; } = string.Empty;
-        public int? ApplicationNumber { get; set; }
+        public string? ApplicationNumber { get; set; }
  
         [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
         public string? PassportNumber { get; set; }
-
         public int? PassportId { get; set; }
 
         [ForeignKey("PassportId")]
         public Passport? Passport { get; set; }
         public ICollection<PassportApplication> PassportApplications { get; set; } = new List<PassportApplication>();
-        public ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
         public ICollection<Complaint> Complaints { get; set; } = new List<Complaint>();
         public ICollection<PaymentDetails> PaymentDetails { get; set; } = new List<PaymentDetails>();
         public ApplicationUser? AppUser { get; set; }

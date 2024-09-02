@@ -50,6 +50,7 @@ namespace PassportApplicationWebApi.HelperClass
                 new Claim("Role", roles.FirstOrDefault()), //Use ClaimTypes.Role
                 new Claim("FirstName", realUser.FirstName?? ""),
                 new Claim("LastName", realUser.LastName?? ""),
+                new Claim("ApplicationNumber", realUser.ApplicationNumber??""),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Aud, jwtSettings["Audience"]),
                 new Claim(JwtRegisteredClaimNames.Iss, jwtSettings["Issuer"])

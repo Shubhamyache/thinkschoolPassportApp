@@ -35,4 +35,13 @@ export class ApiService {
   submitRenewFormData(formsArray: any): Observable<any> {
     return this.http.post(this.renewFormUrl, formsArray);
   }
+
+  checkStatus(applicationNumber: string): Observable<any> {
+    return this.http.get(
+      `${environment.apiUrl}/NewApplication/GetApplicationStatus`,
+      {
+        params: { applicationNumber: applicationNumber },
+      }
+    );
+  }
 }

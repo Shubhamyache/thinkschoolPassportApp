@@ -71,6 +71,8 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem('lastName', lastName); // Save the last name in local storage
           const email = decodedToken.email;
           sessionStorage.setItem('loggedEmail', email); // Save the email in local storage
+          const applicationNumber = decodedToken.ApplicationNumber;
+          sessionStorage.setItem('applicationNumber', applicationNumber); // Save the application number in local storage
 
           //debug
           console.log('Role:', role); // Log the role
@@ -78,6 +80,7 @@ export class LoginComponent implements OnInit {
           console.log('Last Name:', lastName); // Log the last name
           console.log('Email:', email); // Log the email
           console.log('Decoded Token:', decodedToken); // Log the decoded token
+          console.log('Application Number:', applicationNumber); // Log the application number
 
           // Navigate to appropriate dashboard based on role
           if (role === 'User') {
