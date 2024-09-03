@@ -366,7 +366,7 @@
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
               "ToolTip": "D:\\Passport_Collab\\thinkschoolPassportApp\\PassportApplicationWebApi\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAgwFcAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-31T21:35:35.226Z",
               "EditorCaption": ""
@@ -381,8 +381,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
               "ViewState": "AQIAAC4AAAAAAAAAAAA3wEQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T13:15:55.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T13:15:55.675Z"
             },
             {
               "$type": "Document",
@@ -394,8 +393,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAywB0AAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:35:21.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:35:21.54Z"
             },
             {
               "$type": "Document",
@@ -407,8 +405,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\PaymentDetailsDto.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwBEAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T06:35:51.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T06:35:51.787Z"
             },
             {
               "$type": "Document",
@@ -420,8 +417,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
               "ViewState": "AQIAADwAAAAAAAAAAAAowEYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T21:19:27.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-31T21:19:27.215Z"
             },
             {
               "$type": "Document",

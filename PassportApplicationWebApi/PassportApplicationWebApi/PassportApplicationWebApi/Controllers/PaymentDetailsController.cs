@@ -5,7 +5,6 @@ using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
 
 
-
 namespace PassportApplication1.Controllers
 {
     [ApiController]
