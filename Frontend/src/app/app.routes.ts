@@ -3,18 +3,23 @@ import { AdminDashboardComponent } from './shared/admin/components/admin-dashboa
 import { UserDashboardComponent } from './shared/users/components/user-dashboard/user-dashboard.component';
 import { authGuard } from './shared/guards/auth.guard';
 import { HomeComponent } from './shared/public/components/home/home.component';
-import { PassportFormComponent } from './shared/users/components/passport-form/passport-form.component';
 import { NewFormComponent } from './shared/users/components/apply-for-new-passport/apply-for-new-passport/new-form/new-form.component';
 import { PaymentComponent } from './shared/users/components/payment/payment.component';
 import { ComplaintComponent } from './shared/users/components/complaint/complaint.component';
 import { FeedbackComponent } from './shared/users/components/feedback/feedback.component';
+import { ReNewFormComponent } from './shared/users/components/apply-for-renew-passport/renew-form/new-form.component';
+import { PageNotFoundComponent } from './shared/miscellaneous/page-not-found/page-not-found.component';
 
 
 export const routes: Routes = [
     {path:"home", component:HomeComponent},
     // {path:"admindashboard", component:AdminDashboardComponent, canActivate: [authGuard]},
-    {path:"userdashboard", component: UserDashboardComponent, canActivate: [authGuard]},
-    { path: 'admindashboard', component: AdminDashboardComponent, children: [
+    {path:"userdashboard", component: UserDashboardComponent,canActivate: [authGuard], children:[
+      { path: 'dashboard', loadComponent: () => import('./shared/users/components/dashboard/dashboard.component').then(m => m.DashboardComponent)},
+      { path: 'applicationstatus', loadComponent: () => import('./shared/users/components/application-status/application-status.component').then(m => m.ApplicationStatusComponent) },
+      { path: 'profile', loadComponent: () => import('./shared/users/components/profile/profile.component').then(m => m.ProfileComponent) }, 
+    ]},
+    { path: 'admindashboard', component: AdminDashboardComponent,canActivate: [authGuard], children: [
         { path: 'dashboard', loadComponent: () => import('./shared/admin/components/dashboard/dashboard.component').then(m => m.DashboardComponent) },
         { path: 'users', loadComponent: () => import('./shared/admin/components/users/users.component').then(m => m.UsersComponent) },
         { path: 'newapplications', loadComponent: () => import('./shared/admin/components/new-applications/new-applications.component').then(m => m.NewApplicationsComponent) },
@@ -27,8 +32,10 @@ export const routes: Routes = [
     },
     // {path:"applynewpassword", component:PassportFormComponent},
     {path:"applynewpassword", component:NewFormComponent, canActivate: [authGuard]},
+    {path:"applyrenewpassport", component:ReNewFormComponent, canActivate: [authGuard]},
     {path:"payment", component: PaymentComponent,canActivate: [authGuard]},
     {path: "complaint", component: ComplaintComponent},
     {path: "feedback", component: FeedbackComponent},
-    {path:"", redirectTo:"/home", pathMatch:'full'}
+    {path:"", redirectTo:"/home", pathMatch:'full'},
+    { path: '**', component: PageNotFoundComponent, pathMatch:'full' },
 ];

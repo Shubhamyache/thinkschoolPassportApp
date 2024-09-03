@@ -67,6 +67,35 @@ namespace PassportApplicationWebApi.Controllers
             return Ok(applicationsDto);
         }
 
+        [HttpGet("getAllRenewApplications")]
+        public async Task<IActionResult> GetAllRenewApplications()
+        {
+            var applications = await _applicationsRepository.GetAllApplicationsAsync();
+
+            if (applications == null)
+            {
+                return NotFound("No applications found");
+            }
+
+            //var applicationsDto = applications.Where(a=> a.IsRenewalApplication == false).Select(a => _mapper.Map<GetPassportApplicationDto>(a)).ToList();
+            var applicationsDto = applications.Where(a => a.IsRenewalApplication == true).Select(a => new GetRenewPassportApplicationDto
+            {
+                ApplicationNumber = a.ApplicationNumber,
+                PassportNumber = a.PassportNumber,
+                ReIssueReason  = a.ReIssueReason,
+                GivenName = a.ApplicantDetails.GivenName,
+                Surname = a.ApplicantDetails.Surname,
+                DOB = a.ApplicantDetails.DOB,
+                District = a.ApplicantDetails.District,
+                RegionCountry = a.ApplicantDetails.RegionCountry,
+                Aadhar = a.ApplicantDetails.Aadhaar,
+                ApplicationStatus = a.ApplicationStatus
+            }).ToList();
+
+            return Ok(applicationsDto);
+        }
+
+
         [HttpPut("{ApplicationNumber}")]
         public async Task<IActionResult> UpdateApplication(string ApplicationNumber, [FromQuery] ApplicationStatus updatedApplicationStatus, [FromBody] string? rejectedMessage)
         {
@@ -128,49 +157,6 @@ namespace PassportApplicationWebApi.Controllers
         }
 
 
-
-        //[HttpPost("NewPassportApplication")]
-        //public async Task<ActionResult> AddNewApplication(NewPassportApplicationDto newPassportForm)
-        //{
-        //    // Check if the user exists in the database
-        //    var userEmail = newPassportForm.UserDetails.Email;
-        //    var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == userEmail);
-
-        //    if (user == null)
-        //    {
-        //        throw new Exception("User not found.");
-        //    }
-
-        //    // Map DTOs to actual entities
-        //    var applicantDetails = _mapper.Map<ApplicantDetails>(newPassportForm.ApplicantDetails);
-        //    var addressDetails = _mapper.Map<AddressDetails>(newPassportForm.AddressDetails);
-        //    var familyDetails = _mapper.Map<FamilyDetails>(newPassportForm.FamilyDetails);
-        //    var emergencyContactDetails = _mapper.Map<EmergencyContactDetails>(newPassportForm.EmergencyContactDetails);
-        //    var passport = _mapper.Map<Passport>(newPassportForm.PreviousPassportDetails);
-
-        //    // Create a new PassportApplication instance
-        //    var passportApplication = new PassportApplication
-        //    {
-        //        ApplicantDetails = applicantDetails,
-        //        AddressDetails = addressDetails,
-        //        FamilyDetails = familyDetails,
-        //        EmergencyContactDetails = emergencyContactDetails,
-        //        PreviousPassportDetails = passport,
-        //        UserId = user.UserId,
-        //        ApplicationStatus = ApplicationStatus.New,
-        //        IsRenewalApplication = false,
-        //        ApplicationNumber = newPassportForm.UserDetails.ApplicationId.ToString()
-        //    };
-
-        //    // Now add the whole passport application at once
-        //    await _unitOfWork._repositoryPassportApplication.AddAsync(passportApplication);
-
-        //    // Save all changes to the database in one transaction
-        //    await _unitOfWork.SaveChangesAsync();
-
-        //    return Ok("Passport application added successfully.");
-        //}
-
         [HttpPost(Name = "AddNewPassportApplication")]
         public async Task<ActionResult> AddNewApplication(NewPassportApplicationDto newPassportForm)
         {
@@ -196,7 +182,7 @@ namespace PassportApplicationWebApi.Controllers
                 var addressDetails = _mapper.Map<AddressDetails>(newPassportForm.AddressDetails);
                 var familyDetails = _mapper.Map<FamilyDetails>(newPassportForm.FamilyDetails);
                 var emergencyContactDetails = _mapper.Map<EmergencyContactDetails>(newPassportForm.EmergencyContactDetails);
-                var passport = _mapper.Map<Passport>(newPassportForm.PreviousPassportDetails);
+                //var passport = _mapper.Map<Passport>(newPassportForm.PreviousPassportDetails);
 
                 // Validate necessary fields
                 if (applicantDetails == null || addressDetails == null || familyDetails == null || emergencyContactDetails == null)
@@ -211,7 +197,7 @@ namespace PassportApplicationWebApi.Controllers
                     AddressDetails = addressDetails,
                     FamilyDetails = familyDetails,
                     EmergencyContactDetails = emergencyContactDetails,
-                    PreviousPassportDetails = passport,
+                    //PreviousPassportDetails = passport,
                     UserId = user.UserId,
                     ApplicationStatus = ApplicationStatus.New,
                     IsRenewalApplication = false,
@@ -276,6 +262,7 @@ namespace PassportApplicationWebApi.Controllers
                 var passportApplication = new PassportApplication
                 {
                     ApplicantDetails = applicantDetails,
+                    PassportNumber = reNewPassportFormDto.PreviousPassportDetails.PassportNumber,
                     AddressDetails = addressDetails,
                     FamilyDetails = familyDetails,
                     EmergencyContactDetails = emergencyContactDetails,
@@ -290,6 +277,8 @@ namespace PassportApplicationWebApi.Controllers
 
                 // Add the whole passport application at once
                 await _unitOfWork._repositoryPassportApplication.AddAsync(passportApplication);
+                user.ApplicationNumber = reNewPassportFormDto.RenewUserDetails.ApplicationId.ToString();
+                await _unitOfWork._repositoryUser.UpdateAsync(user);
 
                 // Save all changes to the database in one transaction
                 await _unitOfWork.SaveChangesAsync();
@@ -316,5 +305,38 @@ namespace PassportApplicationWebApi.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("GetApplicationStatus")]
+        public async Task<ActionResult> GetApplicationStatus(string applicationNumber)
+        {
+            // Check if the application exists
+            var tempPassportApplication = await _context.PassportApplications
+                .FirstOrDefaultAsync(p => p.ApplicationNumber == applicationNumber);
+
+            if (tempPassportApplication == null)
+            {
+                return NotFound(new { Message = "Application not found." });
+            }
+
+            // Retrieve full application details using repository pattern
+            var passportApplication = await _unitOfWork._repositoryPassportApplication
+                .GetByIdAsync(tempPassportApplication.Id);
+
+            if (passportApplication == null)
+            {
+                return NotFound(new { Message = "Application details not found." });
+            }
+
+            // Return only the relevant data (DTO)
+            var applicationStatusDto = new
+            {
+                ApplicationNumber = passportApplication.ApplicationNumber,
+                Status = passportApplication.ApplicationStatus,  // Assuming status is an integer enum
+                RejectedMessage = passportApplication.RejectedMessage
+            };
+
+            return Ok(applicationStatusDto);
+        }
+
     }
 }

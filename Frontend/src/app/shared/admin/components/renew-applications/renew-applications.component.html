@@ -27,31 +27,35 @@
         <div class="table-container table-responsive border mb-3">
           <table class="table table-bordered table-striped">
             <caption class="table-caption">
-              List of applications
+              List of Renewal applications
             </caption>
             <thead>
               <tr>
                 <th>Application Number</th>
+                <th>Passport Number</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>DOB</th>
                 <th>District</th>
                 <th>Country</th>
                 <th>Aadhar Number</th>
+                <th>Re-Issue Reason</th>
                 <th>Rejected Message</th>
                 <th>Status</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let application of allNewApplications">
+              <tr *ngFor="let application of allRenewApplications">
                 <td>{{ application.applicationNumber }}</td>
+                <td>{{ application.passportNumber }}</td>
                 <td>{{ application.givenName }}</td>
                 <td>{{ application.surname }}</td>
                 <td>{{ application.dob }}</td>
                 <td>{{ application.district }}</td>
                 <td>{{ application.regionCountry }}</td>
                 <td>{{ application.aadhar }}</td>
+                <td>{{ application.reIssueReason }}</td>
                 <td><input [disabled]="!application.isEditing" [(ngModel)] = "application.rejectedMessage"></td>
                 
                 <td>

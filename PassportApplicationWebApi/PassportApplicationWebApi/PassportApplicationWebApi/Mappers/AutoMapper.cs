@@ -50,6 +50,7 @@ namespace PassportApplicationWebApi.Mappers
            .ForMember(dest => dest.Documents, opt => opt.MapFrom(src => src.Documents))
            .ForMember(dest => dest.PaymentDetails, opt => opt.MapFrom(src => src.PaymentDetails))
            .ForMember(dest => dest.ApplicationStatus, opt => opt.MapFrom(src => src.ApplicationStatus));
+
         }
     }
 }

@@ -1,23 +1,22 @@
 <body class="index-page">
-
     <div class="row">
       <div class="col-3">
         <aside id="sidebar" class="sidebar">
           <ul class="sidebar-nav" id="sidebar-nav">
             <li class="nav-item">
-              <a class="nav-link " href="#">
+              <a class="nav-link collapsed" routerLink="/userdashboard/dashboard">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
               </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
             <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link collapsed" routerLink="/userdashboard/profile">
                 <i class="bi bi-person"></i>
                 <span>Profile</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link collapsed" routerLink="/userdashboard/applicationstatus">
                 <i class="bi bi-ui-checks"></i>
                 <span>Track Application</span>
               </a>
@@ -25,11 +24,11 @@
             <li class="nav-item">
               <a class="nav-link collapsed" href="#">
                 <i class="bi bi-calculator"></i>
-                <span>Calculate Fees</span>
+                <span>Payment History</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link collapsed" href="#">
+              <a class="nav-link collapsed" routerLink="/complaint">
                 <i class="bi bi-file-text"></i>
                 <span>Raise Complaint</span>
               </a>
@@ -46,62 +45,7 @@
       </div>
       <div class="col-9">
         <div class="container-fluid">
-            <section id="hero" class="hero section">
-              <div class="container-fluid">
-                <div class="row gy-4 mt-lg-2 justify-content-center">
-      
-                  <div class="col-sm-12 col-md-6 col-lg-3 mx-2" data-aos="zoom-out"
-                    data-aos-delay="100">
-                    <div class="icon-box">
-                      <div class="icon"><i class="bi bi-file-earmark-plus"></i></div>
-                      <h4 class="title"><a id="freshpass" routerLink = "/applynewpassword">Apply for Fresh Passport</a></h4>
-                      <p class="description">Streamline your travel experience with this convenient, wallet-sized ID. </p>
-                    </div>
-                  </div><!--End Icon Box -->
-      
-                  <div class=" col-sm-12 col-md-6 col-lg-3 mx-2" data-aos="zoom-out" data-aos-delay="200">
-                    <div class="icon-box">
-                      <div class="icon"><i class="bi bi-file-earmark-arrow-up"></i></div>
-                      <!-- <h4 class="title"><a  data-toggle="modal" data-target="#passportApplicationModal">Open Passport Application
-                          Form</a></h4> -->
-                      <h4 class="title"> <button id="re-issue" type="button" class="reIssue-button me-2"
-                          data-bs-toggle="modal" data-bs-target="#passportApplicationModal">
-                          Apply for re-issue passport
-                        </button></h4>
-                      <p class="description"> Follow our simple steps to renew your passport card and stay prepared for all
-                        your upcoming journeyse</p>
-                    </div>
-                  </div><!--End Icon Box -->
-      
-                  <div class=" col-sm-12 col-md-6 col-lg-3 mx-2" data-aos="zoom-out" data-aos-delay="300">
-                    <div class="icon-box">
-                      <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                      <h4 class="title"><a href="Track_application.html">Track Your Application</a></h4>
-                      <p class="description">Track the status of your passport card application effortlessly.</p>
-                    </div>
-                  </div><!--End Icon Box -->
-      
-                  <div class="col-md-6 col-lg-3 mx-2" data-aos="zoom-out" data-aos-delay="400">
-                    <div class="icon-box">
-                      <div class="icon"><i class="bi bi-calculator"></i></div>
-                      <h4 class="title"><a href="">Calculate Fees</a></h4>
-                      <p class="description">Understand tsdnf;sdnfdsj;nfdsjonfdsjonodhjdsfnsnhe costs involved, including application, processing, and renewal
-                        fees.</p>
-                    </div>
-                  </div><!--End Icon Box -->
-                  <div class="col-md-6 col-lg-3 mx-2" data-aos="zoom-out" data-aos-delay="400">
-                    <div class="icon-box">
-                      <div class="icon"><i class="bi bi-book"></i></div>
-                      <h4 class="title"><a href="">Quick Guide</a></h4>
-                      <p class="description">Get Your Passport Card Quickly: A step-by-step guide to applying for your
-                        passport card</p>
-                    </div>
-                  </div>
-      
-                </div>
-              </div>
-      
-            </section><!-- /Hero Section -->
+            <router-outlet></router-outlet>
           </div>
       </div>
     </div>

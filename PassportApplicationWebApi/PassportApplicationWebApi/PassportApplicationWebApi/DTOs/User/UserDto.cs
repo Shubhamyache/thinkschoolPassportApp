@@ -21,7 +21,7 @@ namespace PassportApplicationWebApi.DTOs.User
         [Required]
         [Phone(ErrorMessage = "Invalid Phone Number")]
         public string PhoneNumber { get; set; } = string.Empty;
-        public int? ApplicationNumber { get; set; }
+        public string? ApplicationNumber { get; set; }
 
         [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
         public string? PassportNumber { get; set; }

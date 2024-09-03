@@ -1,27 +1,26 @@
 export interface ApplicantDetails {
-  given_name: string;
+  givenName: string;
   surname: string;
-  known_by_other_names?: string;
+  knownByOtherNames?: string;
   alias?: string;
-  changed_name?: string;
-  previous_name?: string;
+  changedName?: string;
+  previousName?: string;
   dob: string;
-  place_of_birth: string;
+  placeOfBirth: string;
   district: string;
   state: string;
-  region_country: string;
+  regionCountry: string;
   gender: string;
-  marital_status: string;
+  maritalStatus: string;
   citizenship: string;
-  pan?: string;
-  voter_id?: string;
-  employment_type: string;
-  organization_name?: string;
-  parent_spouse_government_servant: string;
+  panNumber?: string;
+  voterId?: string;
+  employmentType: string;
+  organizationName?: string;
+  parentSpouseGovernmentServant: boolean;
   education: string;
-  non_ecr: string;
-  distinguishing_mark?: string;
+  nonEcr: boolean;
+  distinguishingMark?: string;
   aadhaar: string;
-  is_applicant_details_valid: boolean;
+  // isApplicantDetailsValid: boolean;
 }
-

@@ -81,6 +81,10 @@ export class ApiService {
     return this.http.get<PassportApplication[]>(`${this.apiUrl}/NewApplication`);
   }
 
+  getAllRenewApplications(): Observable<PassportApplication[]>{
+    return this.http.get<PassportApplication[]>(`${this.apiUrl}/NewApplication/getAllRenewApplications`);
+  }
+
   updateNewApplication(applicationNumber: string, updatedApplicationStatus: ApplicationStatus, rejectedMessage: string): Observable<any>{
     return this.http.put<string>(`${this.apiUrl}/NewApplication/${applicationNumber}?updatedApplicationStatus=${updatedApplicationStatus}`, rejectedMessage);
   }
@@ -88,10 +92,20 @@ export class ApiService {
   deleteNewApplication(applicationNumber: string): Observable<any>{
     return this.http.delete(`${this.apiUrl}/NewApplication/${applicationNumber}`);
   }
+
+  checkStatus(applicationNumber: string): Observable<any> {
+    return this.http.get(
+      `${environment.apiUrl}/NewApplication/GetApplicationStatus?applicationNumber=${applicationNumber}`
+    );
+  }
   // Above till all work completed
 
   submitFormData(formsArray: any): Observable<any> {
     return this.http.post(this.newFormUrl, formsArray);
+  }
+
+  submitRenewFormData(formsArray: any): Observable<any> {
+    return this.http.post(`${environment.apiUrl}/NewApplication/ReNewPassportApplication`, formsArray);
   }
   
 }

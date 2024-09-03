@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PassportApplicationWebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5ac4b0ffbfbe2ede9a0f2c39fee334be92a9aa93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db83e3b50dfeb592fe8d345a517d5fd38d25b406")]
 [assembly: System.Reflection.AssemblyProductAttribute("PassportApplicationWebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PassportApplicationWebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

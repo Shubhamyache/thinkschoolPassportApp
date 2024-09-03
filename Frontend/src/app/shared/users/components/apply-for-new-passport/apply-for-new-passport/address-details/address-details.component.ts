@@ -169,32 +169,30 @@ export class AddressDetailsComponent implements OnInit {
   createFormObject(): AddressDetails | null {
     if (this.presentAddressForm.valid) {
       return {
-        present_house_street:
-          this.presentAddressForm.value.present_house_street,
-        present_town: this.presentAddressForm.value.present_town,
-        present_district: this.presentAddressForm.value.present_district,
-        present_police_station:
+        presentHouseStreet: this.presentAddressForm.value.present_house_street,
+        presentTown: this.presentAddressForm.value.present_town,
+        presentDistrict: this.presentAddressForm.value.present_district,
+        presentPoliceStation:
           this.presentAddressForm.value.present_police_station,
-        present_state: this.presentAddressForm.value.present_state,
-        pin: this.presentAddressForm.value.pin,
-        mobile_number: this.presentAddressForm.value.mobile_number,
-        telephone_number: this.presentAddressForm.value.telephone_number || '',
-        email: this.presentAddressForm.value.email,
-        same_address: this.presentAddressForm.value.same_address,
-        permanent_house_street:
+        presentState: this.presentAddressForm.value.present_state,
+        pincode: this.presentAddressForm.value.pin,
+        mobileNumber: this.presentAddressForm.value.mobile_number,
+        telephoneNumber: this.presentAddressForm.value.telephone_number || '',
+        sameAddress: this.presentAddressForm.value.same_address === 'yes',
+        permanentHouseStreet:
           this.presentAddressForm.value.permanent_house_street,
-        permanent_town: this.presentAddressForm.value.permanent_town,
-        permanent_district: this.presentAddressForm.value.permanent_district,
-        permanent_police_station:
+        permanentTown: this.presentAddressForm.value.permanent_town,
+        permanentDistrict: this.presentAddressForm.value.permanent_district,
+        permanentPoliceStation:
           this.presentAddressForm.value.permanent_police_station,
-        permanent_state: this.presentAddressForm.value.permanent_state,
-        permanent_pin: this.presentAddressForm.value.permanent_pin,
-        permanent_mobile_number:
+        permanentState: this.presentAddressForm.value.permanent_state,
+        permanentPin: this.presentAddressForm.value.permanent_pin,
+        permanentMobileNumber:
           this.presentAddressForm.value.permanent_mobile_number,
-        permanent_telephone_number:
+        permanentTelephoneNumber:
           this.presentAddressForm.value.permanent_telephone_number || '',
-        is_address_details_valid: false,
-      };
+        // isAddressDetailsValid: false,
+        };
     } else {
       console.log('Form is invalid!');
       return null;

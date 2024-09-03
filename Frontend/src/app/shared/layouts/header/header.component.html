@@ -9,7 +9,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a routerLink = "/" class="active">Home<br></a></li>
+          <li><a *ngIf = '!isloggedIn()' routerLink = "/">Home<br></a></li>
+          <li><a *ngIf="isloggedIn()" (click)='isloggedInWithRole()'>Dashboard<br></a></li>
           <li><a >About</a></li>
           <li><a routerLink="/feedback">feedback</a></li>
           <li><a routerLink="/complaint">Raise a Complaint</a></li>

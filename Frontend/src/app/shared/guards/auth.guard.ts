@@ -9,10 +9,10 @@ export const authGuard: CanActivateFn = () => {
   const router = inject(Router)
   if(commonService.isAuthenticated()){
     console.log("authguard true");
-    return true
+    return true;
   }else{
     console.log("authguard false");
      router.navigate(['/'])
-     return false
+     return false;
   }  
 };

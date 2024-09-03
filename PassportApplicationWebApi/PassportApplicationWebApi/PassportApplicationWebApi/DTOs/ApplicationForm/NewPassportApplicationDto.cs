@@ -17,7 +17,7 @@ namespace PassportApplicationWebApi.DTOs.ApplicationForm
         public CreateAddressDetailsDto AddressDetails { get; set; }
         public CreateFamilyDetailsDto FamilyDetails { get; set; }
         public CreateEmergencyContactDetailsDto EmergencyContactDetails  { get; set; }
-        public CreatePassportDto PreviousPassportDetails { get; set; }
-         
+        //public CreatePassportDto PreviousPassportDetails { get; set; }
+
     }
 }

@@ -120,11 +120,18 @@ export class LoginComponent {
             const decodedToken: any = jwtDecode(token);
             const role = decodedToken.Role;
             console.log('Decoded Token:', decodedToken); // Log the decoded token
+
+            var applicationNumber = decodedToken.ApplicationNumber;
+            sessionStorage.setItem('applicationNumber', applicationNumber);
+            sessionStorage.setItem('firstName', decodedToken.FirstName);
+            sessionStorage.setItem('lastName', decodedToken.LastName);
+            sessionStorage.setItem('email', decodedToken.email);
+            localStorage.setItem('role', decodedToken.Role);
   
             // Navigate to appropriate dashboard based on role
             if (role === 'User') {
              
-                  this.router.navigate(['userdashboard']);
+                  this.router.navigate(['userdashboard/dashboard']);
               
             } else if (role === 'Admin') {
                   this.router.navigate(['admindashboard/dashboard']); 

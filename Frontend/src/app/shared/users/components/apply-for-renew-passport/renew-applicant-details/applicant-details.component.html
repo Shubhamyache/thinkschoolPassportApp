@@ -1,0 +1,830 @@
+<form [formGroup]="applicantForm" (ngSubmit)="onSubmit()">
+  <div class="form-group text-center">
+    <label for="reissueReason" class="fw-bold fs-4"
+      >Select Reason for Renewal</label
+    >
+    <select
+      class="form-control"
+      id="reissueReason"
+      (change)="saveReasonToSessionStorage($event)"
+    >
+      <option value="">Select</option>
+      <option>Validity Expired within 3 years/ Due to Expire</option>
+      <option>Exhaustion of Pages</option>
+      <option>Validity Expired more than 3 years ago</option>
+      <option>Lost Passport</option>
+      <option>Change in Existing Personal Particulars</option>
+      <option>Damaged Passport</option>
+      <option>Other Reason</option>
+    </select>
+  </div>
+
+  <fieldset>
+    <legend><b>Applicant Details</b></legend>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-group">
+          <label for="given_name">Given Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="given_name"
+            formControlName="given_name"
+          />
+          <em>
+            [Given Name means First name followed by Middle name (If
+            any)(Initials not allowed)]
+          </em>
+          <p
+            class="text-danger"
+            [hidden]="
+              given_name.valid || given_name.untouched || applicantForm.valid
+            "
+          >
+            Given name is not valid. It should be 1-45 characters long and
+            contain only letters.
+          </p>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="surname">Surname:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="surname"
+            formControlName="surname"
+          />
+          <div class="invalid-feedback">Please enter your surname.</div>
+          <p class="text-danger" [hidden]="surname.valid || surname.untouched">
+            Surname is required and should be 1-45 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Are you known by any other names (aliases)?</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              formControlName="known_by_other_names"
+              value="yes"
+              id="known_by_other_names_yes"
+            />
+            <label class="form-check-label" for="known_by_other_names_yes"
+              >Yes</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="known_by_other_names"
+              formControlName="known_by_other_names"
+              value="no"
+              id="known_by_other_names_no"
+            />
+            <label class="form-check-label" for="known_by_other_names_no"
+              >No</label
+            >
+          </div>
+          @if(known_by_other_names.value==="yes"){
+          <div class="form-group">
+            <label for="alias">Enter your alias</label>
+            <input
+              type="text"
+              class="form-control mt-2"
+              [formControl]="alias"
+              id="alias"
+              formControlName="alias"
+            />
+            <p class="text-danger" [hidden]="alias.valid || alias.untouched">
+              Alias should be 1-45 characters long.
+            </p>
+          </div>
+
+          }
+        </div>
+
+        <div class="form-group">
+          <label>Have you ever changed your name?</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="changed_name"
+              formControlName="changed_name"
+              value="yes"
+              id="changed_name_yes"
+            />
+            <label class="form-check-label" for="changed_name_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="changed_name"
+              formControlName="changed_name"
+              value="no"
+              id="changed_name_no"
+            />
+            <label class="form-check-label" for="changed_name_no">No</label>
+          </div>
+          @if(changed_name.value==="yes"){
+          <div class="form-group">
+            <label for="previous_name">Enter your previous name</label>
+            <input
+              type="text"
+              class="form-control mt-2"
+              [formControl]="previous_name"
+              id="previous_name"
+              formControlName="previous_name"
+            />
+            <p
+              class="text-danger"
+              [hidden]="previous_name.valid || previous_name.untouched"
+            >
+              Previous name should be 1-45 characters long.
+            </p>
+          </div>
+
+          }
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input
+            type="date"
+            class="form-control"
+            [formControl]="dob"
+            id="dob"
+            formControlName="dob"
+          />
+          <div class="invalid-feedback">Please enter your date of birth.</div>
+          <p class="text-danger" [hidden]="dob.valid || dob.untouched">
+            Date of Birth is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="place_of_birth"
+            >Place of Birth (Village or Town or City):</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="place_of_birth"
+            id="place_of_birth"
+            formControlName="place_of_birth"
+          />
+          <div class="invalid-feedback">Please enter your place of birth.</div>
+          <p
+            class="text-danger"
+            [hidden]="place_of_birth.valid || place_of_birth.untouched"
+          >
+            Place of birth should be 1-25 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="district">District (If born in India):</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="district"
+            id="district"
+            formControlName="district"
+          />
+          <div class="invalid-feedback">Please enter your district.</div>
+          <p
+            class="text-danger"
+            [hidden]="district.valid || district.untouched"
+          >
+            District should be 1-25 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State/UT (If born in India):</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="state"
+            id="state"
+            formControlName="state"
+          />
+          <div class="invalid-feedback">Please enter your state or UT.</div>
+          <p class="text-danger" [hidden]="state.valid || state.untouched">
+            State/UT should be 1-25 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="region_country">Region/Country (If born abroad):</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="region_country"
+            id="region_country"
+            formControlName="region_country"
+          />
+          <div class="invalid-feedback">
+            Please enter your region or country.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="region_country.valid || region_country.untouched"
+          >
+            Region/Country should be 1-25 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="gender"
+              formControlName="gender"
+              value="male"
+              id="gender_male"
+            />
+            <label class="form-check-label" for="gender_male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="gender"
+              formControlName="gender"
+              value="female"
+              id="gender_female"
+            />
+            <label class="form-check-label" for="gender_female">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="gender"
+              formControlName="gender"
+              value="transgender"
+              id="gender_transgender"
+            />
+            <label class="form-check-label" for="gender_transgender"
+              >Transgender</label
+            >
+          </div>
+          <div class="invalid-feedback">Please select your gender.</div>
+          <p class="text-danger" [hidden]="gender.valid || gender.untouched">
+            Gender selection is required.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-group">
+          <label>Marital Status:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="marital_status"
+              formControlName="marital_status"
+              value="single"
+              id="marital_status_single"
+            />
+            <label class="form-check-label" for="marital_status_single"
+              >Single</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="marital_status"
+              formControlName="marital_status"
+              value="married"
+              id="marital_status_married"
+            />
+            <label class="form-check-label" for="marital_status_married"
+              >Married</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="marital_status"
+              formControlName="marital_status"
+              value="divorced"
+              id="marital_status_divorced"
+            />
+            <label class="form-check-label" for="marital_status_divorced"
+              >Divorced</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="marital_status"
+              formControlName="marital_status"
+              value="widow_widower"
+              id="marital_status_widow"
+            />
+            <label class="form-check-label" for="marital_status_widow"
+              >Widow/Widower</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="marital_status"
+              formControlName="marital_status"
+              value="separated"
+              id="marital_status_separated"
+            />
+            <label class="form-check-label" for="marital_status_separated"
+              >Separated</label
+            >
+          </div>
+          <div class="invalid-feedback">Please select your marital status.</div>
+          <p
+            class="text-danger"
+            [hidden]="marital_status.valid || marital_status.untouched"
+          >
+            Marital status selection is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Citizenship of India by:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="citizenship"
+              formControlName="citizenship"
+              value="birth"
+              id="citizenship_birth"
+            />
+            <label class="form-check-label" for="citizenship_birth"
+              >Birth</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="citizenship"
+              formControlName="citizenship"
+              value="descent"
+              id="citizenship_descent"
+            />
+            <label class="form-check-label" for="citizenship_descent"
+              >Descent</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="citizenship"
+              formControlName="citizenship"
+              value="registration_naturalization"
+              id="citizenship_registration"
+            />
+            <label class="form-check-label" for="citizenship_registration"
+              >Registration/Naturalization</label
+            >
+          </div>
+          <div class="invalid-feedback">
+            Please select your citizenship status.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="citizenship.valid || citizenship.untouched"
+          >
+            Citizenship selection is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="pan">PAN (If available):</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="pan"
+            id="pan"
+            formControlName="pan"
+          />
+          <div class="invalid-feedback">Please enter a valid PAN number.</div>
+          <p class="text-danger" [hidden]="pan.valid || pan.untouched">
+            PAN should be exactly 10 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="voter_id">Voter ID (If available):</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="voter_id"
+            id="voter_id"
+            formControlName="voter_id"
+          />
+          <div class="invalid-feedback">Please enter a valid Voter ID.</div>
+          <p
+            class="text-danger"
+            [hidden]="voter_id.valid || voter_id.untouched"
+          >
+            Voter ID should be valid.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Employment Type:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="psu"
+              id="employment_type_psu"
+            />
+            <label class="form-check-label" for="employment_type_psu"
+              >PSU</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="government"
+              id="employment_type_government"
+            />
+            <label class="form-check-label" for="employment_type_government"
+              >Government</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="statutory_body"
+              id="employment_type_statutory"
+            />
+            <label class="form-check-label" for="employment_type_statutory"
+              >Statutory Body</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="retired_government_servant"
+              id="employment_type_retired"
+            />
+            <label class="form-check-label" for="employment_type_retired"
+              >Retired Government Servant</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="self_employed"
+              id="employment_type_self"
+            />
+            <label class="form-check-label" for="employment_type_self"
+              >Self Employed</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="private"
+              id="employment_type_private"
+            />
+            <label class="form-check-label" for="employment_type_private"
+              >Private</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="homemaker"
+              id="employment_type_homemaker"
+            />
+            <label class="form-check-label" for="employment_type_homemaker"
+              >Homemaker</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="not_employed"
+              id="employment_type_not_employed"
+            />
+            <label class="form-check-label" for="employment_type_not_employed"
+              >Not Employed</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="retired_private_service"
+              id="employment_type_retired_private"
+            />
+            <label
+              class="form-check-label"
+              for="employment_type_retired_private"
+              >Retired-Private Service</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="student"
+              id="employment_type_student"
+            />
+            <label class="form-check-label" for="employment_type_student"
+              >Student</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="others"
+              id="employment_type_others"
+            />
+            <label class="form-check-label" for="employment_type_others"
+              >Others</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="employment_type"
+              formControlName="employment_type"
+              value="owners_directors"
+              id="employment_type_owners"
+            />
+            <label class="form-check-label" for="employment_type_owners">
+              Owners, Partners & Directors of companies which are members of
+              CII, FICCI & ASSOCHAM
+            </label>
+          </div>
+          <div class="invalid-feedback">
+            Please select your employment type.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="employment_type.valid || employment_type.untouched"
+          >
+            Employment type selection is required.
+          </p>
+        </div>
+        @if((employment_type.value === "government" ) || (employment_type.value
+        === "statutory_body" ) ||(employment_type.value === "psu")) {
+        <div class="form-group">
+          <label for="organization_name"
+            >If employed in Government/ Statutory Body/ PSU, specify
+            organization name:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="organization_name"
+            id="organization_name"
+            formControlName="organization_name"
+          />
+          <p
+            class="text-danger"
+            [hidden]="organization_name.valid || organization_name.untouched"
+          >
+            Organization name should be 1-30 characters long.
+          </p>
+        </div>
+        }
+
+        <div class="form-group">
+          <label
+            >Is either of your parent (in case of minor)/ spouse, a government
+            servant?</label
+          ><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="parent_spouse_government_servant"
+              formControlName="parent_spouse_government_servant"
+              value="yes"
+              id="parent_spouse_government_servant_yes"
+            />
+            <label
+              class="form-check-label"
+              for="parent_spouse_government_servant_yes"
+              >Yes</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="parent_spouse_government_servant"
+              formControlName="parent_spouse_government_servant"
+              value="no"
+              id="parent_spouse_government_servant_no"
+            />
+            <label
+              class="form-check-label"
+              for="parent_spouse_government_servant_no"
+              >No</label
+            >
+          </div>
+          <div class="invalid-feedback">
+            Please select if your parent or spouse is a government servant.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="
+              parent_spouse_government_servant.valid ||
+              parent_spouse_government_servant.untouched
+            "
+          >
+            This selection is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Educational Qualification:</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="education"
+              formControlName="education"
+              value="7th_pass_or_less"
+              id="education_7th"
+            />
+            <label class="form-check-label" for="education_7th"
+              >7th pass or less</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="education"
+              formControlName="education"
+              value="between_8th_and_9th_standard"
+              id="education_between_8th_and_9th"
+            />
+            <label class="form-check-label" for="education_between_8th_and_9th"
+              >Between 8th and 9th Standard</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="education"
+              formControlName="education"
+              value="10th_pass_and_above"
+              id="education_10th_above"
+            />
+            <label class="form-check-label" for="education_10th_above"
+              >10th pass and above</label
+            >
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="education"
+              formControlName="education"
+              value="graduate_and_above"
+              id="education_graduate_above"
+            />
+            <label class="form-check-label" for="education_graduate_above"
+              >Graduate and above</label
+            >
+          </div>
+          <div class="invalid-feedback">
+            Please select your educational qualification.
+          </div>
+          <p
+            class="text-danger"
+            [hidden]="education.valid || education.untouched"
+          >
+            Educational qualification selection is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label>Are you eligible for Non-ECR category?</label><br />
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="non_ecr"
+              formControlName="non_ecr"
+              value="yes"
+              id="non_ecr_yes"
+            />
+            <label class="form-check-label" for="non_ecr_yes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              [formControl]="non_ecr"
+              formControlName="non_ecr"
+              value="no"
+              id="non_ecr_no"
+            />
+            <label class="form-check-label" for="non_ecr_no">No</label>
+          </div>
+          <div class="invalid-feedback">
+            Please select if you are eligible for Non-ECR category.
+          </div>
+          <p class="text-danger" [hidden]="non_ecr.valid || non_ecr.untouched">
+            This selection is required.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="distinguishing_mark">Visible Distinguishing Mark:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="distinguishing_mark"
+            id="distinguishing_mark"
+            formControlName="distinguishing_mark"
+          />
+          <p
+            class="text-danger"
+            [hidden]="
+              distinguishing_mark.valid || distinguishing_mark.untouched
+            "
+          >
+            Distinguishing mark should be 1-30 characters long.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="aadhaar">Aadhaar Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            [formControl]="aadhaar"
+            id="aadhaar"
+            formControlName="aadhaar"
+          />
+          <div class="invalid-feedback">
+            Please enter a valid AADHAR number.
+          </div>
+          <p class="text-danger" [hidden]="aadhaar.valid || aadhaar.untouched">
+            Aadhaar number should be exactly 12 characters long.
+          </p>
+        </div>
+
+        <div class="d-flex justify-content-end">
+          <button class="btn-getstarted nextButton btn-custom" type="submit">
+            Save & Next
+          </button>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>
