@@ -853,8 +853,8 @@ namespace PassportApplicationWebApi.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("ApplicationNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("ApplicationNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .IsRequired()

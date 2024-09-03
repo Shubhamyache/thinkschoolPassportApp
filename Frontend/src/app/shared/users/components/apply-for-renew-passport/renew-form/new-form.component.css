@@ -1,0 +1,37 @@
+.logo {
+  width: 80px;
+  height: auto;
+}
+.header-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40;
+}
+.card {
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.footer-section {
+  background-color: #0056b3;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 170px;
+}
+.footer-section a {
+  color: white;
+}
+.welcome-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0fbf38;
+  margin-top: 10px;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color:#2487ce;
+  border-bottom: 0;
+}

@@ -1,14 +1,19 @@
 import { Component } from '@angular/core';
+import { PassportApplication } from '../../../models/passportApplication';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ApplicationStatus } from '../../../models/enums/applicationStatus';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'app-renew-applications',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './renew-applications.component.html',
   styleUrl: './renew-applications.component.css'
 })
 export class RenewApplicationsComponent {
-  allNewApplications: PassportApplication[] = [];
+  allRenewApplications: PassportApplication[] = [];
   applicationStatuses = Object.values(ApplicationStatus);
   rejectedMessage:string = "";
 
@@ -16,15 +21,15 @@ export class RenewApplicationsComponent {
 
   }
   ngOnInit(): void {
-    this.getAllPassportApplications();
+    this.getAllRenewalPassportApplications();
   }
 
-  getAllPassportApplications(){
-    this.apiService.getAllNewApplications().subscribe({
+  getAllRenewalPassportApplications(){
+    this.apiService.getAllRenewApplications().subscribe({
       next:(data)=>{
         // this.allNewApplications = data;
-        // console.log(data);
-        this.allNewApplications = data.map(application => ({
+        console.log(data);
+        this.allRenewApplications = data.map(application => ({
           ...application,
           applicationStatus: this.convertNumberToApplicationStatus(application.applicationStatus),
           isEditing: false
@@ -59,7 +64,7 @@ export class RenewApplicationsComponent {
     this.apiService.updateNewApplication(application.applicationNumber,application.applicationStatus, application.rejectedMessage).subscribe({
       next:()=>{
         alert("Application Updated Successfully");
-        this.getAllPassportApplications();
+        this.getAllRenewalPassportApplications();
       },
       error:()=>{
         alert("Error whiile updating the application");
@@ -71,7 +76,7 @@ export class RenewApplicationsComponent {
     this.apiService.deleteNewApplication(applicationNumber).subscribe({
       next:()=>{
         alert("Data deleted successfully");
-        this.getAllPassportApplications();
+        this.getAllRenewalPassportApplications();
       },
       error:()=>{
         alert("Error while deleting data");

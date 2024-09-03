@@ -1,11 +1,11 @@
 <div class="wrapper">
   <header>
-      <app-header></app-header>
+      <app-header *ngIf="!isPageNotFound"></app-header>
   </header>
   <main>
       <router-outlet (activate)="onActivate($event)"></router-outlet>
   </main>
  <footer>
-  <app-footer *ngIf="!isUserDashboard"></app-footer>
+  <app-footer *ngIf="!isPageNotFound"></app-footer>
  </footer>
 </div>

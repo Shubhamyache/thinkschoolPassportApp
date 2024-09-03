@@ -7,7 +7,7 @@ namespace PassportApplicationWebApi.DTOs.Complaint
     public class CreateComplaintDto
     {
         [Required]
-        [RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
+        //[RegularExpression(@"^[A-Z]\d{7}$", ErrorMessage = "{0} should have length 8")]
         public string PassportNumberOrApplicationNumber { get; set; } = string.Empty;
         [Required]
         [StringLength(55, MinimumLength = 2)]

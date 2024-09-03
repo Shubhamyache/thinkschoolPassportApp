@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommonService {
-  private tokenKey = 'auth-token';
 
   constructor(private router: Router) { }
 
@@ -17,18 +17,13 @@ export class CommonService {
     }
   }
 
-  getToken(): string | null {
-    if (typeof window !== 'undefined'){
-      return localStorage.getItem(this.tokenKey);
-    }else{
-      return null;
-    }
-    
+  getToken() {
+    return (localStorage.getItem('token') || '');
   }
 
   setToken(token: string): void {
     if (typeof window !== 'undefined'){
-      localStorage.setItem(this.tokenKey, token);
+      localStorage.setItem('token', token);
     }
   }
 
@@ -37,9 +32,12 @@ export class CommonService {
   }
 
   logOut(): void {
-    localStorage.removeItem(this.tokenKey);
-    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    // localStorage.removeItem('user');
     this.router.navigate(['/login'])
+  }
 
+  getloggedInUserInfo(){
+    return jwtDecode(this.getToken());;
   }
 }

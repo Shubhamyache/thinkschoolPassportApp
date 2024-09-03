@@ -5,6 +5,7 @@ namespace PassportApplicationWebApi.Data
 {
     public class SeedData
     {
+        
         public static async Task Initialize(IServiceProvider serviceProvider, UserManager<ApplicationUser> userManager)
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();

@@ -1,0 +1,57 @@
+
+<!-- Navigation Bar -->
+
+
+<h2 class="statusLabel mt-5 mb-2">Passport Application Status</h2>
+<hr>
+<div *ngIf="isApplicationNumberAvailable()" class="container">
+  <div class="row mr-auto mb-3">
+    <h5>
+      <u>Applicant Details:</u>
+    </h5>
+  </div>
+  <div class="row mr-auto">
+    <h6>
+      Application Number:
+      <span class="font-weight-bold">{{ applicationNumber }}</span>
+    </h6>
+  </div>
+  <div class="row mr-auto">
+    <h6>
+      Applicant Full Name:
+      <span class="font-weight-bold">{{ userFullName }}</span>
+    </h6>
+  </div>
+  <div class="row mr-auto">
+    <h6>
+      Applicant Email Address:
+      <span class="font-weight-bold">{{ loggedEmail }}</span>
+    </h6>
+  </div>
+  <div class="row mr-auto mt-3">
+    <h6>
+      See Application Status below:
+      
+    </h6>
+  </div>
+  <div *ngIf="rejectedMessage !==''" class="row mr-auto mt-3">
+    <h6>
+      Rejected Message:
+      <span class="font-weight-bold">{{ rejectedMessage }}</span>
+    </h6>
+  </div>
+  <div class="progress-container">
+    <div
+      class="progress-bar"
+      [ngClass]="statusClass"
+      role="progressbar"
+      [style.width.%]="statusPercentage"
+    >
+      {{ statusLabel }}
+    </div>
+  </div>
+</div>
+
+<h2 class="status-class text-center" *ngIf="!isApplicationNumberAvailable()">
+  Application Not Found
+</h2>
