@@ -5,5 +5,6 @@ export interface UsersDetails {
     phoneNumber: string;
     applicationNumber: string | null;
     passportNumber: string | null;
+    selected?: boolean;
   }
   

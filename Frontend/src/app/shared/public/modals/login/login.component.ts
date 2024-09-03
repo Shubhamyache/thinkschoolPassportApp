@@ -134,7 +134,7 @@ export class LoginComponent {
                   this.router.navigate(['userdashboard/dashboard']);
               
             } else if (role === 'Admin') {
-                  this.router.navigate(['admindashboard/dashboard']); 
+                  this.router.navigate(['admindashboard/users']); 
             }
             this.closeModal();
           },

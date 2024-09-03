@@ -74,5 +74,32 @@ namespace PassportApplicationWebApi.Controllers
             await _repo.DeleteAsync(user);
             return NoContent();
         }
+
+        [HttpPost("deleteBulk")]
+        public async Task<IActionResult> DeleteBulk([FromBody] List<string> emails)
+        {
+            if (emails == null || emails.Count == 0)
+            {
+                return BadRequest("No student IDs provided for deletion.");
+            }
+
+            try
+            {
+                foreach (var email in emails)
+                {
+                    var user = await _userRepo.GetByEmailAsync(email);
+                    if (user != null)
+                    {
+                        await _repo.DeleteAsync(user);
+                    }
+                }
+
+                return Ok("Selected students deleted successfully.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
     }
 }

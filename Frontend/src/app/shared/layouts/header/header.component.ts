@@ -35,7 +35,7 @@ export class HeaderComponent {
       this.router.navigate(['/userdashboard/dashboard']);
     }
     if(decodedToken.Role === 'Admin'){
-      this.router.navigate(['/admindashboard/dashboard']);
+      this.router.navigate(['/admindashboard/users']);
     }
     return true;
   }
