@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PassportApplicationWebApi.Data;
 using PassportApplicationWebApi.DTOs.ApplicationForm;
+using PassportApplicationWebApi.DTOs.PassportApplication;
+using PassportApplicationWebApi.HelperClass;
 using PassportApplicationWebApi.Interfaces;
 using PassportApplicationWebApi.Models;
 
@@ -17,6 +19,11 @@ namespace PassportApplicationWebApi.Controllers
         private readonly IMapper _mapper;
         private readonly PassportContext _context;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IApplicationsRepository _applicationsRepository;
+        private readonly IRepository<Passport> _passportRepository;
+        private readonly IRepository<User> _userRepository;
+        private readonly IRepository<PassportApplication> _passportAppRepo;
+
 
         public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork)
 
@@ -29,11 +36,90 @@ namespace PassportApplicationWebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAllApplications()
         {
-            var newPassportApplication = await _unitOfWork._repositoryPassportApplication.GetAllAsync();
+            var applications = await _applicationsRepository.GetAllApplicationsAsync();
 
-            return Ok(newPassportApplication);
+            if (applications == null)
+            {
+                return NotFound("No applications found");
+            }
 
+            //var applicationsDto = applications.Where(a=> a.IsRenewalApplication == false).Select(a => _mapper.Map<GetPassportApplicationDto>(a)).ToList();
+            var applicationsDto = applications.Where(a => a.IsRenewalApplication == false).Select(a => new GetNewPassportApplicationDto
+            {
+                ApplicationNumber = a.ApplicationNumber,
+                GivenName = a.ApplicantDetails.GivenName,
+                Surname = a.ApplicantDetails.Surname,
+                DOB = a.ApplicantDetails.DOB,
+                District = a.ApplicantDetails.District,
+                RegionCountry = a.ApplicantDetails.RegionCountry,
+                Aadhar = a.ApplicantDetails.Aadhaar,
+                ApplicationStatus = a.ApplicationStatus
+            }).ToList();
+
+            return Ok(applicationsDto);
         }
+
+        [HttpPut("{ApplicationNumber}")]
+        public async Task<IActionResult> UpdateApplication(string ApplicationNumber, [FromQuery] ApplicationStatus updatedApplicationStatus, [FromBody] string? rejectedMessage)
+        {
+            var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(ApplicationNumber);
+            var applicationDto = _mapper.Map<GetPassportApplicationDto>(application);
+
+            if (application == null)
+            {
+                return NotFound("Application not found");
+            }
+
+            if (applicationDto.ApplicationStatus == ApplicationStatus.Completed)
+            {
+                return BadRequest("Application already Processed");
+            }
+
+            if (updatedApplicationStatus == ApplicationStatus.Completed)
+            {
+                var newPassport = new Passport
+                {
+                    PassportNumber = PassportNumberGenerator.GeneratePassportNumber(),
+                    FirstName = applicationDto.ApplicantDetails.GivenName,
+                    LastName = applicationDto.ApplicantDetails.Surname,
+                    Address = applicationDto.AddressDetails.PresentHouseStreet,
+                    ExpiryDate = DateTime.Now.AddYears(10),
+                    DOB = applicationDto.ApplicantDetails.DOB,
+                    Country = applicationDto.ApplicantDetails.RegionCountry,
+                    DateOfIssue = DateTime.Now,
+                    Gender = applicationDto.ApplicantDetails.Gender,
+                    PassportStatus = PassportStatus.Active
+                };
+
+                var newCreatedPassport = await _passportRepository.AddAsync(newPassport);
+                application.User.PassportNumber = newCreatedPassport.PassportNumber;
+                application.User.PassportId = newCreatedPassport.PassportId;
+            }
+
+            if (updatedApplicationStatus == ApplicationStatus.Rejected)
+            {
+                application.RejectedMessage = rejectedMessage;
+            }
+
+            application.ApplicationStatus = updatedApplicationStatus;
+            var updatedApplication = await _applicationsRepository.UpdateApplicationAsync(application);
+
+            return NoContent();
+        }
+
+        [HttpGet("{ApplicationNumber}")]
+        public async Task<IActionResult> GetApplicationByApplicationNumber(string ApplicationNumber)
+        {
+            var application = await _applicationsRepository.GetApplicationByApplicationNumberAsync(ApplicationNumber);
+
+            if (application == null)
+            {
+                return NotFound("Application not found");
+            }
+            return Ok(_mapper.Map<GetPassportApplicationDto>(application));
+        }
+
+
 
         [HttpPost(Name = "AddNewPassportApplication")]
         public async Task<ActionResult> AddNewApplication(NewPassportApplicationDto newPassportForm)

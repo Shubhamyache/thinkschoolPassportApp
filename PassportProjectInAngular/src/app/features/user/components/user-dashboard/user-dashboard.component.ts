@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { Inject, PLATFORM_ID } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserHeaderComponent } from '../Layout/user-header/user-header.component';
 
 @Component({
   selector: 'app-user-dashboard',
@@ -17,6 +18,7 @@ import { Router } from '@angular/router';
     RouterLink,
     HttpClientModule,
     CommonModule,
+    UserHeaderComponent,
   ],
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.css',

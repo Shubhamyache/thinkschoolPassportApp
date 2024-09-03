@@ -1,0 +1,79 @@
+<app-admin-header></app-admin-header>
+
+<!-- Table Container -->
+<div class="container my-3">
+  <div class="row">
+    <div class="col-lg-12">
+      <div
+        class="table-container table-responsive shadow-md p-3 mb-5 bg-white rounded"
+      >
+        <table class="table table-bordered table-striped">
+          <caption class="table-caption text-center font-weight-bold mb-4">
+            List of Complaints
+          </caption>
+          <thead class="thead-dark">
+            <tr>
+              <th>Passport/Application</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Mobile Number</th>
+              <th>Complaint Type</th>
+              <th>Complaint Details</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let complaint of allComplaints">
+              <td>{{ complaint.passportNumberOrApplicationNumber }}</td>
+              <td>{{ complaint.fullName }}</td>
+              <td>{{ complaint.email }}</td>
+              <td>{{ complaint.mobileNumber }}</td>
+              <td>{{ complaint.complaintType }}</td>
+              <td>{{ complaint.complaintDetails }}</td>
+              <td>
+                <select
+                  [disabled]="!complaint.isEditing"
+                  [(ngModel)]="complaint.complaintStatus"
+                  class="form-control form-control-lg"
+                >
+                  <option
+                    *ngFor="let status of complaintStatuses"
+                    [value]="status"
+                  >
+                    {{ status }}
+                  </option>
+                </select>
+              </td>
+              <td>
+                <div class="btn-group" role="group">
+                  <button
+                    type="button"
+                    class="btn btn-md btn-outline-secondary"
+                    (click)="toggleEdit(complaint)"
+                  >
+                    <i
+                      *ngIf="complaint.isEditing; else editIcon"
+                      class="bi bi-check-circle"
+                    ></i>
+
+                    <ng-template #editIcon>
+                      <i class="bi bi-pencil-square"></i>
+                    </ng-template>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-md btn-outline-danger"
+                    (click)="deleteComplaint(complaint.id)"
+                  >
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

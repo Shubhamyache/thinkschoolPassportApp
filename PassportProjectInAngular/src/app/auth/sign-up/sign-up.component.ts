@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
           '',
           [Validators.required, Validators.pattern('^[0-9]{10}$')],
         ],
-        password: [
+        password1: [
           '',
           [
             Validators.required,
@@ -64,7 +64,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   passwordMatchValidator(form: FormGroup) {
-    return form.get('password')!.value === form.get('confirmPassword')!.value
+    return form.get('password1')!.value === form.get('confirmPassword')!.value
       ? null
       : { mismatch: true };
   }

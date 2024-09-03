@@ -1,93 +1,109 @@
 <app-header></app-header>
-
-<div class="container pad-top mt-3 mb-2">
+<div class="container pad-top mt-5 mb-5">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card shadow">
-        <div class="card-header text-center">
+    <div class="col-md-6">
+      <!-- Card for feedback form -->
+      <div class="card shadow-lg border-0 rounded-3">
+        <!-- Card header -->
+        <div class="card-header bg-primary text-white text-center rounded-top">
           <h4>Submit Your Feedback</h4>
         </div>
-        <div class="card-body">
-          <form>
-            <div class="form-group">
-              <label for="passportNumber">Passport/Application Number</label>
-              <input
-                type="text"
-                class="form-control"
-                id="passportNumber"
-                placeholder="Enter your Passport or Application Number"
-                onblur="validatePassportNumber()"
-              />
-              <div id="passportNumberFeedback"></div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="fullName">Full Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="fullName"
-                placeholder="Enter your Full Name"
-              />
-              <div id="fullNameFeedback"></div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="email">Email Address</label>
+        <!-- Card body -->
+        <div class="card-body p-4">
+          <!-- Feedback form -->
+          <form [formGroup]="feedbackForm">
+            <!-- Email Address -->
+            <div class="form-group mb-4">
+              <label for="email" class="form-label">Email Address</label>
               <input
                 type="email"
-                class="form-control"
+                class="form-control form-control-lg"
                 id="email"
+                formControlName="email"
                 placeholder="Enter your Email Address"
               />
-              <div id="emailError"></div>
+              <div
+                *ngIf="
+                  feedbackForm.get('email')?.invalid &&
+                  feedbackForm.get('email')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                <div *ngIf="feedbackForm.get('email')?.errors?.['required']">
+                  Email Address is required.
+                </div>
+                <div *ngIf="feedbackForm.get('email')?.errors?.['email']">
+                  Enter a valid Email address.
+                </div>
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="mobile">Mobile Number</label>
-              <input
-                type="number"
-                class="form-control"
-                id="mobileNumber"
-                placeholder="Enter your Mobile Number"
-              />
-              <div id="mobileFeedback"></div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="feedbackType">Feedback Type</label>
-              <select class="form-control" id="feedbackType">
-                <option value="" disabled selected>Select Feedback Type</option>
-                <option value="service">Service Quality</option>
-                <option value="staff">Staff Behavior</option>
-                <option value="processing">Processing Time</option>
-                <option value="facility">Facility Cleanliness</option>
-                <option value="other">Other</option>
-              </select>
-              <div id="feedbackTypeFeedback"></div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="rating">Rating</label>
-              <select class="form-control" id="rating">
-                <option value="" disabled selected>Select Rating</option>
+
+            <!-- Rating -->
+            <div class="form-group mb-4">
+              <label for="rating" class="form-label">Rating</label>
+              <select
+                class="form-select form-select-lg"
+                id="rating"
+                formControlName="rating"
+              >
+                <option value="" selected>Choose Rating</option>
                 <option value="1">1 - Very Poor</option>
                 <option value="2">2 - Poor</option>
                 <option value="3">3 - Average</option>
                 <option value="4">4 - Good</option>
                 <option value="5">5 - Excellent</option>
               </select>
-              <div id="ratingFeedback"></div>
+              <div
+                *ngIf="
+                  feedbackForm.get('rating')?.invalid &&
+                  feedbackForm.get('rating')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Rating is required.
+              </div>
             </div>
-            <div class="form-group mt-3">
-              <label for="feedbackDetails">Feedback Details</label>
+
+            <!-- Feedback Details -->
+            <div class="form-group mb-4">
+              <label for="feedbackDetails" class="form-label"
+                >Feedback Details</label
+              >
               <textarea
-                class="form-control"
+                class="form-control form-control-lg"
                 id="feedbackDetails"
+                formControlName="feedbackDetails"
                 rows="5"
                 placeholder="Describe your experience in detail"
                 style="resize: none"
               ></textarea>
-              <div id="feedbackDetailsFeedback"></div>
+              <div
+                *ngIf="
+                  feedbackForm.get('feedbackDetails')?.invalid &&
+                  feedbackForm.get('feedbackDetails')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Feedback Details are required.
+              </div>
             </div>
-            <div class="d-flex justify-content-center mt-3">
-              <button type="button" class="btn-getstarted">
+
+            <!-- Submit and Reset Buttons -->
+            <div class="d-flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg px-4 me-3"
+                [disabled]="feedbackForm.invalid"
+                (click)="submitFeedback()"
+              >
                 Submit Feedback
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-lg px-4"
+                (click)="resetForm()"
+              >
+                Reset
               </button>
             </div>
           </form>
@@ -96,3 +112,4 @@
     </div>
   </div>
 </div>
+<app-footer></app-footer>

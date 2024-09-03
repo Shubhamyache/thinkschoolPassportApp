@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './shared/components/about-us/about-us.component';
 import { WhatsNewComponent } from './shared/components/whats-new/whats-new.component';
-import { FeedbackPageComponent } from './shared/components/feedback-page/feedback-page.component';
 import { NewApplicationComponent } from './auth/test-app-form/test-app-form.component';
+import { FeedbackComponent } from './shared/components/feedback-page/feedback-page.component';
 
 export const routes: Routes = [
   //lazy-loading for auth component
@@ -34,7 +34,7 @@ export const routes: Routes = [
   { path: '', redirectTo: 'auth/index', pathMatch: 'full' },
   { path: 'about_us', component: AboutUsComponent },
   { path: 'whats_new', component: WhatsNewComponent },
-  { path: 'feedback_page', component: FeedbackPageComponent },
+  { path: 'feedback_page', component: FeedbackComponent },
   { path: 'test-app-form', component: NewApplicationComponent },
   { path: '**', redirectTo: 'auth/login', pathMatch: 'full' },
 ];
