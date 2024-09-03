@@ -28,8 +28,5 @@ namespace PassportApplicationWebApi.DTOs.PaymentDetails
         [Required]
         [StringLength(256)]
         public string PaymentDetail { get; set; } = string.Empty;
-
-        [Required]
-        public ApplicationType ApplicationType { get; set; }
     }
 }

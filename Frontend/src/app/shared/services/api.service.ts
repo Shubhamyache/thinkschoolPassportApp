@@ -11,6 +11,7 @@ import { ComplaintStatus } from '../models/enums/ComplaintStatus';
 import { PassportApplication } from '../models/passportApplication';
 import { ApplicationStatus } from '../models/enums/applicationStatus';
 import { Application } from 'express';
+import { PaymentDetails } from '../models/PaymentDetails';
 
 @Injectable({
   providedIn: 'root',
@@ -47,6 +48,10 @@ export class ApiService {
 
   deleteUserByEmail(email:string): Observable<any>{
     return this.http.delete<string>(`${this.apiUrl}/users/${email}`);
+  }
+
+  deleteMultipleUsers(emails: string[]): Observable<void>{
+    return this.http.post<void>(`${this.apiUrl}/Users/deleteBulk`,emails,{ responseType: 'text' as 'json' } );
   }
 
   registerComplaint(complaint: Complaint):Observable<Complaint>{
@@ -105,7 +110,17 @@ export class ApiService {
   }
 
   submitRenewFormData(formsArray: any): Observable<any> {
-    return this.http.post(`${environment.apiUrl}/NewApplication/ReNewPassportApplication`, formsArray);
+    return this.http.post(`${this.apiUrl}/NewApplication/ReNewPassportApplication`, formsArray);
+  }
+
+  paymentApplication(paymentData: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/PaymentDetails`, paymentData, {
+      responseType: 'text',
+    });
+  }
+
+  getAllpayments(): Observable<PaymentDetails[]>{
+    return this.http.get<PaymentDetails[]>(`${this.apiUrl}/PaymentDetails`);
   }
   
 }

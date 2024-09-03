@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   standalone:true,
@@ -11,9 +12,10 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
+  email: string = sessionStorage.getItem('email') || "";
   isEditMode = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private apiService: ApiService) {
     this.profileForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -29,17 +31,22 @@ export class ProfileComponent implements OnInit {
   }
 
   loadUserProfile(): void {
-    // Assuming the backend data is fetched via a service (for demo purposes, it's hard-coded)
-    const profileData = {
-      firstName: 'Prashant',
-      lastName: 'Patil',
-      email: 'kotalwar@gmail.com',
-      phoneNumber: '7969309597',
-      applicationNumber: '12345678',
-      passportNumber: 'X2699504'
-    };
-
-    this.profileForm.setValue(profileData);
+    this.apiService.getUserByEmail(this.email).subscribe({
+      next: (profileData) => {
+        this.profileForm.setValue({
+          firstName: profileData.firstName || '',
+          lastName: profileData.lastName || '',
+          email: profileData.email || '',
+          phoneNumber: profileData.phoneNumber || '',
+          applicationNumber: profileData.applicationNumber || '',
+          passportNumber: profileData.passportNumber || ''
+        });
+      },
+      error: (error) => {
+        console.error('Error fetching profile data:', error);
+        // Handle error appropriately, e.g., show an error message to the user
+      }
+    });
   }
 
   toggleEdit(): void {

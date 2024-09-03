@@ -6,7 +6,6 @@ namespace PassportApplicationWebApi.DTOs.PaymentDetails
 {
     public class PaymentDetailsDto
     {
-
         public int Id { get; set; }
         public string Email { get; set; }  = string.Empty;
         public Guid TransactionNumber { get; set; }
@@ -15,11 +14,7 @@ namespace PassportApplicationWebApi.DTOs.PaymentDetails
         public DateTime PaymentDate { get; set; }
         public string PaymentMethod { get; set; } = string.Empty;
         public string PaymentDetail { get; set; } = string.Empty;
-        public int ApplicationId { get; set; }
         public ApplicationType ApplicationType { get; set; }// Discriminator column for application type
         public PaymentStatus PaymentStatus { get; set; }
-        public string UserId { get; set; } = string.Empty;
-
-
     }
 }

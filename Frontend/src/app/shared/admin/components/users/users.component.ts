@@ -17,6 +17,7 @@ import Swal from 'sweetalert2';
 export class UsersComponent implements OnInit {
 
   allusers:UsersDetails[] = [];
+  selectedUsers: UsersDetails | null = null;
   constructor(private modalService: NgbModal,private apiService: ApiService){
 
   }
@@ -68,6 +69,33 @@ export class UsersComponent implements OnInit {
          
         }
       });
+    }
+  }
+
+  toggleSelectAll(event: any): void {
+    const checked = event.target.checked;
+    this.allusers.forEach(user => (user.selected = checked));
+  }
+
+  deleteSelectedRecords(): void {
+    console.log("Deleted selected users");
+    const selectedEmails = this.allusers
+      .filter(user => user.selected)
+      .map(user => user.email);
+
+    if (selectedEmails.length > 0) {
+      this.apiService.deleteMultipleUsers(selectedEmails).subscribe(
+        () => {
+          this.allusers = this.allusers.filter(user => !user.selected);
+          this.getAllUsers();
+          // this.errorMessage = 'Selected records deleted successfully!';
+        },
+        error => {
+          // this.errorMessage = error.message;
+        }
+      );
+    } else {
+      // this.errorMessage = 'No records selected for deletion.';
     }
   }
 }
