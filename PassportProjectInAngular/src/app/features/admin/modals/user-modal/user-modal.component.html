@@ -1,0 +1,133 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Edit User Data</h4>
+      <button
+        type="button"
+        class="btn-close me-2"
+        aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="editForm">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="firstName"
+                >First Name<span class="required-asterisk">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder="Enter First Name"
+                [formControl]="firstName"
+              />
+              <h5
+                class="red-text"
+                [hidden]="firstName.valid || firstName.untouched"
+              >
+                Business Name is required
+              </h5>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="lastName"
+                >Last Name<span class="required-asterisk">*</span></label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder="Enter Last Name"
+                [formControl]="lastName"
+              />
+              <h5
+                class="red-text"
+                [hidden]="lastName.valid || lastName.untouched"
+              >
+                Select business category
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="email"
+                >Email Address<span class="required-asterisk">*</span></label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your Email Address"
+                [formControl]="email"
+              />
+              <h5 class="red-text" [hidden]="email.valid || email.untouched">
+                email is required and it should be correct
+              </h5>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="mobileNumber"
+                >Mobile Number<span class="required-asterisk">*</span></label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="mobileNumber"
+                placeholder="Enter 10 Digit Mobile Number"
+                [formControl]="mobileNumber"
+              />
+              <h5
+                class="red-text"
+                [hidden]="mobileNumber.valid || mobileNumber.untouched"
+              >
+                10 digit mobile number is required
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="passportNumber">Passport Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="passportNumber"
+            placeholder="Enter Passport Number if Available"
+            [formControl]="passportNumber"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="applicationNumber">Application Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="addressline2"
+            placeholder="Enter street address line 2 (Optional)"
+            [formControl]="applicationNumber"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        (click)="activeModal.dismiss('Cancel click')"
+      >
+        Close
+      </button>
+      <button type="button" class="btn-getstarted" (click)="saveChanges()">
+        Save changes
+      </button>
+    </div>
+  </div>
+</div>

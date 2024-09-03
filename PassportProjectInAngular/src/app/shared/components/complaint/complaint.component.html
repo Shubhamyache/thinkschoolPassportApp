@@ -1,0 +1,206 @@
+<div class="mb-5">
+  <app-user-header></app-user-header>
+</div>
+
+<div class="container mt-4 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8">
+      <div class="card shadow-lg rounded-3 border-0">
+        <div class="card-header bg-primary text-white text-center">
+          <h3 class="mb-0">Raise a Complaint</h3>
+        </div>
+        <div class="card-body p-4">
+          <form [formGroup]="complaintForm">
+            <!-- Passport Number/Application Number -->
+            <div class="mb-3">
+              <label for="passportNumberOrApplicationNumber" class="form-label"
+                >Application Number</label
+              >
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-passport"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="passportNumberOrApplicationNumber"
+                  formControlName="passportNumberOrApplicationNumber"
+                  placeholder="Enter your Passport/Application Number"
+                  [(ngModel)]="applicationNumber"
+                  readonly
+                />
+              </div>
+              <div
+                *ngIf="
+                  complaintForm.get('passportNumberOrApplicationNumber')
+                    ?.invalid &&
+                  complaintForm.get('passportNumberOrApplicationNumber')
+                    ?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Application Number is required
+              </div>
+            </div>
+
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-person-fill"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  formControlName="fullName"
+                  placeholder="Enter your Full Name"
+                />
+              </div>
+              <div
+                *ngIf="
+                  complaintForm.get('fullName')?.invalid &&
+                  complaintForm.get('fullName')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Full Name is required
+              </div>
+            </div>
+
+            <!-- Email Address -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-envelope-fill"></i
+                ></span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  formControlName="email"
+                  [(ngModel)]="emailAddress"
+                  readonly
+                />
+              </div>
+              <div
+                *ngIf="
+                  complaintForm.get('email')?.invalid &&
+                  complaintForm.get('email')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Enter a valid Email address
+              </div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <div class="input-group">
+                <span class="input-group-text"
+                  ><i class="bi bi-telephone-fill"></i
+                ></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  formControlName="phone"
+                  placeholder="Enter your Phone Number"
+                />
+              </div>
+              <div
+                *ngIf="
+                  complaintForm.get('phone')?.invalid &&
+                  complaintForm.get('phone')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Phone Number is required and must be numeric
+              </div>
+            </div>
+
+            <!-- Complaint Type -->
+            <div class="mb-3">
+              <label for="complaintType" class="form-label"
+                >Complaint Type</label
+              >
+              <select
+                class="form-select"
+                id="complaintType"
+                formControlName="complaintType"
+              >
+                <option value="" disabled selected>
+                  Select Complaint Type
+                </option>
+                <option value="delayed">Delayed Passport Processing</option>
+                <option value="incorrect">
+                  Incorrect Information on Passport
+                </option>
+                <option value="lost">Lost Passport</option>
+                <option value="service">Poor Service</option>
+                <option value="other">Other</option>
+              </select>
+              <div
+                *ngIf="
+                  complaintForm.get('complaintType')?.invalid &&
+                  complaintForm.get('complaintType')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Complaint Type is required
+              </div>
+            </div>
+
+            <!-- Complaint Details -->
+            <div class="mb-3">
+              <label for="complaintDetails" class="form-label"
+                >Complaint Details</label
+              >
+              <textarea
+                class="form-control"
+                id="complaintDetails"
+                formControlName="complaintDetails"
+                rows="5"
+                placeholder="Describe your complaint in detail"
+                style="resize: none"
+              ></textarea>
+              <div
+                *ngIf="
+                  complaintForm.get('complaintDetails')?.invalid &&
+                  complaintForm.get('complaintDetails')?.touched
+                "
+                class="text-danger mt-1"
+              >
+                Complaint Details are required
+              </div>
+            </div>
+
+            <!-- Submit and Reset Buttons -->
+            <div class="d-flex justify-content-center mt-4">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg me-3"
+                [disabled]="complaintForm.invalid"
+                (click)="submitComplaint()"
+              >
+                <i class="bi bi-send"></i> Raise a Complaint
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary btn-lg"
+                (click)="resetForm()"
+              >
+                <i class="bi bi-arrow-counterclockwise"></i> Reset
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
