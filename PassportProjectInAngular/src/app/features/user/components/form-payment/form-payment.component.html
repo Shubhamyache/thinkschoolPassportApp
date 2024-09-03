@@ -1,0 +1,103 @@
+<app-user-header></app-user-header>
+<div class="container mt-5">
+  <h2>Payment Details</h2>
+  <form [formGroup]="paymentForm" (ngSubmit)="onSubmit()">
+    <!-- Email Field (Read-only) -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="form-control"
+        readonly
+      />
+    </div>
+
+    <!-- Application Number Field (Read-only) -->
+    <div class="form-group">
+      <label for="applicationNumber">Application Number</label>
+      <input
+        type="text"
+        id="applicationNumber"
+        formControlName="applicationNumber"
+        class="form-control"
+        readonly
+      />
+    </div>
+
+    <!-- Amount Field (Dropdown) -->
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <select id="amount" formControlName="amount" class="form-control">
+        <option value="" selected>Select Amount</option>
+        <option value="1200">1200 (Normal)</option>
+        <option value="2000">2000 (Tatkal)</option>
+      </select>
+    </div>
+
+    <!-- Payment Date Field (Read-only) -->
+    <div class="form-group">
+      <label for="paymentDate">Payment Date</label>
+      <input
+        type="date"
+        id="paymentDate"
+        formControlName="paymentDate"
+        class="form-control"
+        readonly
+      />
+    </div>
+
+    <!-- Payment Method Field (Dropdown) -->
+    <div class="form-group">
+      <label for="paymentMethod">Payment Method</label>
+      <select
+        id="paymentMethod"
+        formControlName="paymentMethod"
+        class="form-control"
+        (change)="onPaymentMethodChange($event)"
+      >
+        <option value="" selected>Select Method</option>
+        <option value="UPI">UPI</option>
+        <option value="Debit/Credit Card" disabled>
+          Debit/Credit Card(Currently Unavailable)
+        </option>
+      </select>
+    </div>
+
+    <!-- Payment Detail Field -->
+    <div class="form-group">
+      <label for="paymentDetail">Payment Detail</label>
+      <input
+        type="text"
+        id="paymentDetail"
+        formControlName="paymentDetail"
+        class="form-control"
+        [placeholder]="paymentDetailPlaceholder"
+      />
+    </div>
+
+    <!-- Application Type Field (Dropdown)
+    <div class="form-group" hidden>
+      <label for="applicationType">Application Type</label>
+      <select
+        id="applicationType"
+        formControlName="applicationType"
+        class="form-control"
+      >
+        <option value="" selected>Select Type</option>
+        <option value="0">New Application</option>
+        <option value="1">Renew Application</option>
+      </select>
+    </div> -->
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!paymentForm.valid"
+    >
+      Submit Payment
+    </button>
+  </form>
+</div>

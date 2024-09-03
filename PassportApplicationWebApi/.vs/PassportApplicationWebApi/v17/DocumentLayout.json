@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\newapplicationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\helperclass\\jwttokenhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\complaintscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\repositories\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\repositories\\applicationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|solutionrelative:passportapplicationwebapi\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E896A151-152E-4159-A28D-60624AC77DAE}|PassportApplicationWebApi\\PassportApplicationWebApi.csproj|e:\\ts072_shubhamyache_alpha_project\\passportapplicationwebapi\\passportapplicationwebapi\\dtos\\complaint\\createcomplaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,15 +154,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreatePaymentDetailsDto.cs",
-              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAgwCMAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAYAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T01:00:14.61Z",
+              "WhenOpened": "2024-09-03T04:45:08.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T04:44:52.842Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Program.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Program.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Program.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFQAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T04:36:17.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenHelper.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\HelperClass\\JwtTokenHelper.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAYwDMAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T04:35:27.123Z",
               "EditorCaption": ""
             },
             {
@@ -157,27 +212,14 @@
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\NewApplicationController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAewBUAAAAwAAAA",
+              "ViewState": "AQIAAAcBAAAAAAAAAAAswBQBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-02T05:47:01.352Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PaymentDetailsController.cs",
-              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
-              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCYAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:56:10.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "ComplaintsController.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
@@ -185,12 +227,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\ComplaintsController.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAQwBEAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:55:21.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:55:21.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "FeedbackController.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
@@ -198,12 +239,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\FeedbackController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:55:37.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:55:37.436Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ApplicationRepository.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
@@ -211,12 +251,48 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\ApplicationRepository.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T18:22:09.934Z",
+              "WhenOpened": "2024-09-02T18:22:09.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAwwGoAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T16:39:03.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "PaymentDetailsController.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\PaymentDetailsController.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCYAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-02T05:56:10.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreatePaymentDetailsDto.cs",
+              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\PaymentDetails\\CreatePaymentDetailsDto.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAgwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-03T01:00:14.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PassportApplicationsDto.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\PassportApplicationsDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\PassportApplicationsDto.cs",
@@ -224,12 +300,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\PassportApplicationsDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T18:25:23.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T18:25:23.524Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "PassportNumberGenerator.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
@@ -237,12 +312,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\HelperClass\\PassportNumberGenerator.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T18:26:56.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T18:26:56.936Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\User.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\User.cs",
@@ -250,12 +324,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:26:43.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:26:43.579Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "NewPassportApplicationDto.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
@@ -263,25 +336,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\ApplicationForm\\NewPassportApplicationDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T18:28:03.448Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T18:28:03.448Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
-              "ToolTip": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
-              "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAwBgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T16:39:03.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "SeedData.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Data\\SeedData.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Data\\SeedData.cs",
@@ -289,12 +348,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Data\\SeedData.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAAB4AAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T11:28:37.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T11:28:37.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "PaymentDetails.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\PaymentDetails.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
@@ -302,12 +360,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\PaymentDetails.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAMwEAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:31:39.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:31:39.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CreateComplaintDto.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
@@ -315,12 +372,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\CreateComplaintDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T06:52:21.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T06:52:21.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "ComplaintDto.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
@@ -328,12 +384,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\DTOs\\Complaint\\ComplaintDto.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T06:51:49.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T06:51:49.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "Repository.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Repositories\\Repository.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Repositories\\Repository.cs",
@@ -341,12 +396,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Repositories\\Repository.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T06:17:44.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T06:17:44.018Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Complaint.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Complaint.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Complaint.cs",
@@ -354,12 +408,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\Complaint.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:43:01.142Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:43:01.142Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "UsersController.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
@@ -367,12 +420,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEoAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T06:28:32.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T06:28:32.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "PassportContext.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Data\\PassportContext.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Data\\PassportContext.cs",
@@ -380,12 +432,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Data\\PassportContext.cs",
               "ViewState": "AQIAABMAAAAAAAAAAAD4vw0AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T06:35:05.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T06:35:05.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Feedback.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Feedback.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Feedback.cs",
@@ -393,12 +444,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\Feedback.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:33:34.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:33:34.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Documents.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\Documents.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\Documents.cs",
@@ -406,12 +456,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\Documents.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:53:10.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:53:10.738Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "ApplicantDetails.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
@@ -419,12 +468,11 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\ApplicantDetails.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAgwAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:45:57.641Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:45:57.641Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "E:\\TS072_ShubhamYache_Alpha_Project\\PassportApplicationWebApi\\PassportApplicationWebApi\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "PassportApplicationWebApi\\Models\\ApplicationUser.cs",
@@ -432,8 +480,7 @@
               "RelativeToolTip": "PassportApplicationWebApi\\Models\\ApplicationUser.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T05:45:53.84Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-02T05:45:53.84Z"
             }
           ]
         },

@@ -21,6 +21,8 @@ builder.Services.AddDbContext<PassportContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddScoped<JwtTokenHelper>();
+builder.Services.AddScoped<IApplicationsRepository, ApplicationsRepository>();
+
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {

@@ -15,7 +15,6 @@ namespace PassportApplicationWebApi.Controllers
     [ApiController]
     public class NewApplicationController : ControllerBase
     {
-
         private readonly IMapper _mapper;
         private readonly PassportContext _context;
         private readonly IUnitOfWork _unitOfWork;
@@ -25,17 +24,25 @@ namespace PassportApplicationWebApi.Controllers
         private readonly IRepository<PassportApplication> _passportAppRepo;
 
 
-        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork)
+        public NewApplicationController(PassportContext context, IMapper mapper, IUnitOfWork unitOfWork, IApplicationsRepository applicationsRepository, IRepository<Passport> passportRepository, IRepository<User> userRepository, IRepository<PassportApplication> passportAppRepo)
 
         {
             _context = context;
             _mapper = mapper;
             _unitOfWork = unitOfWork;
+            _applicationsRepository = applicationsRepository;
+            _passportRepository = passportRepository;
+            _userRepository = userRepository;
+            _passportAppRepo = passportAppRepo;
         }
-
         [HttpGet]
         public async Task<IActionResult> GetAllApplications()
         {
+            if (_applicationsRepository == null)
+            {
+                return StatusCode(500, "Internal server error: Repository is not initialized.");
+            }
+
             var applications = await _applicationsRepository.GetAllApplicationsAsync();
 
             if (applications == null)

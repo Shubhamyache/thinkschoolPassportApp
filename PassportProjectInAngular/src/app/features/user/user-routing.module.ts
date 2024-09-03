@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from '../../shared/components/about-us/about-us.component';
 import { ApplicationStatusComponent } from './components/application-status/application-status.component';
 import { ContactComponent } from '../../shared/components/contact/contact.component';
-import { PaymentComponent } from './components/payment/payment.component';
+import { PaymentComponent } from './components/form-payment/form-payment.component';
 
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { WhatsNewComponent } from '../../shared/components/whats-new/whats-new.component';
